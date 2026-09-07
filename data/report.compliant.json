@@ -8,11 +8,11 @@
     "compliant": 24,
     "not_applicable": 9
   },
-  "summary": "Overall this is a balanced, risk-aware retail investing promotion. It clearly discloses that capital is at risk, notes that fees and spreads apply with a signpost to the pricing page, avoids hype or performance claims, and even encourages customers to take their time and consult support. No rules appear breached; no external fact checks are needed for market or performance claims, as none are made. The copy is already in a good state for compliance under the provided ruleset.",
+  "summary": "Overall the communication is concise, balanced and risk-aware. It clearly states the nature of the service, minimum investment, mentions that fees exist with a link to full pricing, and provides prominent risk warnings including capital at risk, while encouraging customers to take their time and seek help. There are no market or performance claims and no signs of pressure, obscured risks, or exploitative tactics; only rules related to upstream/downstream firms, declines, and professional-only products are not applicable.",
   "verdicts": [
     {
       "rule_id": "CP-01",
-      "reasoning": "The message is balanced, mentions availability of many instruments without hype, clearly flags fees and risks, and explicitly tells customers to take their time. There are no market or performance claims requiring substantiation.",
+      "reasoning": "The message is balanced, highlights availability of many instruments and low minimums without exaggeration, and clearly warns about investment risk and possible loss of capital. It does not make any market or performance claims and explicitly encourages customers to take their time, which supports good outcomes.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -22,7 +22,7 @@
     },
     {
       "rule_id": "CC-01",
-      "reasoning": "The communication is transparent about costs (referring to the full pricing page) and risks, and does not promise outcomes or hide drawbacks. A reasonable customer’s expectations are aligned with the text.",
+      "reasoning": "The communication is straightforward about features (3,000 stocks/ETFs, $10 minimum, existence of spreads and FX costs) and risks, and signposts the full fee schedule. There is no indication of hidden drawbacks or overstated benefits, and no unverifiable performance or market claims.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -32,7 +32,7 @@
     },
     {
       "rule_id": "CC-02",
-      "reasoning": "Key facts such as existence of spreads/currency costs and capital-at-risk are clearly stated, not obscured by sales messaging. There is no complex structure that hides important information.",
+      "reasoning": "Information is presented in a brief, balanced way: benefits are mentioned, but so are fees (with a link to the pricing page) and clear risk statements. There is no obscuring of key facts or overemphasis on hype.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -42,7 +42,7 @@
     },
     {
       "rule_id": "CC-03",
-      "reasoning": "The tone is calm and not emotionally manipulative; it even encourages taking time to decide. No FOMO, urgency, or exaggerated social proof is used.",
+      "reasoning": "The text does not use emotional pressure, social proof, time-limited offers, or FOMO; instead, it explicitly advises customers to take their time. This avoids exploiting behavioural biases to create inappropriate demand.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -52,9 +52,9 @@
     },
     {
       "rule_id": "CC-04",
-      "reasoning": "The text does not target or reference vulnerable characteristics (e.g. debt, hardship) and does not suggest solving serious problems via investing. It is neutral and general in tone.",
+      "reasoning": "There is no targeting or wording aimed at vulnerable groups, no suggestion that investing will solve financial hardship, and no exploitation of vulnerability-related themes.",
       "evidence": null,
-      "verdict": "not_applicable",
+      "verdict": "compliant",
       "fact_to_verify": null,
       "severity": "high",
       "principle": "Firms must avoid communications that take advantage of retail customers’ characteristics of vulnerability in a manner likely to cause detriment.",
@@ -62,7 +62,7 @@
     },
     {
       "rule_id": "CC-05",
-      "reasoning": "The ad includes a clear risk warning and does not encourage reckless behaviour or misuse (no leverage pushing, no misleading liquidity claims). It is unlikely to foreseeably cause harm beyond inherent investment risk which is disclosed.",
+      "reasoning": "The message includes a clear risk warning and does not encourage harmful behaviours (e.g. leverage, speculative trading, cashing in protections). It does not obscure material risks; instead, it highlights that capital is at risk and values can go down.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -72,7 +72,7 @@
     },
     {
       "rule_id": "CC-06",
-      "reasoning": "There is no exploitation of behavioural biases: no pressure, no “smart default” framing, no gambling/excitement language. The framing is neutral and cautious.",
+      "reasoning": "The communication does not employ defaults, framing, or language that exploit behavioural biases. It avoids hype and even encourages thoughtful consideration before investing, which is customer-friendly.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -82,7 +82,7 @@
     },
     {
       "rule_id": "CC-07",
-      "reasoning": "The communication briefly explains the service and highlights that investing may not be right for everyone, with clear risk warnings and an invitation to use support before starting, which supports informed pursuit of financial objectives.",
+      "reasoning": "The text briefly explains what the platform offers, notes the minimum investment, and clearly states that investing carries risk and capital is at risk, which supports customers in aligning investing with their objectives. It also signposts help and support for questions before starting.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -92,7 +92,7 @@
     },
     {
       "rule_id": "CC-08",
-      "reasoning": "The text does not relate to declining or withdrawing a product, so the rule’s scenario does not arise.",
+      "reasoning": "The communication is promotional and does not involve declining or withdrawing a product, so this scenario does not arise.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -102,7 +102,7 @@
     },
     {
       "rule_id": "CU-01",
-      "reasoning": "For a short promo, it gives key information: what the product is (stocks/ETFs), minimum amount, existence of fees with signpost to pricing page, and prominent risk warnings before suggesting customers decide. This supports an informed initial decision at this stage.",
+      "reasoning": "For a short promotional text, it provides the key information customers need at this stage: what the service offers, a minimum investment size, existence of fees with signposting to details, and clear risk warnings including that they may get back less than they put in. It is brief and timed for pre-investment consideration.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -112,7 +112,7 @@
     },
     {
       "rule_id": "CU-02",
-      "reasoning": "The message is clear, fair and not misleading. It does not make performance or market-position claims, and it includes strong risk caveats alongside benefits. No contradictions between headline and body appear.",
+      "reasoning": "The message is clear and not misleading. There are no performance, user-number, or market-position claims. The content about features and costs is factual and caveated appropriately (mentioning spreads and FX costs, and that investing involves risk).",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -122,7 +122,7 @@
     },
     {
       "rule_id": "CU-03",
-      "reasoning": "Key elements relevant at this point are included: product type, investable universe at a high level, minimum amount, existence of fees, and that capital is at risk. No major limitations or conditions are implied then omitted.",
+      "reasoning": "It states the product type (investing in stocks and ETFs), capital-at-risk nature, potential for loss, and that some instruments have spreads and FX costs, with a link to the full pricing page. This covers the most important risks and cost elements reasonably for a high-level promo.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -132,7 +132,7 @@
     },
     {
       "rule_id": "CU-04",
-      "reasoning": "Language is plain and simple, without jargon apart from standard terms like “stocks”, “ETFs”, and “spreads” which are reasonably familiar for this audience. Sentences are short and easy to follow.",
+      "reasoning": "The language is simple, free of jargon (stocks, ETFs, spreads, and currency-conversion costs are standard terms and used plainly), and structured in short sentences that a typical retail customer can understand.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -142,7 +142,7 @@
     },
     {
       "rule_id": "CU-05",
-      "reasoning": "Information is logically ordered: what you can do, minimum investment, fees signpost, then risks, then encouragement to take time and use support. Key risk text is concise and prominent within the short copy, not hidden.",
+      "reasoning": "Information is logically ordered: offering, minimum, fees, then risks, then encouragement to take time and contact support. Key risk statements (“Investing involves risk… Capital at risk.”) are clearly and prominently phrased, not buried or in fine print.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -152,7 +152,7 @@
     },
     {
       "rule_id": "CU-06",
-      "reasoning": "The text is concise with no boilerplate overload or unnecessary, duplicative disclaimers. Material risks and information are present without overwhelming the reader.",
+      "reasoning": "The text is concise and free of boilerplate. Risk disclosures are proportionate and not excessive, so there is no information overload or unnecessary disclaimers.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -162,7 +162,7 @@
     },
     {
       "rule_id": "CU-07",
-      "reasoning": "The copy gives essential risk and cost information before any invitation to begin investing, and it encourages customers to consider and ask questions first, which aligns with timely disclosure.",
+      "reasoning": "This is clearly pre-sale messaging and includes essential information about risk and the nature of the product before any commitment, while also inviting customers to use help and support before beginning, which supports timely information provision.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -172,7 +172,7 @@
     },
     {
       "rule_id": "CU-08",
-      "reasoning": "The channel/format is not fully specified but the wording works as persistent text a user can read and consider. There is no indication of transient or obstructive presentation like fleeting pop-ups.",
+      "reasoning": "The snippet appears as static text that can be read and considered; there is no indication of transient or obstructive formats (like fleeting pop-ups). Based on the text alone, the channel choice doesn’t impede decision-making.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -182,7 +182,7 @@
     },
     {
       "rule_id": "CU-09",
-      "reasoning": "For a retail investing audience, the message appears appropriately pitched: simple language, investment basics, and risk signposting. There is no sign of one-size-fits-all messaging misaligned with a specialist-only product or advice context.",
+      "reasoning": "The communication seems tailored for a broad retail audience, using non-technical language and basic concepts suitable for typical retail investors considering a trading platform. It does not suggest advice and is appropriately neutral.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -192,7 +192,7 @@
     },
     {
       "rule_id": "CU-10",
-      "reasoning": "This is generic marketing copy, not a one-to-one interaction script or template, so requirements about checking individual understanding do not apply.",
+      "reasoning": "This is generic marketing copy, not a one-to-one interaction or script, so the requirement to include prompts to check individual understanding does not apply.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -202,7 +202,7 @@
     },
     {
       "rule_id": "CU-11",
-      "reasoning": "There is no indication of previously confusing wording being repeated or acknowledged; the text uses standard, clear phrasing. Nothing suggests it conflicts with insights from reasonable testing or monitoring.",
+      "reasoning": "There is no indication of continued use of known-confusing language or references to previous confusion. The wording avoids problematic terms like “free” with conditions. While there is no explicit mention of testing, nothing suggests failure to address known issues.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -212,7 +212,7 @@
     },
     {
       "rule_id": "CU-12",
-      "reasoning": "The communication does not mention other firms’ problematic materials or distribution-chain issues, so this rule is not engaged.",
+      "reasoning": "The communication does not refer to any other firm’s materials or to having identified issues upstream, so this rule is not engaged.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -222,7 +222,7 @@
     },
     {
       "rule_id": "CU-13",
-      "reasoning": "There is no reference to missing information being blamed on other firms, nor any suggestion to act without full details due to third-party issues. The scenario in this rule does not arise.",
+      "reasoning": "There is no mention of other firms failing to provide information or of distribution-chain information issues; the rule’s scenario does not arise here.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -232,7 +232,7 @@
     },
     {
       "rule_id": "CU-14",
-      "reasoning": "The product (retail access to stocks and ETFs from $10) is clearly aimed at retail customers, not professional-only instruments, so professional-client warnings are not relevant.",
+      "reasoning": "The product is clearly retail-oriented (investing from $10 in stocks and ETFs). It does not relate to professional-only instruments, so the requirement for a ‘not for retail’ warning is irrelevant.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -242,7 +242,7 @@
     },
     {
       "rule_id": "CU-15",
-      "reasoning": "The communication is retail-focused and does not describe products as professional-only or non-retail, so this rule does not apply.",
+      "reasoning": "The communication does not describe the product as being only for professional or non-retail clients; instead, it targets retail customers. Therefore, this exemption-focused rule does not apply.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -252,7 +252,7 @@
     },
     {
       "rule_id": "CS-01",
-      "reasoning": "Support is described as available without implying unreasonable barriers or more friction for complaints/exit than for purchase; it simply notes that the help centre and support team are available for questions.",
+      "reasoning": "The text notes that a help centre and support team are available for questions before beginning, and does not suggest any unreasonable barriers to contact or to using support. It also does not contrast easy sign-up with difficult exit or complaints processes.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -262,7 +262,7 @@
     },
     {
       "rule_id": "CS-02",
-      "reasoning": "The text explicitly tells customers to take their time and does not promote instant one-click high-risk actions, suggesting an appropriate level of friction and reflection before investing.",
+      "reasoning": "The communication explicitly says “Take your time to decide whether investing is right for you,” which signals built-in appropriate friction and discourages rushed, high-risk decisions. It does not promote one-click high-risk actions without consideration.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -272,9 +272,9 @@
     },
     {
       "rule_id": "CS-03",
-      "reasoning": "While support is mentioned, no limitation to a single channel (e.g. digital-only) is asserted. There is therefore no risk of hiding support limitations in this copy.",
+      "reasoning": "While it references a help centre and support team, it does not say that support is limited to a single channel or hide such limitations. There is no indication of digital-only or other restrictions, so the specific issue of exclusive channel support is not raised here.",
       "evidence": null,
-      "verdict": "compliant",
+      "verdict": "not_applicable",
       "fact_to_verify": null,
       "severity": "high",
       "principle": "Firms must ensure that where products offer support mainly or only through one channel (such as digital‑only), this limitation is clearly communicated before sale so consumers can assess whether the product meets their needs.",
@@ -282,7 +282,7 @@
     },
     {
       "rule_id": "CS-04",
-      "reasoning": "The communication does not set out detailed support policies or refuse reasonable adjustments; it is neutral and does not indicate an unwillingness to adapt channels for vulnerable customers.",
+      "reasoning": "The communication does not describe support policies in enough detail to evidence specific adjustments for vulnerabilities, but it also does not indicate any refusal to make reasonable adjustments or rigid one-channel-only rules. Absence of any refusal language makes it reasonably compliant for this brief marketing context.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -292,7 +292,7 @@
     },
     {
       "rule_id": "CS-05",
-      "reasoning": "Support journeys are not described in detail, but reference to a “help centre and support team” suggests straightforward access without describing convoluted or circular processes.",
+      "reasoning": "The description of support is simple (“help centre and support team are available”) and does not outline any convoluted support journeys or barriers. There is no suggestion of confusing or circular processes.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -302,7 +302,7 @@
     },
     {
       "rule_id": "CS-06",
-      "reasoning": "There is no mention of cooperation or lack thereof with other firms, transfers, or third-party requests, so this rule is not triggered.",
+      "reasoning": "The message does not discuss cooperation with other firms (e.g. transfers, third-party requests), so this rule is not engaged.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -312,7 +312,7 @@
     },
     {
       "rule_id": "VU-01",
-      "reasoning": "The tone is inclusive and non-shaming, risk is spelled out in plain language, and it prompts customers to take their time and seek help, which is considerate of varying understanding levels and potential vulnerabilities.",
+      "reasoning": "The language is neutral and inclusive, without shaming or assuming high sophistication. It signposts help and support for questions, which is consistent with considering diverse needs, including those who might need assistance understanding investing.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -322,7 +322,7 @@
     },
     {
       "rule_id": "VU-02",
-      "reasoning": "The copy is generic marketing, not directed at customers in evident financial difficulty or arrears. There is no context of hardship where third-party debt advice signposting would be expected.",
+      "reasoning": "The message is generic investing promotion and not directed at consumers in financial difficulty or exclusion. There is no discussion of arrears, hardship, or similar issues, so third-party debt-support signposting is not expected here.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -332,7 +332,7 @@
     },
     {
       "rule_id": "FM-01",
-      "reasoning": "As a financial promotion for a retail trading service, it is clear, fair, includes risk warnings, mentions the existence of fees, and makes no unsubstantiated performance or market-position claims. It aligns with Consumer Duty standards.",
+      "reasoning": "This is a financial promotion about a retail investment service, and it aligns with Consumer Duty standards: clear and non-misleading wording, risk warnings, mention of costs with signposting to full details, no performance or ‘#1’ claims, and tone encouraging careful consideration.",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,

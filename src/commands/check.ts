@@ -8,6 +8,8 @@ export interface CheckOptions {
   input: string; // path or "-" for stdin
   rules: string;
   out: string;
+  /** Suppress the terminal digest (used by batch eval runners). */
+  quiet?: boolean;
 }
 
 export type Band = "PASS" | "WARN" | "FAIL";
@@ -61,7 +63,8 @@ export async function runCheck(opts: CheckOptions): Promise<CheckReport> {
   const inputText = (await readInput(opts.input)).trim();
   if (!inputText) throw new Error("input text is empty");
 
-  console.error(`checking input (${inputText.length} chars) against ${ruleSet.rules.length} rules with ${modelName()}…`);
+  if (!opts.quiet)
+    console.error(`checking input (${inputText.length} chars) against ${ruleSet.rules.length} rules with ${modelName()}…`);
 
   const output = await structuredCall({
     schema: CheckOutput,
@@ -82,14 +85,23 @@ export async function runCheck(opts: CheckOptions): Promise<CheckReport> {
   if (missing.length > 0) throw new Error(`model returned no verdict for: ${missing.join(", ")}`);
 
   // --- Evidence honesty: quoted evidence must actually appear in the input. ---
-  // Wrapping quotation marks the model may add around the quote are stripped:
-  // the check verifies the quoted TEXT exists, not its punctuation wrapper.
+  // The model may cite MULTIPLE fragments (a breach scattered across the text),
+  // separated by newlines or ellipses — each fragment must be verbatim, so the
+  // check verifies per-fragment. Wrapping quotation marks are stripped: we
+  // verify the quoted TEXT exists, not its punctuation wrapper.
   const normInput = normalize(inputText);
   const stripWrappingQuotes = (s: string) => s.replace(/^["'“”‘’]+/, "").replace(/["'“”‘’]+$/, "");
+  const evidenceFragments = (e: string): string[] =>
+    e
+      .split(/\n+|…|\.\.\./)
+      .map((f) => stripWrappingQuotes(f.trim()))
+      .filter((f) => f.length > 0);
   const verdicts = output.verdicts.map((v) => {
     const rule = ruleById.get(v.rule_id)!;
     const evidence_verified =
-      v.evidence === null ? null : normInput.includes(normalize(stripWrappingQuotes(v.evidence)));
+      v.evidence === null
+        ? null
+        : evidenceFragments(v.evidence).every((f) => normInput.includes(normalize(f)));
     return { ...v, severity: rule.severity, principle: rule.principle, evidence_verified };
   });
 
@@ -123,8 +135,10 @@ export async function runCheck(opts: CheckOptions): Promise<CheckReport> {
   await mkdir(dirname(opts.out), { recursive: true });
   await writeFile(opts.out, JSON.stringify(report, null, 2) + "\n");
 
-  renderDigest(report);
-  console.error(`\nfull report → ${opts.out}`);
+  if (!opts.quiet) {
+    renderDigest(report);
+    console.error(`\nfull report → ${opts.out}`);
+  }
   return report;
 }
 

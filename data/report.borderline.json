@@ -5,34 +5,34 @@
     "non_compliant_medium": 0,
     "non_compliant_low": 0,
     "needs_review": 4,
-    "compliant": 16,
-    "not_applicable": 13
+    "compliant": 15,
+    "not_applicable": 14
   },
-  "summary": "The communication is concise, balanced and includes appropriate risk warnings and a clear indication that other costs apply, supporting informed decisions and good outcomes. The main regulatory sensitivity is the unsubstantiated market claim about being trusted by more than 30 million users worldwide, which must be factually supportable; this drives several needs_review verdicts. To strengthen compliance, the firm should ensure that user-number claim is robustly evidenced (or suitably qualified or removed), while retaining the existing clear risk and fee qualifiers.",
+  "summary": "Overall the communication is clear, balanced, and includes appropriate fee and risk caveats, supporting informed consideration by retail investors. The main concern is the unsubstantiated user-count claim (“trusted by more than 30 million users worldwide”), which is acceptable if accurate but must be verifiable; this drives several needs_review verdicts. To strengthen compliance, the firm should ensure this figure is current and evidenced, or qualify/omit it, while retaining the existing risk and cost disclosures.",
   "verdicts": [
     {
       "rule_id": "CP-01",
-      "reasoning": "The message is balanced: it highlights access and zero commission but clearly discloses that investing involves risk and that capital is at risk. There is one market claim about being trusted by 30 million users, which would be acceptable if accurate but is not substantiated in the text, so it needs external verification rather than being presumed true or false.",
+      "reasoning": "The ad is balanced: it pairs benefit claims with clear fee and risk caveats. The only market/performance claim is user count, which is acceptable if true but not substantiated in the text, so it must be flagged for verification rather than treated as misleading.\n",
       "evidence": "trusted by more than 30 million users worldwide.",
       "verdict": "needs_review",
-      "fact_to_verify": "Whether NovaTrade in fact has more than 30 million users worldwide who use and trust the platform.",
+      "fact_to_verify": "Whether NovaTrade in fact has more than 30 million users worldwide.",
       "severity": "high",
       "principle": "A firm must act to deliver good outcomes for retail customers in its retail market business communications.",
       "evidence_verified": true
     },
     {
       "rule_id": "CC-01",
-      "reasoning": "Benefits (wide access, zero commission) are presented alongside clear mention of other costs and risk warnings. There is no indication of hidden fees or contradictory small print. The user-number claim is factual in nature and must be evidence-based, which cannot be confirmed from the text alone and thus requires verification.",
+      "reasoning": "The content is straightforward about features, mentions that other costs apply with a pointer to the pricing page, and includes a clear risk warning. The user-count claim is capable of being evidenced but is not evidenced here, so it requires verification rather than being deemed misleading.\n",
       "evidence": "trusted by more than 30 million users worldwide.",
       "verdict": "needs_review",
-      "fact_to_verify": "Whether NovaTrade has more than 30 million users worldwide as claimed.",
+      "fact_to_verify": "Whether NovaTrade has more than 30 million users worldwide as users or customers.",
       "severity": "high",
       "principle": "A firm must act in good faith towards retail customers in its communications, dealing honestly, fairly, openly and consistently with their reasonable expectations.",
       "evidence_verified": true
     },
     {
       "rule_id": "CC-02",
-      "reasoning": "Key elements—product scope, zero commission with a pointer to other costs, and clear risk statements—are straightforward and not obscured in favour of hype. The layout is simple and the downside risk is explicitly stated, so customers’ interests are reasonably taken into account.",
+      "reasoning": "Information is not structured to obscure key facts: the zero-commission benefit is immediately qualified by mentioning other costs and a pricing page, and material investment risks are clearly stated. No hype or burying of caveats is evident.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -42,7 +42,7 @@
     },
     {
       "rule_id": "CC-03",
-      "reasoning": "The text does not use emotional pressure, FOMO, social proof beyond a simple user-count reference, or deadlines. It is informational and includes a sober risk warning, not language that would create inappropriate demand.",
+      "reasoning": "There is no use of emotional manipulation, FOMO, urgency, or social-pressure tactics; the tone is factual with standard product and risk descriptions. The reference to user numbers is not framed as social pressure.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -52,7 +52,7 @@
     },
     {
       "rule_id": "CC-04",
-      "reasoning": "There is no targeting of people in financial distress or other vulnerable circumstances, nor any suggestion that investing will solve money problems. The language is neutral and generic.",
+      "reasoning": "The message is generic investing marketing and does not target or exploit vulnerable groups, nor suggest resolving hardship via investing. No vulnerability-related hooks are present.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -62,7 +62,7 @@
     },
     {
       "rule_id": "CC-05",
-      "reasoning": "The text does not encourage harmful behaviour, and it clearly states that investing involves risk and capital is at risk. There is no leverage, borrowing, or unrealistic reassurance about liquidity or safety.",
+      "reasoning": "The communication warns clearly that investing involves risk and that capital is at risk, and does not encourage harmful behaviours (e.g. leverage, speculative day trading). No foreseeable-harm messaging or omissions are apparent in this short ad.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -72,7 +72,7 @@
     },
     {
       "rule_id": "CC-06",
-      "reasoning": "There is no evidence of exploiting behavioural biases through defaults, framing, or ‘only sensible choice’ claims. The communication is short and descriptive with balanced risk language.",
+      "reasoning": "There is no indication of default settings, nudging, or framing exploiting behavioural biases beyond normal product description. No overconfidence, urgency, or framing effects are being leveraged unfairly.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -82,7 +82,7 @@
     },
     {
       "rule_id": "CC-07",
-      "reasoning": "The text briefly explains relevant features (range of instruments, zero commission with other fees) and includes core risk warnings, which helps customers relate the service to common investing objectives without implying it suits all goals or is effortless.",
+      "reasoning": "The ad gives basic, relevant information (access to many instruments, fees exist and are detailed elsewhere, capital at risk). For a short promotion it does not obstruct customers’ financial objectives or oversell suitability.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -92,7 +92,7 @@
     },
     {
       "rule_id": "CC-08",
-      "reasoning": "The message does not discuss declining or withdrawing products or accounts, so this subject matter is absent.",
+      "reasoning": "The text does not discuss declines or withdrawals of products or decisions not to provide a product; therefore this subject matter is absent.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -102,7 +102,7 @@
     },
     {
       "rule_id": "CU-01",
-      "reasoning": "For a short promotional snippet, customers get key headline information: breadth of products, fee headline with reference to other costs on a pricing page, and direct risk warnings. This is appropriate for the early stage of a decision journey.",
+      "reasoning": "For a brief marketing piece, it provides key high-level info (product type, access scope, fee headline plus pointer to pricing page, and risk warning) at the same time as the call to interest. This supports an informed next step rather than a commitment decision point.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -112,17 +112,17 @@
     },
     {
       "rule_id": "CU-02",
-      "reasoning": "Overall the wording is clear and not misleading. The main potential issue is the factual user-count and trust claim, which must be capable of substantiation; this cannot be validated from the text and therefore requires external review rather than being assumed accurate.",
+      "reasoning": "The communication is clear and not misleading overall. Benefits are not overstated, zero commission is correctly caveated with reference to other costs, and investment risk warnings are present. The user-count claim is an unsubstantiated market claim that is acceptable if true and thus must be verified.\n",
       "evidence": "trusted by more than 30 million users worldwide.",
       "verdict": "needs_review",
-      "fact_to_verify": "Whether NovaTrade genuinely has more than 30 million users worldwide and can substantiate this figure.",
+      "fact_to_verify": "Accuracy of the claim that more than 30 million users worldwide trust NovaTrade.",
       "severity": "high",
       "principle": "All retail communications, including financial promotions and post‑sale materials, must be clear, fair and not misleading.",
       "evidence_verified": true
     },
     {
       "rule_id": "CU-03",
-      "reasoning": "The core risks (investment value can go down as well as up, capital at risk) and existence of other costs are explicitly mentioned, with signposting to detailed pricing. For a brief ad, that meets typical information needs at this stage.",
+      "reasoning": "Key information reasonably expected in a short ad is included: scope of instruments, that zero commission is limited to US stocks and other costs apply, plus a clear capital-at-risk warning. Detailed fee breakdown and eligibility are appropriately deferred to the pricing page.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -132,7 +132,7 @@
     },
     {
       "rule_id": "CU-04",
-      "reasoning": "The language is simple (stocks, ETFs, zero commission, other costs, pricing page, investing involves risk). No technical jargon appears beyond commonplace terms for retail investors. A typical retail audience can understand it without specialist knowledge.",
+      "reasoning": "Language is simple and widely understood (stocks, ETFs, zero commission, pricing page, investing involves risk, capital at risk) without technical jargon or complex constructs. A typical retail investor can understand it.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -142,7 +142,7 @@
     },
     {
       "rule_id": "CU-05",
-      "reasoning": "Information is logically ordered: features, fees with qualifier, then risks. Risk statements are short and prominent enough in this small text block. No key conditions are hidden or obscured.",
+      "reasoning": "Information is logically ordered: product description, user base, fee headline with caveat, then risk warnings. Key caveats (other costs, risks) are stated in normal, prominent prose—not hidden or in fine print (as far as the text reveals).\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -152,7 +152,7 @@
     },
     {
       "rule_id": "CU-06",
-      "reasoning": "The text is concise and free of excessive disclaimers. It includes only materially relevant caveats (other costs apply, investment risk), so there is no overload.",
+      "reasoning": "There are no long or repetitive disclaimers; the risk warning and fee caveat are concise and relevant, not overwhelming. No unnecessary boilerplate is present.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -162,7 +162,7 @@
     },
     {
       "rule_id": "CU-07",
-      "reasoning": "As a pre-sale promotional communication, it provides essential information before commitment—there is no urging to transact immediately without seeing any risks or costs. Timing issues beyond this snippet are not implicated.",
+      "reasoning": "Within this snippet, essential cautions (fees exist, capital at risk) are given alongside the promotional content, i.e. before any implied decision to start investing. There is no urging to act before seeing key info.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -172,9 +172,9 @@
     },
     {
       "rule_id": "CU-08",
-      "reasoning": "The format appears to be a persistent text block (e.g. web or app copy); there is no indication of transient or obstructive presentation like fleeting pop-ups, so the channel as implied supports reviewing the information.",
+      "reasoning": "The text does not specify or imply the delivery channel (e.g. banner, email, app screen) or any transient format issues, so there is no basis to assess channel suitability in this excerpt.\n",
       "evidence": null,
-      "verdict": "compliant",
+      "verdict": "not_applicable",
       "fact_to_verify": null,
       "severity": "medium",
       "principle": "The communication channel chosen must support effective decision‑making by enabling customers to receive, review and, where relevant, assess information and options.",
@@ -182,7 +182,7 @@
     },
     {
       "rule_id": "CU-09",
-      "reasoning": "The message is pitched at a generic retail investing audience with appropriate simplicity and clear risk caveats. There is no sign of advice-like wording or neglect of foreseeable vulnerabilities in this short, neutral text.",
+      "reasoning": "The message is clearly aimed at retail investors, uses non-technical language, and includes fundamental risk warnings. There is no indication it ignores obvious audience characteristics or mis-pitches complexity.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -192,7 +192,7 @@
     },
     {
       "rule_id": "CU-10",
-      "reasoning": "This is generic marketing copy, not a one-to-one scripted interaction; there is no individual tailoring or dialogue context, so the rule’s scenario does not apply.",
+      "reasoning": "This is not a one-to-one scripted or personalised interaction; it is generic marketing copy. Therefore the rule on individual understanding checks does not apply.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -202,7 +202,7 @@
     },
     {
       "rule_id": "CU-11",
-      "reasoning": "There is no reference to prior confusion or testing, but also no signs of wording known to cause misunderstanding (e.g. unqualified “free”). Zero commission is immediately qualified by mention of other costs. Nothing suggests continued use of problematic language.",
+      "reasoning": "There is no reference to prior confusion or testing, and no evident use of known-confusing phrases; nothing suggests ongoing use of problematic wording. In the absence of contrary indicators, the communication appears aligned with expectations.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -212,7 +212,7 @@
     },
     {
       "rule_id": "CU-12",
-      "reasoning": "The text does not mention other firms’ communications or distribution chains, so this obligation is not engaged.",
+      "reasoning": "The text does not mention other firms’ communications or any distribution-chain issues, so this obligation is not engaged.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -222,7 +222,7 @@
     },
     {
       "rule_id": "CU-13",
-      "reasoning": "There is no reference to missing information from other firms or to distribution-chain issues; it simply describes NovaTrade’s own service.",
+      "reasoning": "There is no suggestion that another firm has failed to provide information or that missing information is being used to pressure decisions. Third-party information flows are not referenced.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -232,7 +232,7 @@
     },
     {
       "rule_id": "CU-14",
-      "reasoning": "The products (stocks and ETFs through a retail-style platform) are not described as professional-only instruments, and there is no indication that the promotion is for non-retail instruments, so this rule does not apply.",
+      "reasoning": "The communication is clearly about a retail trading platform, not a professional-only or non-retail instrument. No professional-only limitation is claimed, so the specific professional-client warning requirement does not apply.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -242,7 +242,7 @@
     },
     {
       "rule_id": "CU-15",
-      "reasoning": "The communication is clearly aimed at retail users and does not claim the product is limited to professional or non-retail clients, so the exemption context in this rule is not in scope.",
+      "reasoning": "The product is not described as professional- or non-retail-only; it is presented as a general trading service. Therefore the rule about consistency with a non-retail-only positioning does not apply.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -252,7 +252,7 @@
     },
     {
       "rule_id": "CS-01",
-      "reasoning": "Customer support processes or barriers are not described; there is no mention of how to contact the firm, make changes, or complain, so this rule’s subject matter is absent from the text.",
+      "reasoning": "Customer support processes or barriers are not mentioned at all, so there is no content to assess regarding support accessibility or barriers.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -262,7 +262,7 @@
     },
     {
       "rule_id": "CS-02",
-      "reasoning": "The snippet does not describe an in-app or web journey flow, confirmations, or friction steps—only static marketing claims—so there is nothing to assess regarding journey friction or speed into high-risk decisions.",
+      "reasoning": "The snippet does not describe a customer journey flow or decision screens; it only advertises features and risks. Therefore high-risk flow friction or lack thereof cannot be assessed.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -272,7 +272,7 @@
     },
     {
       "rule_id": "CS-03",
-      "reasoning": "Support channels or their limitations are not mentioned at all, so the requirement to disclose channel restrictions before sale is not triggered by this particular communication.",
+      "reasoning": "Support channels or limitations (e.g. digital-only support) are not referenced, so this rule’s subject matter is absent from the text.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -282,7 +282,7 @@
     },
     {
       "rule_id": "CS-04",
-      "reasoning": "There is no content about support channels or willingness to adjust communications for vulnerabilities; the text focuses solely on product features, pricing headline, and risks.",
+      "reasoning": "There is no discussion of support channels, let alone accessibility adaptations or refusals, so this rule does not apply to the excerpt.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -292,7 +292,7 @@
     },
     {
       "rule_id": "CS-05",
-      "reasoning": "Support journeys are not discussed or depicted; only product access and costs/risks are mentioned, so this rule’s topic does not arise.",
+      "reasoning": "Support journeys or processes are not described, so clarity or confusion in such journeys cannot be evaluated from this text.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -302,7 +302,7 @@
     },
     {
       "rule_id": "CS-06",
-      "reasoning": "No cooperation with other firms or handling of third-party requests is referenced, so there is nothing to assess under this rule.",
+      "reasoning": "The text does not refer to cooperation with other firms regarding customer support, transfers, or complaints; thus this requirement is not triggered.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -312,7 +312,7 @@
     },
     {
       "rule_id": "VU-01",
-      "reasoning": "The language is neutral and non-exclusionary, with clear risk warnings that are relevant to all investors, including potentially vulnerable ones. It does not shame or belittle those who might struggle, though it also does not explicitly address diverse needs; for a short generic ad, this is acceptable.",
+      "reasoning": "The communication uses neutral, simple language and does not belittle those who may struggle; it includes a clear risk warning, which is relevant for potentially less-experienced investors. It does not explicitly acknowledge vulnerabilities but also does not ignore them in a problematic way for a short generic ad.\n",
       "evidence": null,
       "verdict": "compliant",
       "fact_to_verify": null,
@@ -322,7 +322,7 @@
     },
     {
       "rule_id": "VU-02",
-      "reasoning": "The communication is generic investing promotion and does not address consumers in financial difficulty or other vulnerable circumstances. There is no indication that it is a collections or arrears context where signposting to independent help would be expected.",
+      "reasoning": "The communication is generic marketing, not directed at customers in arrears or evident financial distress; no vulnerability-triggering scenarios are presented, so there is no expectation of third-party debt/advice signposting here.\n",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -332,10 +332,10 @@
     },
     {
       "rule_id": "FM-01",
-      "reasoning": "This is plainly a financial promotion for a retail trading platform. It includes core risk warnings, avoids exaggerated performance claims, and qualifies the ‘zero commission’ statement by noting other costs and pointing to a pricing page. The only factual market claim requiring substantiation is user count, which needs external verification rather than being accepted or rejected here.",
+      "reasoning": "This is a financial promotion for a retail trading service. It includes clear risk warnings, avoids exaggerated performance claims, and fairly presents zero commission with an immediate cost caveat. The only external market claim is the user count, which is acceptable if true but requires verification.\n",
       "evidence": "trusted by more than 30 million users worldwide.",
       "verdict": "needs_review",
-      "fact_to_verify": "Whether NovaTrade can substantiate that it is trusted by more than 30 million users worldwide.",
+      "fact_to_verify": "Verification that NovaTrade is in fact trusted by more than 30 million users worldwide (e.g. active or registered users).",
       "severity": "high",
       "principle": "Principle 12 and PRIN 2A communications standards apply to financial promotions and other retail communications relating to retail market business.",
       "evidence_verified": true

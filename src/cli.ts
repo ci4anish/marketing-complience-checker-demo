@@ -113,6 +113,12 @@ switch (command) {
     process.exitCode = ok ? 0 : 1;
     break;
   }
+  case "eval:checker": {
+    const { runCheckerEval } = await import("./commands/checker-eval.js");
+    const ok = await runCheckerEval();
+    process.exitCode = ok ? 0 : 1;
+    break;
+  }
   default:
     console.error(USAGE);
     process.exit(command ? 1 : 0);

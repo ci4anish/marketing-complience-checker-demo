@@ -2,17 +2,17 @@
   "band": "FAIL",
   "counts": {
     "non_compliant_high": 11,
-    "non_compliant_medium": 4,
+    "non_compliant_medium": 3,
     "non_compliant_low": 0,
     "needs_review": 0,
-    "compliant": 2,
-    "not_applicable": 16
+    "compliant": 0,
+    "not_applicable": 19
   },
-  "summary": "The communication is a single, highly misleading hype line promising customers they will “get rich tomorrow” simply by installing a trading/investment app. It lacks any explanation of the product, risks, or limitations, and exploits behavioural biases with an unrealistic, near‑guaranteed‑style wealth claim. Multiple high‑severity rules on good outcomes, fairness, non‑misleading promotions, and risk disclosure are breached. To comply, the firm would need to remove the instant‑riches claim, add clear and prominent risk warnings, and provide at least basic, balanced information about what the app does and the uncertainty of investment outcomes before urging installation.",
+  "summary": "The communication is a very short but seriously misleading financial promotion that promises “get rich tomorrow” simply by installing an app, with no risks, limitations or realistic context. Multiple high‑severity rules are breached due to unrealistic performance claims, exploitation of behavioural biases, and failure to support informed decisions. To move towards compliance, the message would need to remove any guaranteed/near‑certain wealth claims, avoid implying immediate riches, and instead provide balanced, realistic information about the app’s function, risks (including potential losses), and the non‑guaranteed nature of investment outcomes.",
   "verdicts": [
     {
       "rule_id": "CP-01",
-      "reasoning": "The slogan promises rapid wealth (“get rich tomorrow”) with no risk, effort, or caveats, which would predictably lead to poor outcomes by encouraging unrealistic expectations and potentially harmful behaviour. This is a misleading performance claim that would be problematic even if some users did profit, because it implies near‑certain, immediate riches.",
+      "reasoning": "The slogan explicitly promises a rapid riches outcome from installing the app, with no caveats or risk context. This is a highly misleading performance claim that would predictably lead to poor outcomes by encouraging unrealistic expectations of quick wealth from trading/investing.",
       "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
@@ -22,7 +22,7 @@
     },
     {
       "rule_id": "CC-01",
-      "reasoning": "The message is not honest or fair: it creates the expectation that simply installing the app will make the customer rich by tomorrow, with no mention of risk, uncertainty, or effort. A reasonable customer could be misled about what the product can deliver.",
+      "reasoning": "The message is not honest or fair: it strongly implies that simply installing the app will make the customer rich by tomorrow, which is not a reasonable expectation for any trading/investment product and is presented without basis or qualification.",
       "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
@@ -32,7 +32,7 @@
     },
     {
       "rule_id": "CC-02",
-      "reasoning": "The information is presented in an extremely one‑sided way, focusing solely on instant wealth and omitting any risks or limitations. This fails to take account of customers’ interests because it obscures the speculative and risky nature of trading/investing behind a ‘get rich’ promise.",
+      "reasoning": "The communication focuses entirely on an extreme upside claim with no mention of any risk, cost, or realistic limitation. This presentation fails to take account of customers’ interests by obscuring the true nature of investment outcomes in favour of hype.",
       "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
@@ -42,7 +42,7 @@
     },
     {
       "rule_id": "CC-03",
-      "reasoning": "The communication clearly exploits behavioural biases such as overconfidence and fear of missing out by promising immediate riches and using rocket emojis to signal explosive gains, likely creating inappropriate demand for a risky product.",
+      "reasoning": "The phrase uses excitement (rockets) and an unrealistic ‘get rich tomorrow’ promise to trigger FOMO and inappropriate demand for a risky product by implying immediate wealth, which exploits behavioural biases in a misleading way.",
       "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
@@ -52,7 +52,7 @@
     },
     {
       "rule_id": "CC-04",
-      "reasoning": "While the message is problematic, it does not specifically reference or target known vulnerable circumstances (e.g. debt, hardship, illness); it is a generic hype statement. There is no explicit exploitation of identified vulnerabilities in the text itself.",
+      "reasoning": "While the claim is problematic, it does not specifically reference or target vulnerable circumstances such as debt, hardship, illness, or low income; it is a generic hype message rather than exploiting a particular vulnerability group.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -62,7 +62,7 @@
     },
     {
       "rule_id": "CC-05",
-      "reasoning": "By suggesting users will “get rich tomorrow” just by installing the app, the promotion encourages impulsive use of a presumably high‑risk product without any mention of risks or that capital can be lost, which creates a foreseeable risk of financial harm.",
+      "reasoning": "Encouraging the belief that installing the app will make customers rich by tomorrow can reasonably be foreseen to cause harm, by prompting unsuitable, speculative behaviour without any balancing risk information or realism about outcomes.",
       "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
@@ -72,7 +72,7 @@
     },
     {
       "rule_id": "CC-06",
-      "reasoning": "The message leverages behavioural biases (excitement, overconfidence, instant‑gratification framing) and presents installing the app as an obvious route to quick riches, steering customers into decisions they might not make if information were neutrally and clearly presented.",
+      "reasoning": "The message leverages overconfidence and excitement by implying a virtually certain, immediate positive outcome from a complex, risky activity, steering customers toward decisions they might not take under neutral, accurate framing.",
       "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
@@ -82,7 +82,7 @@
     },
     {
       "rule_id": "CC-07",
-      "reasoning": "The communication does not explain how the product relates to any financial objectives, nor does it mention risks, suitability, or limitations; it simply promises instant wealth. It therefore does not support customers in pursuing realistic financial objectives.",
+      "reasoning": "The communication does nothing to help customers understand how the product can realistically support financial objectives and instead suggests instant wealth with minimal effort, which undermines rather than supports informed, goal‑aligned decisions.",
       "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
@@ -92,7 +92,7 @@
     },
     {
       "rule_id": "CC-08",
-      "reasoning": "The text is not about declining or withdrawing a product; it is a simple acquisition promotion.",
+      "reasoning": "The text does not concern declining or withdrawing a product or any refusal communication; it is purely promotional.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -102,7 +102,7 @@
     },
     {
       "rule_id": "CU-01",
-      "reasoning": "The message provides no meaningful information about the product’s nature, risks, or costs. It is impossible for a customer to make an informed decision from this; instead, it is pure hype around getting rich quickly.",
+      "reasoning": "The message provides no information about the product, its risks, or how it works, and instead gives a single misleading promise of getting rich tomorrow. This does not enable an informed decision in any respect.",
       "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
@@ -112,7 +112,7 @@
     },
     {
       "rule_id": "CU-02",
-      "reasoning": "The overall communication is misleading: it asserts that installing the app will make the user rich by tomorrow, which is an unqualified and unrealistic performance claim without any context or basis.",
+      "reasoning": "The overall impression is clearly misleading: ‘get rich tomorrow’ is an unqualified, unrealistic performance outcome claim. Even if some users might profit quickly, framing it as a near‑certain result of installation is misleading and not clearly substantiated or caveated.",
       "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
@@ -122,17 +122,17 @@
     },
     {
       "rule_id": "CU-03",
-      "reasoning": "Key information that customers would reasonably need—risks of loss, that returns are uncertain, fees or costs, eligibility—is entirely absent, while a guaranteed‑style benefit is suggested. This fails to meet information needs.",
-      "evidence": null,
+      "reasoning": "Key information such as that capital is at risk, that outcomes are uncertain, and any costs or limitations are entirely absent, while a highly positive outcome is promised. This fails to meet the information needs of the target audience.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
       "severity": "high",
       "principle": "Communications must meet the information needs of the retail customers they are intended for, taking account of the product’s target market or the firm’s customer base.",
-      "evidence_verified": null
+      "evidence_verified": true
     },
     {
       "rule_id": "CU-04",
-      "reasoning": "The language is simple, but it is simplistically misleading rather than explanatory. It does not attempt to explain the product at all, so typical customers cannot understand what is being offered in a meaningful way.",
+      "reasoning": "The language is simple but conveys a fundamentally misleading idea about what the app does. Clarity of wording is outweighed by the deceptive content; a typical retail consumer would misunderstand the realistic nature of returns.",
       "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
@@ -142,19 +142,19 @@
     },
     {
       "rule_id": "CU-05",
-      "reasoning": "Key information such as risks and conditions is not made prominent or explained; instead, only a bold promise is given. This fails the requirement to make key information easy to identify and use plain, informative language.",
-      "evidence": null,
+      "reasoning": "Although short, the communication fails to present any key information about risks or conditions; instead it highlights only a sensational benefit. Key points are not made prominent because they are entirely absent.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
       "severity": "medium",
       "principle": "Communications should use plain and intelligible language, present information logically, and make key information prominent and easy to identify.",
-      "evidence_verified": null
+      "evidence_verified": true
     },
     {
       "rule_id": "CU-06",
-      "reasoning": "The issue here is not overload or excessive disclaimers; the text is extremely brief and not cluttered. It therefore does not breach this rule on information overload or unnecessary disclaimers.",
+      "reasoning": "There is no issue of excessive disclaimers or information overload; the problem is under‑disclosure and misleading brevity, not over‑complexity. Thus this specific rule on overload is not engaged.",
       "evidence": null,
-      "verdict": "compliant",
+      "verdict": "not_applicable",
       "fact_to_verify": null,
       "severity": "low",
       "principle": "Communications should avoid unnecessary disclaimers and avoid overloading consumers with excessive information that prevents effective decision‑making.",
@@ -162,7 +162,7 @@
     },
     {
       "rule_id": "CU-07",
-      "reasoning": "The communication pushes immediate installation (“Install our app”) without providing any essential pre‑commitment information (features, risks, costs). This encourages action before the customer has the information needed for a decision.",
+      "reasoning": "Essential information about features and risks is not provided at all before the implied call to action (‘Install our app’); instead, the user is urged to act based on an unrealistic promise, undermining timely, effective decision‑making.",
       "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,
@@ -172,7 +172,7 @@
     },
     {
       "rule_id": "CU-08",
-      "reasoning": "The text snippet does not indicate channel design aspects like persistence or ability to review; it could appear in various formats, but nothing in the wording itself breaches or addresses this requirement.",
+      "reasoning": "The snippet does not specify the channel or format beyond being a short text; there is no indication of transient formats like fleeting pop‑ups or unreadable risk text. On its face, the rule on channel suitability cannot be assessed as breached from content alone.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -182,9 +182,9 @@
     },
     {
       "rule_id": "CU-09",
-      "reasoning": "The message is a one‑size‑fits‑all hype line with no tailoring to audience capabilities or product complexity. For a likely mass‑market, high‑risk trading app, this is insufficient and misleading because it ignores the need for more nuanced explanation and risk framing.",
+      "reasoning": "The message is generic and not tailored, but this rule requires that communications be tailored where appropriate. In this extremely brief advert, the breach is already captured under other misrepresentation rules; there is no explicit evidence of ignoring known vulnerabilities or mismatched complexity vs audience beyond what is addressed elsewhere.",
       "evidence": null,
-      "verdict": "non_compliant",
+      "verdict": "not_applicable",
       "fact_to_verify": null,
       "severity": "medium",
       "principle": "Firms must tailor communications to the characteristics of their retail customers, including characteristics of vulnerability, the complexity of the product, the channels used, and the firm’s role.",
@@ -192,7 +192,7 @@
     },
     {
       "rule_id": "CU-10",
-      "reasoning": "This is not a one‑to‑one scripted interaction; it is a generic promotional slogan, so obligations about checking individual understanding do not apply.",
+      "reasoning": "This is not a one‑to‑one scripted interaction; it is a generic promotional line, so obligations about checking individual understanding do not apply.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -202,7 +202,7 @@
     },
     {
       "rule_id": "CU-11",
-      "reasoning": "There is no reference to testing or past confusion, and no obvious pattern like re‑used contested wording; the rule on testing/monitoring cannot be assessed from this brief slogan alone.",
+      "reasoning": "There is no reference to testing, monitoring, or prior confusion. While the wording is misleading, this rule is specifically about adapting after evidence of misunderstanding; the snippet contains no such context.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -212,7 +212,7 @@
     },
     {
       "rule_id": "CU-12",
-      "reasoning": "The text does not refer to other firms’ communications or any distribution chain issues.",
+      "reasoning": "The communication does not mention other firms’ materials or any distribution chain issues.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -222,7 +222,7 @@
     },
     {
       "rule_id": "CU-13",
-      "reasoning": "There is no reference to missing information from other firms or distribution‑chain cooperation; the rule is not engaged.",
+      "reasoning": "The text does not refer to missing information from another firm or cooperation in a distribution chain.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -232,7 +232,7 @@
     },
     {
       "rule_id": "CU-14",
-      "reasoning": "The communication does not indicate that the product is professional‑only or relate to non‑retail instruments.",
+      "reasoning": "The message does not relate to a professional‑only or non‑retail financial instrument, nor does it mention eligibility status.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -242,7 +242,7 @@
     },
     {
       "rule_id": "CU-15",
-      "reasoning": "There is no suggestion that the product is limited to professional or non‑retail clients, so the carve‑out for non‑retail products is not in scope here.",
+      "reasoning": "There is no claim that the product is for non‑retail or professional investors only; it appears to be a mass‑market pitch, so this rule is not triggered.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -252,7 +252,7 @@
     },
     {
       "rule_id": "CS-01",
-      "reasoning": "The text does not describe customer support channels, processes, or barriers; it is solely a promotional tagline for acquisition.",
+      "reasoning": "The text does not describe customer support, complaints, or cancellation processes at all; it is a pure acquisition slogan, so this support‑design rule is not engaged.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -262,7 +262,7 @@
     },
     {
       "rule_id": "CS-02",
-      "reasoning": "Although the tagline encourages quick action, it does not describe the in‑app journey or specific absence of friction such as one‑tap activation of high‑risk features. The rule about journey friction cannot be directly assessed from this wording alone.",
+      "reasoning": "While the slogan urges immediate action, it does not describe a specific customer journey or process design (screens, confirmations). The harm is captured under bias/exploitation and misleading content rather than absence of structural friction in a journey description.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -272,7 +272,7 @@
     },
     {
       "rule_id": "CS-03",
-      "reasoning": "No information is given about support channels or their limitations, so the specific duty to disclose channel limitations is not triggered by this snippet alone.",
+      "reasoning": "No support channels or their limitations are mentioned, so there is nothing to assess under this rule.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -282,7 +282,7 @@
     },
     {
       "rule_id": "CS-04",
-      "reasoning": "The communication says nothing about support channels or adjustments for vulnerable customers, so this rule is not engaged.",
+      "reasoning": "The message says nothing about support channels, accessibility, or adjustments for vulnerable customers.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -292,7 +292,7 @@
     },
     {
       "rule_id": "CS-05",
-      "reasoning": "There is no description of support journeys or how to get help; this is purely an acquisition message and does not touch on support journey design.",
+      "reasoning": "There is no description of support journeys or instructions; the communication is just a promotional tagline.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -302,7 +302,7 @@
     },
     {
       "rule_id": "CS-06",
-      "reasoning": "The text does not mention cooperation with other firms or transfers/complaints, so this obligation is not engaged.",
+      "reasoning": "The communication does not mention cooperation with other firms or handling of third‑party requests.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -312,9 +312,9 @@
     },
     {
       "rule_id": "VU-01",
-      "reasoning": "The messaging assumes all recipients are in a position to ‘get rich’ quickly without recognising diverse needs or vulnerabilities; however, the rule is more about recognising vulnerability in design rather than banning generic hype. There is no explicit exclusion or shaming of vulnerable groups in the text itself.",
+      "reasoning": "The tone implies that getting rich quickly via an app is normal and desirable, which could mislead customers including those with vulnerabilities; however, the specific obligation here is about considering diverse needs in design/communication. The very short generic slogan does not show explicit disregard for vulnerable characteristics beyond generic misrepresentation already captured under higher‑level rules.",
       "evidence": null,
-      "verdict": "compliant",
+      "verdict": "not_applicable",
       "fact_to_verify": null,
       "severity": "medium",
       "principle": "Firms must consider the diverse needs and characteristics (including characteristics of vulnerability) of customers in their target market when designing and communicating about products and services.",
@@ -322,7 +322,7 @@
     },
     {
       "rule_id": "VU-02",
-      "reasoning": "The message is not directed at customers in financial difficulty or similar vulnerable circumstances, nor does it discuss handling such situations, so signposting to independent support is not in scope.",
+      "reasoning": "The message is not directed at customers in financial difficulty or exclusion, nor does it discuss dealing with arrears or hardship; it is generic promotional text.",
       "evidence": null,
       "verdict": "not_applicable",
       "fact_to_verify": null,
@@ -332,7 +332,7 @@
     },
     {
       "rule_id": "FM-01",
-      "reasoning": "As a financial promotion, this clearly fails Consumer Duty standards: it omits key risk warnings and makes a highly misleading performance claim about getting rich tomorrow just by installing the app, with no caveats or substantiation.",
+      "reasoning": "As a financial promotion/advert for a trading/investment app, this must meet Consumer Duty standards. The unqualified ‘get rich tomorrow’ claim is a non‑substantiated, highly misleading performance promise, so the promotion fails to comply with clarity, fairness and non‑misleading requirements.",
       "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
       "verdict": "non_compliant",
       "fact_to_verify": null,

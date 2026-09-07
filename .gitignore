@@ -12,3 +12,5 @@ eToro - BizOps AI Task (1).pdf
 .DS_Store
 
 .temp
+# eval scratch reports
+data/checker-eval-reports/

@@ -211,3 +211,15 @@ a smoke-test fixture that honest judges can disagree about tests nothing.
   compliant/non_compliant enum), and `rules.json` is committed exactly as the model produced
   it — no hand-editing, so reviewers see true extraction quality. Amusingly, the independently
   produced golden set made the *identical* polarity slip on the same foreseeable-harm rule.
+
+**D16 — Checker eval (24-case golden set): 11/24 → 20/24 → 18/24 hard; bands stable 21/24.**
+Full story in evaluations/checker-eval-results.md. Three lessons worth keeping:
+(1) *Audit the harness before the model* — run 1's dominant failure was our evidence verifier
+rejecting honest multi-fragment quotes (fixed: per-fragment verification).
+(2) *Presumed accurate ≠ presumed acceptable* — the product-terms carve-out (D15) got
+stretched by the judge to bless openly-disclosed-but-harmful terms (exit fees, postal-only
+closure); every carve-out handed to an LLM judge must state its own limit.
+(3) *Know when to stop tuning* — residual gap = two contestable pins, one boundary case, and
+run-to-run variance on medium-severity presentation rules (bands never wobble; mediums do).
+Chasing 24/24 against one reviewer's pins is overfitting, not improvement. Future lever:
+self-consistency voting (N=3 majority) to stabilize mediums, at 3× cost.

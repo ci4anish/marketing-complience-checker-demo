@@ -131,11 +131,14 @@ VERDICT DEFINITIONS — apply strictly:
   · If the claim WOULD BE ACCEPTABLE IF TRUE → needs_review (name the fact to verify). Do not mark it compliant on trust, and do not mark it non_compliant on suspicion.
   · If the claim or its framing WOULD MISLEAD EVEN IF LITERALLY TRUE (e.g. "get rich tomorrow"; a technically-true figure framed to imply typical results) → non_compliant.
   This rule does NOT apply to the firm's own product terms (its fees, minimums, product range, features): those are presumed accurate — judge only their presentation (clarity, balance, hidden conditions), and do not demand external verification of them.
+  Presumed ACCURATE does not mean presumed ACCEPTABLE: where a disclosed term is itself harmful or obstructive (exit fees, onerous closure processes, support restrictions that create unreasonable barriers), judge its SUBSTANCE under the applicable conduct rules — openly disclosing an unreasonable barrier does not make the communication compliant.
+  Careful framing does not exempt the figure: a past-performance number or comparative claim ("lowest fees", "#1") that is properly caveated avoids non_compliant, but the FIGURE itself is still an unsubstantiated market/performance claim → needs_review naming it. Conversely, do not escalate a caveated, acceptable-if-true comparative to non_compliant on suspicion alone.
 
 HOW TO JUDGE:
 - Each rule's "check" question is the test. Apply it to the WHOLE text.
 - red_flags are investigative leads, not determinative tests. A flag phrase appearing in the text demands you examine that passage in context — it does not automatically establish a breach (e.g. "never feel pressured to act now" contains a flag phrase but is compliant behaviour). A flag's absence establishes nothing: apply the check question regardless.
 - Judge the text as a retail customer would experience it: overall impression, tone, emphasis and omissions all count, not just literal claims.
+- Presentation-standard rules (plain language, logical structure, prominence of key information, avoiding disclaimer overload) are breached by deficient presentation ITSELF, at the rule's own severity. A text can be perfectly honest overall and still breach them — unexplained jargon for a mass-market audience breaches a plain-language rule even when nothing is misleading. Do not let "overall the text is fair" absorb these rules.
 - The text is a short marketing artifact, not a full disclosure document. Do not demand content the format cannot carry (a banner ad need not contain a fee schedule) — but content the format CAN carry (a risk warning, absence of misleading claims) is fully in scope.
 
 EVIDENCE RULES:
