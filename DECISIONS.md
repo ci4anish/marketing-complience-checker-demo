@@ -62,4 +62,19 @@ point at whatever their org has enabled. Small BYOK courtesy, future-proofs the 
 
 - The FCA task PDF's own example ("get rich tomorrow 🚀") maps almost 1:1 onto PS22/9 Ch 8
   consumer-understanding obligations — the brief was clearly written with Consumer Duty in mind.
-- (log more here as they happen)
+- **The planner's first run marked 13/18 sections relevant** (Summary, price & value,
+  governance…). The fix wasn't more instructions — it was changing the relevance *test* from
+  "contains obligations" to "obligations checkable BY READING A MARKETING TEXT ALONE". One
+  sharpened criterion beat a list of exclusions; second run: 5/18, all defensible, and it
+  correctly refused to guess the unlisted appendix page range instead of hallucinating one.
+- In PS22/9 printed page numbers happen to equal PDF indices (rare luck); the `=== PDF PAGE n ===`
+  marker calibration still earns its keep on any document where they diverge.
+- PRIN 2A.5 (binding consumer-understanding rules) lives at PDF p.127–131 inside a 70-page
+  legal instrument the TOC doesn't paginate. Located via a content probe; added through an
+  explicit `cut --extra` operator override rather than faking planner output. Result: 27/31
+  extracted rules cite made-rules numbers (2A.5.3R…) instead of only chapter prose.
+- **One extraction defect kept deliberately:** CC-02's `check` has inverted polarity
+  ("Could a customer suffer harm…?" — YES = breach, against the prompt's YES = complies rule).
+  Downstream verdicts don't depend on polarity (the check stage returns an explicit
+  compliant/non_compliant enum), and `rules.json` is committed exactly as the model produced
+  it — no hand-editing, so reviewers see true extraction quality.

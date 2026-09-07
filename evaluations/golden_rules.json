@@ -1,0 +1,180 @@
+{
+  "source_document": "FCA PS22/9 — A new Consumer Duty (Feedback to CP21/36 and final rules), July 2022. Rules extracted from the narrative chapters (Ch 4 Consumer Principle, Ch 5 cross-cutting rules, Ch 8 consumer understanding outcome) and, authoritatively, from Appendix 1 'Made rules (legal instrument)' — the Consumer Duty Instrument 2022 (FCA 2022/31), Annex B: Principle 12 and PRIN 2A.",
+  "scope_note": "GOLDEN / REFERENCE SET, hand-curated by a human-in-the-loop review of the full document for use as an evaluation baseline against the automated `extract` pipeline. Scoped to obligations that are CHECKABLE AGAINST A PIECE OF MARKETING / CONSUMER-COMMUNICATION TEXT, which is the tool's purpose. In scope: the Consumer Principle (Principle 12), the three cross-cutting obligations (PRIN 2A.2), and the consumer understanding outcome (PRIN 2A.5). Each rule's binding source is the PRIN 2A legal instrument in Appendix 1 (the narrative chapters restate the same obligations in prose). DELIBERATELY SCOPED OUT because they govern firm processes/back-office conduct rather than the content of a marketing text, and cannot be evaluated against a static text sample: product governance & approval (PRIN 2A.3, Ch 6), price & value / fair-value assessment (PRIN 2A.4, Ch 7), consumer support / customer-service channels (PRIN 2A.6, Ch 9), firm-side testing & monitoring processes (PRIN 2A.5.10R-2A.5.13G, Ch 8 'Approach to testing'), redress/remediation after harm is identified (PRIN 2A.2.5R), distribution-chain information-passing and notification duties (PRIN 2A.5.14R-2A.5.15R), one-to-one interactive tailoring (PRIN 2A.5.9R), governance & accountability (Ch 13), and implementation timetable (Ch 12). A correct automated extraction should surface substantially the 13 rules below; extra rules from the scoped-out areas are not wrong, but missing any rule below (especially the high-severity ones) is a recall failure. Page references are PDF page indices (1-based) in regulations.pdf.",
+  "rules": [
+    {
+      "id": "CP-01",
+      "category": "consumer_principle",
+      "principle": "A firm must act to deliver good outcomes for retail customers (the Consumer Principle, Principle 12) — the overarching standard against which all marketing communications are judged.",
+      "check": "Taken as a whole, does the communication appear designed to help the customer reach a good outcome, rather than solely to drive a sale regardless of the customer's interests?",
+      "red_flags": [
+        "purely sales-driven framing with no genuine customer benefit",
+        "messaging that prioritises firm revenue over the customer's interests",
+        "content a prudent firm applying a 'good outcomes' standard would not publish"
+      ],
+      "source": "PRIN 2.1.1R (Principle 12); PS22/9 Ch.4 §4.6-4.7 (Appendix 1, Annex B, PDF p.104)",
+      "severity": "high"
+    },
+    {
+      "id": "CC-01",
+      "category": "cross_cutting",
+      "principle": "A firm must act in good faith towards retail customers — a standard of conduct characterised by honesty, fair and open dealing, and acting consistently with the reasonable expectations of retail customers.",
+      "check": "Is the communication honest and consistent with what a retail customer would reasonably expect, with no hidden catches, bait-and-switch, or material conditions concealed from the headline offer?",
+      "red_flags": [
+        "'free' / 'no fees' offers that carry undisclosed conditions or costs",
+        "headline offer contradicted by buried terms",
+        "bait-and-switch framing",
+        "claims that set an expectation the product cannot meet"
+      ],
+      "source": "PRIN 2A.2.1R, PRIN 2A.2.2R, PRIN 2A.2.3G; PS22/9 Ch.5 §5.5 (Appendix 1, Annex B, PDF p.108)",
+      "severity": "high"
+    },
+    {
+      "id": "CC-02",
+      "category": "cross_cutting",
+      "principle": "A firm must avoid causing foreseeable harm to retail customers; this covers all aspects of the design, terms, marketing, sale of and support for its products.",
+      "check": "Could this communication foreseeably lead a customer to a decision that harms them — for example, encouraging investment in a high-risk product without any counterbalancing information about downside?",
+      "red_flags": [
+        "promoting a high-risk or complex product as simple, safe, or suitable for everyone",
+        "encouraging over-commitment (e.g. 'invest everything', 'go all in')",
+        "downplaying or omitting the possibility of loss",
+        "urging fast action that forecloses considered decision-making"
+      ],
+      "source": "PRIN 2A.2.8R, PRIN 2A.2.9R, PRIN 2A.2.10G(1); PS22/9 Ch.5 §5.9-5.11 (Appendix 1, Annex B, PDF p.108-109)",
+      "severity": "high"
+    },
+    {
+      "id": "CC-03",
+      "category": "cross_cutting",
+      "principle": "A firm must enable and support retail customers to pursue their financial objectives, including by ensuring they have the information and support they need, when they need it, to make and act on informed decisions.",
+      "check": "Does the communication empower the customer to make a good, informed choice in their own interest — rather than merely generating demand while leaving them without what they need to decide?",
+      "red_flags": [
+        "hype or excitement with no substantive information to act on",
+        "no route to key facts (features, costs, risks, next steps)",
+        "content that frustrates rather than supports an informed decision"
+      ],
+      "source": "PRIN 2A.2.14R, PRIN 2A.2.20G(1)-(2); PS22/9 Ch.5 §5.12-5.14 (Appendix 1, Annex B, PDF p.109)",
+      "severity": "medium"
+    },
+    {
+      "id": "CC-04",
+      "category": "cross_cutting",
+      "principle": "A firm must not seek to manipulate or exploit retail customers' emotions, behavioural biases, or characteristics of vulnerability to mislead them or create demand for a product.",
+      "check": "Does the communication use pressure, urgency, greed, fear-of-missing-out, or other emotional/behavioural manipulation to push the customer towards a decision?",
+      "red_flags": [
+        "urgency signals: 'act now', 'limited time', 'don't miss out', countdown timers",
+        "excitement/greed signals: 'get rich', 'to the moon', rocket/money emojis 🚀💰",
+        "FOMO and social-proof pressure ('everyone is buying')",
+        "exploiting inexperience, financial difficulty, or other vulnerability"
+      ],
+      "source": "PRIN 2A.2.3G(b)-(c), PRIN 2A.2.10G(2); PS22/9 Ch.5 (Appendix 1, Annex B, PDF p.108, 109)",
+      "severity": "high"
+    },
+    {
+      "id": "CU-01",
+      "category": "consumer_understanding",
+      "principle": "A firm must communicate information to retail customers in a way which is clear, fair and not misleading — including not misleading by omission or by creating a false overall impression.",
+      "check": "Is every claim accurate, substantiated and balanced, such that the communication does not create a misleading impression (including through selective disclosure or omission)?",
+      "red_flags": [
+        "guaranteed / promised / 'risk-free' returns",
+        "unsubstantiated or exaggerated performance claims",
+        "selective use of favourable figures; cherry-picked past performance",
+        "absolute claims ('always', 'guaranteed', 'certain') without basis"
+      ],
+      "source": "PRIN 2A.5.3R(2); PS22/9 Ch.8 §8.1 (Appendix 1, Annex B, PDF p.126)",
+      "severity": "high"
+    },
+    {
+      "id": "CU-02",
+      "category": "consumer_understanding",
+      "principle": "A firm must support retail customer understanding so its communications meet customers' information needs, are likely to be understood by them, and equip them to make decisions that are effective, timely and properly informed.",
+      "check": "Does the communication give the information a retail customer actually needs — key features, benefits, costs and risks — in a way they are likely to understand, to make an informed decision?",
+      "red_flags": [
+        "vague marketing with no substantive product information",
+        "key features, costs, or risks absent",
+        "claims a customer cannot act on because the necessary detail is missing"
+      ],
+      "source": "PRIN 2A.5.3R(1); PS22/9 Ch.8 §8.1, §8.11 (Appendix 1, Annex B, PDF p.126)",
+      "severity": "high"
+    },
+    {
+      "id": "CU-03",
+      "category": "consumer_understanding",
+      "principle": "Where a communication promotes benefits or returns, the corresponding risks (including the risk of loss) must be presented fairly and with appropriate prominence so the overall impression is balanced.",
+      "check": "Are the risks — especially the risk of capital loss — presented alongside the benefits with adequate prominence (i.e. is there a proportionate risk warning where returns/benefits are promoted)?",
+      "red_flags": [
+        "returns or gains promoted with no mention of risk of loss",
+        "no risk warning on an investment / high-risk product promotion",
+        "benefits in the headline, risks absent or only in tiny print",
+        "'capital at risk' omitted entirely"
+      ],
+      "source": "PRIN 2A.5.3R(2); PS22/9 Ch.8 §8.11 (key features, benefits, costs and risks) (Appendix 1, Annex B, PDF p.126, 129-130)",
+      "severity": "high"
+    },
+    {
+      "id": "CU-04",
+      "category": "consumer_understanding",
+      "principle": "A firm should use plain and intelligible language, and where jargon or technical terms are unavoidable, explain their meaning as simply as possible.",
+      "check": "Is the language plain and intelligible for the intended audience, with any technical terms or jargon explained?",
+      "red_flags": [
+        "unexplained technical or industry jargon",
+        "dense legalese aimed at a mass-market audience",
+        "acronyms and product terms used without definition"
+      ],
+      "source": "PRIN 2A.5.7G(2); PS22/9 Ch.8 §8.10 (Appendix 1, Annex B, PDF p.130)",
+      "severity": "medium"
+    },
+    {
+      "id": "CU-05",
+      "category": "consumer_understanding",
+      "principle": "A firm should make key information prominent and easy to identify, and should avoid unnecessary disclaimers — material terms must not be buried or obscured.",
+      "check": "Is key information (costs, risks, material conditions) presented prominently, rather than hidden in fine print or drowned out by unnecessary disclaimers?",
+      "red_flags": [
+        "material terms or costs only in small print / footnotes / asterisks",
+        "important conditions buried away from the headline claim",
+        "excessive disclaimers used to obscure rather than clarify"
+      ],
+      "source": "PRIN 2A.5.7G(3)-(4) (Appendix 1, Annex B, PDF p.129)",
+      "severity": "medium"
+    },
+    {
+      "id": "CU-06",
+      "category": "consumer_understanding",
+      "principle": "A firm should provide information with an appropriate level of detail — enough to support an effective decision, but not so much that it overwhelms and prevents effective decision-making.",
+      "check": "Is the amount of information appropriate — sufficient to decide, without information overload that obscures what matters?",
+      "red_flags": [
+        "a bare headline claim with no supporting detail at all",
+        "information overload that buries the key points",
+        "wall of text with no signposting to what matters"
+      ],
+      "source": "PRIN 2A.5.7G(5) (Appendix 1, Annex B, PDF p.129)",
+      "severity": "low"
+    },
+    {
+      "id": "CU-07",
+      "category": "consumer_understanding",
+      "principle": "A firm must communicate in good time for retail customers to make effective decisions, including before the purchase of a product — information needed to decide must not be deferred until after the customer is pushed to commit.",
+      "check": "Does the communication give the customer the information they need in good time to review it before being prompted to commit, rather than rushing them to act first?",
+      "red_flags": [
+        "'sign up now' / 'buy first' with key information deferred",
+        "urgency that prevents the customer reviewing information before deciding",
+        "commitment demanded before material terms are disclosed"
+      ],
+      "source": "PRIN 2A.5.5R (Appendix 1, Annex B, PDF p.126)",
+      "severity": "medium"
+    },
+    {
+      "id": "CU-08",
+      "category": "consumer_understanding",
+      "principle": "A firm must tailor its communications to the intended audience, taking account of the characteristics of retail customers (including any characteristics of vulnerability), the complexity of the product, and the communication channel used.",
+      "check": "Is the communication pitched appropriately for the understanding of its intended audience — including more vulnerable or less financially capable customers — given the complexity of the product?",
+      "red_flags": [
+        "a complex or high-risk product marketed to a mass-market audience in over-simplified 'anyone can do this' terms",
+        "no allowance for customers with low financial literacy/numeracy",
+        "targeting audiences likely to include vulnerable customers without appropriate care"
+      ],
+      "source": "PRIN 2A.5.8R; PS22/9 Ch.8 §8.9-8.10 (Appendix 1, Annex B, PDF p.130)",
+      "severity": "medium"
+    }
+  ]
+}

@@ -32,6 +32,8 @@ export const Rule = z.object({
     "consumer_principle",
     "cross_cutting",
     "consumer_understanding",
+    "consumer_support",
+    "vulnerable_consumers",
   ]),
   principle: z.string().describe("The obligation, stated in one sentence"),
   check: z.string().describe("Concrete yes/no question to ask of a marketing text to test compliance"),
