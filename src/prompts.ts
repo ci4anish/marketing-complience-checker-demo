@@ -4,10 +4,14 @@
  * more than the framework you pick.")
  */
 
-/** The compliance goal every stage is scoped against. */
+/**
+ * The compliance goal every stage is scoped against. Deliberately names NO
+ * industry: the tool's fixed axis is "marketing/consumer communications";
+ * the DOMAIN flows from the regulation document itself (extraction) and from
+ * the ruleset + text under review (checking). See DECISIONS.md D17.
+ */
 export const TASK_INTENT =
-  "Auditing marketing materials and consumer communications of a retail " +
-  "trading/investment platform for compliance with this regulation.";
+  "Auditing marketing materials and consumer communications for compliance with this regulation.";
 
 // ---------------------------------------------------------------------------
 // Stage 1 — plan: read the front matter, decide which pages to extract from.
@@ -78,7 +82,7 @@ export function scannerUser(windowText: string): string {
 // Stage 3 — extract: decompose the subset into discrete, checkable rules.
 // ---------------------------------------------------------------------------
 
-export const EXTRACTOR_SYSTEM: string = `You are a senior compliance analyst turning a regulation into an executable rulebook. The rulebook will be used by a downstream reviewer (human or LLM) to audit MARKETING MATERIALS of a retail trading/investment platform, rule by rule.
+export const EXTRACTOR_SYSTEM: string = `You are a senior compliance analyst turning a regulation into an executable rulebook. The rulebook will be used by a downstream reviewer (human or LLM) to audit MARKETING MATERIALS and consumer communications governed by this regulation, rule by rule. Take the domain, audience, and vocabulary from the document itself — whatever industry it regulates is the industry the rulebook serves.
 
 You are given a curated subset of the regulation (chapter prose plus, where present, the binding "made rules" legal-instrument text). Extract every obligation that can be checked against a piece of marketing text on its own.
 
@@ -118,7 +122,7 @@ export function extractorUser(subset: string): string {
 // rule by rule.
 // ---------------------------------------------------------------------------
 
-export const CHECKER_SYSTEM: string = `You are a compliance officer reviewing a piece of MARKETING / CUSTOMER COMMUNICATION text from a retail trading/investment platform against an extracted regulatory rulebook.
+export const CHECKER_SYSTEM: string = `You are a compliance officer reviewing a piece of MARKETING / CUSTOMER COMMUNICATION text against an extracted regulatory rulebook. The rulebook defines the domain and audience — take them from it and from the text itself; do not assume an industry beyond what they establish.
 
 You are given the rulebook (JSON) and the text under review. Return EXACTLY ONE verdict per rule — every rule ID in the rulebook must appear exactly once in your verdicts.
 

@@ -223,3 +223,21 @@ closure); every carve-out handed to an LLM judge must state its own limit.
 run-to-run variance on medium-severity presentation rules (bands never wobble; mediums do).
 Chasing 24/24 against one reviewer's pins is overfitting, not improvement. Future lever:
 self-consistency voting (N=3 majority) to stabilize mediums, at 3× cost.
+
+**D17 — No industry in the prompts: the document is the domain authority.**
+Asked directly: do we need TASK_INTENT's "retail trading/investment platform", and the same
+detail in EXTRACTOR/CHECKER? No. The tool's fixed axis is "marketing/consumer communications"
+— that phrase is load-bearing in the scan relevance test and the extractor's check-question
+framing. The INDUSTRY is not: the regulation document defines its own domain (an FCA paper
+yields finance rules and finance red-flags because the text is about financial promotions —
+not because we announced a trading platform), the ruleset carries that domain into checking,
+and the text under review reveals its own subject. A hardcoded industry is redundant when it
+matches the document and distorting when it doesn't (e.g. a gambling ad code audited "for a
+trading platform"). Removed from all three prompts; TASK_INTENT is now purpose-only.
+rules.json NOT re-extracted after this change: for PS22/9 the output is equivalent (domain
+flowed from the document all along) and re-extraction would churn rule IDs, invalidating both
+eval pins for zero content benefit. The change matters for the NEXT document, not this one.
+Residual soft anchors, accepted: FCA-flavored example lists in the scanner's include/exclude
+classes and the extractor's few-shot — illustrations of general classes (conduct principles,
+process noise), left as-is to avoid re-tuning a validated prompt; noted for a future
+multi-domain test.
