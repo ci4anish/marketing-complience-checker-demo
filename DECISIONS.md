@@ -58,6 +58,41 @@ point at whatever their org has enabled. Small BYOK courtesy, future-proofs the 
 
 **D10 — Node 24, `type: module`, `tsx` runner.** No build step for a POC; `tsx` runs TS directly.
 
+**D11 — `scan` replaces TOC-only planning: every page passes in front of the LLM.**
+The TOC-only planner had a structural blind spot: it can only select sections the contents
+page lists, and PS22/9's TOC gives no page numbers for the 70-page legal-instrument appendix —
+which is where the binding rules live. Round 1 of the golden-set eval proved the cost: a
+high-severity recall miss, patched by a HUMAN locating pages and hardcoding `cut --extra`
+ranges. That patch violates the project requirement: page selection must be autonomous and
+recall is non-negotiable. Redesign: a `scan` stage sweeps ALL pages of the document in
+parallel windows and asks, per window, which pages contain obligations checkable against a
+marketing text. Guarantee by construction: every page is read by the LLM at least once —
+no human-chosen ranges, no invisible regions. The scan prompt is recall-biased ("when
+uncertain, include the page"): a false-positive page costs a few extraction tokens; a
+false-negative page costs a missing rule. Parallelization fits *here* (and not in extraction)
+because window outputs are page numbers — merging is a trivial set union with no dedup
+problem, unlike merging semantically-duplicated rules. `cut --extra` remains only as a
+documented escape hatch; the default flow no longer uses it.
+
+**D12 — Why scan and extract stay two separate LLM passes (not one).**
+Considered: since scan reads every page anyway, why not have it return the rules directly —
+one pass instead of two? Rejected, for three reasons:
+1. *Windowed extraction reintroduces rule-dedup.* The same obligation appears in chapter
+   prose and in the made rules — in different windows. Parallel window-extraction yields
+   semantic duplicates needing an LLM merge step and unstable IDs. Page-set union has no
+   such problem. (Same trade-off as D8, resurfacing in a new disguise.)
+2. *Extraction quality needs global context.* The single extract call sees prose + legal text
+   together, merges them into one rule with dual citations (e.g. "PRIN 2A.5.3R; PS22/9 Ch.8").
+   A window-local extractor cannot.
+3. *Iteration cost and auditability.* With stages split, re-running the extraction prompt
+   costs only the ~15-page subset, and `data/subset.md` remains the inspectable record of
+   exactly what the extractor saw — the artifact that let us root-cause the recall miss.
+   A single whole-document extraction call (no windows) would also work technically (~100k
+   tokens fits context) but pays full-document cost per iteration, reasons over ~70 pages of
+   consultation noise, and destroys that audit seam.
+Economic shape: scan = cheap classification over everything; extract = expensive reasoning
+over a small, clean input. Cheap eyes everywhere, expensive brain once.
+
 ## Surprises / notes during build
 
 - The FCA task PDF's own example ("get rich tomorrow 🚀") maps almost 1:1 onto PS22/9 Ch 8
@@ -73,6 +108,17 @@ point at whatever their org has enabled. Small BYOK courtesy, future-proofs the 
   legal instrument the TOC doesn't paginate. Located via a content probe; added through an
   explicit `cut --extra` operator override rather than faking planner output. Result: 27/31
   extracted rules cite made-rules numbers (2A.5.3R…) instead of only chapter prose.
+- **Scan iteration 1 over-included (139/161 pages).** Root cause: a self-contradictory
+  criterion — "legal-instrument rule text is relevant" as a blanket bullet meant pricing and
+  product-governance rules qualified just for being numbered. Fix: one uniform test ("checkable
+  by reading a marketing text") applied to every text form + "mentions communications ≠
+  relevant". Second pass: 78/161 with all golden-critical pages included autonomously.
+- **Extractor lost a parent obligation on the noisier autonomous subset (12/13):**
+  "avoid foreseeable harm" was absorbed by its own guidance examples (exploitation,
+  vulnerability rules) — an extraction miss, not a coverage miss. Fix: document-agnostic
+  COVERAGE FLOOR ("where the document enumerates named obligations, each becomes its own
+  rule; guidance never absorbs its parent") → 13/13. Lesson: LLM extractors drift toward
+  specifics; the floor pins the document's own structure.
 - **Eval-driven fix (see evaluations/extraction-eval.md):** scored the pipeline against an
   independently hand-curated golden ruleset. Round 1: 12/13 recall — the miss (no standalone
   "don't exploit emotions/behavioural biases" rule, i.e. the urgency/FOMO/🚀 rule) root-caused

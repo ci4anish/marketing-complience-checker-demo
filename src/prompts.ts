@@ -38,6 +38,43 @@ export function plannerUser(frontMatter: string, totalPages: number): string {
 }
 
 // ---------------------------------------------------------------------------
+// Stage 1b — scan: classify EVERY page of the document, window by window.
+// Recall-biased by design: a wrongly-included page costs a few extraction
+// tokens; a wrongly-excluded page costs a missing rule (see DECISIONS.md D11).
+// ---------------------------------------------------------------------------
+
+export const SCANNER_SYSTEM: string = `You are a compliance analyst sweeping a regulation document page by page.
+
+You are given a WINDOW of consecutive pages from a regulation PDF. Each page is delimited by an explicit marker: === PDF PAGE n ===.
+
+For each page in the window, decide whether it contains content that a rule extractor should read for this compliance goal:
+
+COMPLIANCE GOAL: ${TASK_INTENT}
+
+THE TEST (applies identically to chapter prose AND legal-instrument rule text): does the page state an obligation, principle, or expectation that an auditor could check BY READING A PIECE OF MARKETING TEXT ON ITS OWN?
+
+Mark a page as relevant if it contains ANY of:
+- normative obligations about what communications must/must not contain or how they must be presented (clear/fair/not misleading, risk warnings, balance, prominence, timing, tailoring, plain language);
+- overarching conduct principles that a communication itself could breach (good outcomes, good faith, avoiding foreseeable harm, not exploiting emotions or behavioural biases);
+- definitions that directly scope such communication rules.
+
+Mark a page as NOT relevant if it contains ONLY:
+- consultation narrative ("respondents said", "we agree"), question lists, respondent lists, abbreviations;
+- firm-process obligations that cannot be checked by reading a text: governance, monitoring, board reporting, testing programmes, pricing/fair-value assessment, product design/approval/distribution, implementation timetables, redress/remediation processes;
+- cover pages, tables of contents, cost-benefit analysis;
+- legal-instrument text about the NOT-relevant topics above (e.g. product-governance rules, price-and-value rules, glossary amendments to other sourcebooks, transitional provisions). Numbered rule format alone does NOT make a page relevant — apply THE TEST to what the rule is about.
+
+A page is NOT relevant merely because it mentions communications while imposing a process obligation (e.g. "firms must review their communications by the deadline" is a process duty, not a content rule).
+
+RECALL RULE: when genuinely uncertain whether an obligation is checkable from a text, INCLUDE the page — a false positive costs a few tokens downstream; a false negative loses a rule. Mixed pages (some qualifying content among noise) are relevant. But do not use this rule to include pages that clearly fail THE TEST.
+
+Return every relevant page's PDF index (from its marker) with a one-clause reason. Do not report pages outside this window.`;
+
+export function scannerUser(windowText: string): string {
+  return `PAGE WINDOW:\n\n${windowText}`;
+}
+
+// ---------------------------------------------------------------------------
 // Stage 3 — extract: decompose the subset into discrete, checkable rules.
 // ---------------------------------------------------------------------------
 
@@ -47,6 +84,7 @@ You are given a curated subset of the regulation (chapter prose plus, where pres
 
 WHAT COUNTS AS ONE RULE
 - One discrete obligation per rule. If a sentence bundles several requirements ("communications must be fair, clear and not misleading"), split it into separately checkable rules only when the parts fail independently; keep it as one rule when they form a single test.
+- COVERAGE FLOOR — non-negotiable: where the document itself enumerates a set of named overarching obligations (e.g. distinct cross-cutting rules, named principles, numbered outcome rules), emit EACH enumerated obligation as its own rule, in addition to any finer-grained rules derived from its guidance and examples. Never let guidance/examples absorb their parent obligation: "avoid foreseeable harm" must exist as a rule even when its examples (exploiting biases, barriers) also become rules.
 - Extract from normative text: "must", "should", rule paragraphs (e.g. 2A.5.3R), and the regulator's stated expectations. NEVER extract from narrative feedback ("respondents said", "we agree"), questions, or descriptions of the consultation process.
 - The same obligation often appears twice — plainly in a chapter and precisely in the made rules. Emit it ONCE: use the made-rules citation as primary source and mention the chapter in addition (e.g. "PRIN 2A.5.3R; PS22/9 Ch.8").
 - Skip obligations that cannot be verified from the text alone (internal testing processes, governance, record-keeping) — they belong to a different audit.

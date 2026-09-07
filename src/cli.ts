@@ -10,18 +10,37 @@ try {
 const USAGE = `Regulation Compliance Agent — pipeline stages as subcommands
 
 Usage:
-  npm run plan     [-- --pdf <file>] [--toc-pages <n>] [--out <file>]
-  npm run cut      [-- --pdf <file>] [--plan <file>] [--out <file>]
+  npm run scan     [-- --pdf <file>] [--window-size <n>] [--out <file>]
+  npm run plan     [-- --pdf <file>] [--toc-pages <n>] [--out <file>]   (optional: section titles/overview)
+  npm run cut      [-- --pdf <file>] [--scan <file>] [--out <file>]
   npm run extract  [-- --subset <file>] [--out <file>]
   npm run check    -- --input <file|-> [--rules <file>] [--out <file>]
 
-Defaults target the committed FCA PS22/9 artifacts under data/.
+Default flow: scan → cut → extract → check. Defaults target the committed
+FCA PS22/9 artifacts under data/.
 `;
 
 const [command] = process.argv.slice(2);
 const rest = process.argv.slice(3);
 
 switch (command) {
+  case "scan": {
+    const { values } = parseArgs({
+      args: rest,
+      options: {
+        pdf: { type: "string", default: "regulations.pdf" },
+        "window-size": { type: "string", default: "12" },
+        out: { type: "string", default: "data/scan.json" },
+      },
+    });
+    const { runScan } = await import("./commands/scan.js");
+    await runScan({
+      pdf: values.pdf,
+      windowSize: Number(values["window-size"]),
+      out: values.out,
+    });
+    break;
+  }
   case "plan": {
     const { values } = parseArgs({
       args: rest,
@@ -44,13 +63,13 @@ switch (command) {
       args: rest,
       options: {
         pdf: { type: "string", default: "regulations.pdf" },
-        plan: { type: "string", default: "data/extraction-plan.json" },
+        scan: { type: "string", default: "data/scan.json" },
         out: { type: "string", default: "data/subset.md" },
         extra: { type: "string", multiple: true, default: [] },
       },
     });
     const { runCut } = await import("./commands/cut.js");
-    await runCut({ pdf: values.pdf, plan: values.plan, out: values.out, extra: values.extra });
+    await runCut({ pdf: values.pdf, scan: values.scan, out: values.out, extra: values.extra });
     break;
   }
   case "extract": {

@@ -7,7 +7,8 @@
     "cut": "tsx src/cli.ts cut",
     "extract": "tsx src/cli.ts extract",
     "check": "tsx src/cli.ts check",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "scan": "tsx src/cli.ts scan"
   },
   "license": "ISC",
   "type": "module",

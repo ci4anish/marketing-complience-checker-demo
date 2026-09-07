@@ -84,9 +84,36 @@ phrasing), with three findings:
 3. Minor citation drift: golden places PRIN 2A.5.3R at "PDF p.126"; the 2A.5 text begins at
    p.127 (verified by content probe).
 
+## Round 3 — fully autonomous page selection (scan pipeline, no hardcoded ranges)
+
+Round 2's fix was a human hardcoding page ranges — rejected as a design (recall must not
+depend on an operator knowing the document). Replaced the TOC-only planner with the `scan`
+stage: every page of the PDF is classified by the LLM in parallel windows (DECISIONS.md
+D11/D12). Two iterations were needed:
+
+1. **Scan selectivity.** First scan marked 139/161 pages relevant — a criteria contradiction
+   (blanket "legal-instrument rule text is relevant" bullet) plus "mentions communications"
+   false positives. Fix: instrument text passes the same checkable-from-text test as prose;
+   mentioning communications inside a process obligation doesn't qualify. Second scan: 78/161,
+   with every golden-critical range selected autonomously — including PRIN 2A.2 pp.104–113,
+   the range a human had to hardcode in round 2.
+2. **Parent-obligation absorption.** First extract over the (noisier, 31k-word) autonomous
+   subset scored 12/13: "avoid foreseeable harm" disappeared as a standalone rule — its
+   guidance examples (exploiting biases, vulnerability) were extracted while the parent
+   obligation was absorbed, an extractor miss this time (the source pages WERE in the subset).
+   Fix: a document-agnostic COVERAGE FLOOR instruction — where the regulation enumerates
+   named overarching obligations, each must be emitted as its own rule; guidance never absorbs
+   its parent. Re-extract: **13/13**, with all three cross-cutting parents standalone.
+
+Final state: recall 13/13 against golden with zero human page selection. The two fixes
+generalize: (a) scan criteria must apply one uniform checkability test to all text forms;
+(b) extraction needs an explicit floor tied to the document's own enumerated structure.
+
 ## Takeaway
 
 The extractor itself is strong (92% recall on first sight of the text, 100% after the subset
-gap was closed; zero hallucinations; both rounds caught a real gap in the human-curated golden
-set). The dominant quality lever is **subset coverage** — which pages the LLM gets to see —
-not extraction prompting. That is where evaluation effort should go for new documents.
+gap was closed; zero hallucinations; the pipeline caught a real gap in the human-curated golden
+set). The two dominant quality levers, in order: **input coverage** (which pages the LLM sees —
+solved structurally by the scan stage's every-page guarantee, not by prompt wording) and
+**enumeration mirroring** (the coverage-floor instruction preventing guidance from absorbing
+parent obligations). Verdict-level prompt tuning mattered less than either.
