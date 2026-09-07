@@ -93,6 +93,15 @@ one pass instead of two? Rejected, for three reasons:
 Economic shape: scan = cheap classification over everything; extract = expensive reasoning
 over a small, clean input. Cheap eyes everywhere, expensive brain once.
 
+**D13 — No document-specific vocabulary in the schema.** The rule `category` was originally a
+hardcoded zod enum of PS22/9's five outcome names — the same disease as hardcoded page ranges,
+hiding in the type system. Now a free string: the extractor is instructed to mirror the
+document's OWN structure (principles/outcomes/chapter themes) and derive unique ID prefixes
+from its categories. Validation that this works: on PS22/9 the model re-derived essentially
+the same taxonomy unprompted, plus two organic categories the enum would have forbidden.
+General principle: the pipeline's *shape* is fixed (rule/check/red_flags/severity); its
+*vocabulary* belongs to the document.
+
 ## Surprises / notes during build
 
 - The FCA task PDF's own example ("get rich tomorrow 🚀") maps almost 1:1 onto PS22/9 Ch 8

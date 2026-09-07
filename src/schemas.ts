@@ -53,13 +53,11 @@ export type ScanResult = z.infer<typeof ScanResult>;
  */
 export const Rule = z.object({
   id: z.string().describe("Stable short ID, e.g. CU-01 (consumer understanding), CC-02 (cross-cutting)"),
-  category: z.enum([
-    "consumer_principle",
-    "cross_cutting",
-    "consumer_understanding",
-    "consumer_support",
-    "vulnerable_consumers",
-  ]),
+  category: z
+    .string()
+    .describe(
+      "Short snake_case label derived from the document's OWN structure (its principles, outcomes, or chapter themes) — not from a predefined list",
+    ),
   principle: z.string().describe("The obligation, stated in one sentence"),
   check: z.string().describe("Concrete yes/no question to ask of a marketing text to test compliance"),
   red_flags: z.array(z.string()).describe("Phrases/patterns in marketing text that typically indicate a breach"),

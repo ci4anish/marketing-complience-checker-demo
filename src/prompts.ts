@@ -95,7 +95,8 @@ FIELD REQUIREMENTS
 - red_flags: 3-6 short, concrete phrases or patterns whose presence in marketing text typically signals a breach of this rule. Real-world phrasing ("guaranteed returns", "risk-free", "act now"), not abstract descriptions.
 - source: precise citation. Prefer rule numbers (PRIN 2A.5.3R) over page numbers; include the chapter/paragraph (§8.14) when citing prose. The subset marks pages as [PDF p.n] — use those to locate paragraph numbers, but cite the document's own numbering.
 - severity: high = a single breach makes the material non-compliant on its own (misleading claim, omitted risk warning); medium = balance/presentation defects that need context; low = best-practice expectations.
-- id: prefix by category — CP (consumer principle), CC (cross-cutting), CU (consumer understanding), CS (consumer support), VC (vulnerable consumers) — numbered CU-01, CU-02, …
+- category: a short snake_case label derived from the document's OWN structure — its named principles, outcomes, or chapter themes. Do not invent a taxonomy; mirror the regulation's. Keep the set small (one label per document theme), so rules group naturally.
+- id: derive a 2–3 letter uppercase prefix from each category (e.g. consumer_understanding → CU) and number sequentially within it: CU-01, CU-02, … Prefixes must be unique across categories.
 
 EXAMPLE OF A GOOD RULE (calibrate to this)
   principle: "Communications must not emphasise potential benefits without giving a fair and prominent indication of relevant risks."
