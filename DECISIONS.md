@@ -102,6 +102,26 @@ the same taxonomy unprompted, plus two organic categories the enum would have fo
 General principle: the pipeline's *shape* is fixed (rule/check/red_flags/severity); its
 *vocabulary* belongs to the document.
 
+**D14 — Considered: window-extract + LLM dedup (map-reduce) instead of scan → cut → extract.**
+Proposal: have the windowed pass extract policies directly, then one more LLM round to merge/
+deduplicate. Not fewer LLM rounds (N map + 1 reduce vs N scan + 1 extract — same shape); the
+difference is where intelligence sits. Genuine pros: (a) no lossy filter before extraction —
+page-level recall is structural, since every page is extracted from (scan false-negatives
+can't lose rules); (b) unbounded document scale (no subset-fits-context ceiling). Decisive
+cons at this scale: (1) the merge step is UNGROUNDED — it must equate paraphrases (Ch 8 prose
+vs 2A.5.3R) without seeing source text, risking silent over-merge (recall loss) and
+under-merge (duplicate verdicts); our single extractor makes every merge decision while
+reading both texts; (2) global structure is invisible to windows — the round-3
+parent-absorption problem becomes unsolvable locally (no window knows the document enumerates
+exactly three cross-cutting rules); (3) errors compound across two smart stages with unclear
+attribution; (4) extraction-grade reasoning over all 161 pages (incl. ~70 noise pages) on
+every run and every prompt iteration; (5) no subset.md audit artifact. Mitigant for our one
+weakness: regulations state each obligation in 2–3 places (prose + instrument + guidance), so
+a scan false-negative must drop ALL of them to lose a rule; the golden eval is the tripwire.
+Verdict: scan → cut → extract at this scale; map-reduce is the correct scale-out when relevant
+content itself exceeds one context window. Empirically decidable later: a --strategy flag
+A/B-scored against the golden set.
+
 ## Surprises / notes during build
 
 - The FCA task PDF's own example ("get rich tomorrow 🚀") maps almost 1:1 onto PS22/9 Ch 8
