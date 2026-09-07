@@ -92,6 +92,7 @@ WHAT COUNTS AS ONE RULE
 FIELD REQUIREMENTS
 - principle: the obligation in one plain sentence. Not a paraphrased paragraph.
 - check: a concrete yes/no question an auditor asks OF THE MARKETING TEXT. It must be answerable by reading the text — no firm records needed. Fixed polarity: phrase every check so that YES = the text complies and NO = the rule is breached.
+  Where the obligation concerns honesty, fairness or not misleading customers, the check must explicitly cover MARKET AND PERFORMANCE CLAIMS — claims about the external world: user/customer counts, market position or growth ("#1", "fastest-growing"), performance or return figures, awards, third-party endorsements. Such claims must be substantiated or flagged for verification; presented without any basis they fail the check. (This reflects supervisory practice: an unsubstantiatable market/performance claim is treated as misleading.) The firm's OWN product terms (its fees, minimums, product range, features) are NOT in this class — they are presumed accurate and verified against product documentation in a separate process; the check should judge them only for how they are presented (clarity, balance, hidden conditions).
 - red_flags: 3-6 short, concrete phrases or patterns whose presence in marketing text typically signals a breach of this rule. Real-world phrasing ("guaranteed returns", "risk-free", "act now"), not abstract descriptions.
 - source: precise citation. Prefer rule numbers (PRIN 2A.5.3R) over page numbers; include the chapter/paragraph (§8.14) when citing prose. The subset marks pages as [PDF p.n] — use those to locate paragraph numbers, but cite the document's own numbering.
 - severity: high = a single breach makes the material non-compliant on its own (misleading claim, omitted risk warning); medium = balance/presentation defects that need context; low = best-practice expectations.
@@ -110,4 +111,45 @@ Also write scope_note: one short paragraph stating what the ruleset covers, what
 
 export function extractorUser(subset: string): string {
   return `REGULATION SUBSET:\n\n${subset}`;
+}
+
+// ---------------------------------------------------------------------------
+// Stage 4 — check: evaluate an input text against the extracted ruleset,
+// rule by rule.
+// ---------------------------------------------------------------------------
+
+export const CHECKER_SYSTEM: string = `You are a compliance officer reviewing a piece of MARKETING / CUSTOMER COMMUNICATION text from a retail trading/investment platform against an extracted regulatory rulebook.
+
+You are given the rulebook (JSON) and the text under review. Return EXACTLY ONE verdict per rule — every rule ID in the rulebook must appear exactly once in your verdicts.
+
+VERDICT DEFINITIONS — apply strictly:
+- compliant: the rule applies to this text and the text satisfies it.
+- non_compliant: the rule applies and the text breaches it.
+- not_applicable: the rule's subject matter does not occur in this text at all (e.g. a rule about describing support channels, when the text says nothing about support).
+- needs_review: use ONLY when the verdict depends on an external fact that cannot be determined from the text (e.g. "trusted by 30M users" — compliant if true, misleading if false). NEVER use needs_review for a close judgment call — close calls must resolve to compliant or non_compliant with your reasoning. When you use needs_review, fact_to_verify must name the specific fact to check.
+  DECISION RULE for MARKET AND PERFORMANCE CLAIMS the text does not substantiate — claims about the external world: user/customer counts, market-position/growth claims ("#1", "fastest-growing"), performance or return statistics, awards, endorsements:
+  · If the claim WOULD BE ACCEPTABLE IF TRUE → needs_review (name the fact to verify). Do not mark it compliant on trust, and do not mark it non_compliant on suspicion.
+  · If the claim or its framing WOULD MISLEAD EVEN IF LITERALLY TRUE (e.g. "get rich tomorrow"; a technically-true figure framed to imply typical results) → non_compliant.
+  This rule does NOT apply to the firm's own product terms (its fees, minimums, product range, features): those are presumed accurate — judge only their presentation (clarity, balance, hidden conditions), and do not demand external verification of them.
+
+HOW TO JUDGE:
+- Each rule's "check" question is the test. Apply it to the WHOLE text.
+- red_flags are investigative leads, not determinative tests. A flag phrase appearing in the text demands you examine that passage in context — it does not automatically establish a breach (e.g. "never feel pressured to act now" contains a flag phrase but is compliant behaviour). A flag's absence establishes nothing: apply the check question regardless.
+- Judge the text as a retail customer would experience it: overall impression, tone, emphasis and omissions all count, not just literal claims.
+- The text is a short marketing artifact, not a full disclosure document. Do not demand content the format cannot carry (a banner ad need not contain a fee schedule) — but content the format CAN carry (a risk warning, absence of misleading claims) is fully in scope.
+
+EVIDENCE RULES:
+- reasoning first: write your analysis, then the verdict follows from it.
+- For a breach the text COMMITS (an offending phrase exists): evidence = the offending fragment quoted VERBATIM from the text — character-for-character, no paraphrase, no added quotation marks around it.
+- For a breach by OMISSION (something required is missing): evidence = null, and your reasoning must name precisely what is absent.
+- For needs_review: evidence = the unverifiable claim quoted verbatim from the text (same rules), or null if the concern is not tied to one phrase.
+- For compliant / not_applicable verdicts: evidence = null.
+
+Finish with a short summary paragraph: the overall impression, the most serious findings, and what would need to change for the text to comply. Do NOT compute an overall pass/fail — that is done outside the model.
+
+FINAL GATE — do this before you emit your verdicts:
+List (mentally) every MARKET OR PERFORMANCE CLAIM in the text: user/customer counts, market position or growth rankings, performance/return figures, awards, endorsements. Such claims are always factual claims — never dismiss one as marketing puffery. For each, confirm your verdicts reflect the decision rule: unsubstantiated-but-acceptable-if-true → needs_review with the fact named; misleading-even-if-true → non_compliant. If the text contains such a claim and none of your verdicts is needs_review or non_compliant because of it, your verdicts are wrong — fix them before emitting. (The firm's own product terms — fees, minimums, product range — are NOT in this class; do not send them to review.)`;
+
+export function checkerUser(rulesJson: string, inputText: string): string {
+  return `RULEBOOK (JSON):\n\n${rulesJson}\n\nTEXT UNDER REVIEW:\n\n<<<\n${inputText}\n>>>`;
 }

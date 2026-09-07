@@ -85,8 +85,32 @@ switch (command) {
     break;
   }
   case "check": {
-    console.error("check: designed after rules.json review — see DECISIONS.md D4");
-    process.exit(1);
+    const { values } = parseArgs({
+      args: rest,
+      options: {
+        input: { type: "string" },
+        rules: { type: "string", default: "data/rules.json" },
+        out: { type: "string", default: "data/report.json" },
+      },
+    });
+    if (!values.input) {
+      console.error("check: --input <file|-> is required");
+      process.exit(2);
+    }
+    try {
+      const { runCheck } = await import("./commands/check.js");
+      const report = await runCheck({ input: values.input, rules: values.rules, out: values.out });
+      process.exitCode = report.band === "FAIL" ? 1 : 0; // CI-friendly (Q8)
+    } catch (err) {
+      console.error(`check: ${err instanceof Error ? err.message : err}`);
+      process.exit(2);
+    }
+    break;
+  }
+  case "check:fixtures": {
+    const { runCheckFixtures } = await import("./commands/check-fixtures.js");
+    const ok = await runCheckFixtures();
+    process.exitCode = ok ? 0 : 1;
     break;
   }
   default:

@@ -122,6 +122,56 @@ Verdict: scan → cut → extract at this scale; map-reduce is the correct scale
 content itself exceeds one context window. Empirically decidable later: a --strategy flag
 A/B-scored against the golden set.
 
+**D15 — Two eval sets, one per LLM stage: `evaluations/extraction-eval/` and `evaluations/checker-eval/`.**
+Extraction and checking are separate LLM stages with separate failure modes, so they get
+separate golden sets that compose: extraction-eval validates the *rulebook* (recall/precision
+vs an independent golden ruleset); checker-eval validates the *verdicts* made against it. The
+checker set is 14 realistic marketing artifacts (synthetic copy modelled on real FCA
+financial-promotion enforcement themes — crypto FOMO, guaranteed returns, vulnerability
+targeting, CFD leverage, bonus/urgency, profit testimonials, unverifiable awards, jargon,
+exit barriers, professional-product scope leakage, redress notices) engineered to cover, by
+construction, all three bands (FAIL/WARN/PASS), all four verdict types (non_compliant,
+needs_review, not_applicable, compliant) and all six extracted rule categories
+(CP/CC/CU/CS/FM/RM — the last three are untested by `tests/fixtures/`). Design choices that
+matter: (1) pin conservatively — hard-assert only `band` + `must_flag` (+ the existing
+evidence-verbatim check), keep `must_not_flag`/`expect_needs_review`/`expect_not_applicable`
+as softer diagnostics, because exact verdict partitions drift run-to-run (same reason
+`tests/fixtures/expected.json` pins bands not full verdicts); (2) deliberate false-positive
+guards — a present risk warning (case 04) and anti-pressure phrasing (cases 09/10) must NOT
+be flagged, catching keyword-matcher regressions; (3) one clean case per hard-to-test verdict
+— `needs_review` (case 07, verifiable-fact claims only) and mass `not_applicable` (case 11,
+an operational notice). `tests/fixtures/` remains the fast smoke test; this is the thorough
+graded set. Rule IDs are pinned to the committed `data/rules.json` and must be re-mapped if
+`extract` is re-run.
+
+**D15 — Check stage: design locked by grilling, then two lessons from fixture testing.**
+Design (agreed via Q&A): single call over all rules (category-batching as future escape
+hatch); verdicts compliant/non_compliant/not_applicable/needs_review with a strict
+needs_review definition (external facts only, named in fact_to_verify); deterministic
+PASS/WARN/FAIL band computed in code (any high breach = FAIL; no invented thresholds);
+nullable evidence (verbatim quote for commission breaches, null + named absence for
+omissions) with a CODE-side substring verification (evidence_verified); reasoning field
+precedes verdict in the schema so the verdict is conditioned on written analysis;
+completeness check (exactly one verdict per rule ID) as a hard error; digest terminal
+output + full report.json; CI exit codes.
+Lesson 1 — *the rulebook beats the referee.* The checker kept flip-flopping on "trusted by
+30M users" (compliant some runs, needs_review others) despite three rounds of checker-prompt
+strengthening. Root cause: no extracted rule mentioned substantiation — "clear, fair, not
+misleading" as written is satisfied by a plausibly-true claim, so the model was CORRECTLY
+applying the rule and ignoring our meta-instructions. Fix at the source: the extractor now
+encodes the substantiation duty (supervisory practice: unsubstantiatable market/performance
+claims are treated as misleading) into fairness-type checks. Verdicts stabilized immediately.
+Checker-level instruction patches lose to rule text — which is the architecture working as
+intended: fix the rulebook, not the referee.
+Lesson 2 — *the substantiation class needs a boundary.* First encoding sent EVERY factual
+claim to review — the compliant fixture WARNed over its own "$10 minimum" and "3,000 stocks".
+Line drawn: MARKET/PERFORMANCE claims (user counts, rankings, returns, awards — external-world
+facts) require substantiation; the firm's OWN PRODUCT TERMS (fees, minimums, range) are
+presumed accurate and judged on presentation only. Encoded consistently in extractor + checker.
+Also: fixtures must sit INSIDE their band, not on a boundary — the first borderline fixture
+stacked three superlatives and was legitimately bistable between WARN and FAIL across runs;
+a smoke-test fixture that honest judges can disagree about tests nothing.
+
 ## Surprises / notes during build
 
 - The FCA task PDF's own example ("get rich tomorrow 🚀") maps almost 1:1 onto PS22/9 Ch 8
@@ -148,7 +198,7 @@ A/B-scored against the golden set.
   COVERAGE FLOOR ("where the document enumerates named obligations, each becomes its own
   rule; guidance never absorbs its parent") → 13/13. Lesson: LLM extractors drift toward
   specifics; the floor pins the document's own structure.
-- **Eval-driven fix (see evaluations/extraction-eval.md):** scored the pipeline against an
+- **Eval-driven fix (see evaluations/extraction-eval/extraction-eval.md):** scored the pipeline against an
   independently hand-curated golden ruleset. Round 1: 12/13 recall — the miss (no standalone
   "don't exploit emotions/behavioural biases" rule, i.e. the urgency/FOMO/🚀 rule) root-caused
   to a subset gap: PRIN 2A.2 (pp.104–110) wasn't in the operator-added ranges. Widened the

@@ -1,0 +1,18 @@
+{
+  "_note": "Expectations pin BANDS and a few must-flag rule IDs, not all verdicts — full verdict-level goldens would be brittle against harmless model variation. Rule IDs are pinned to the committed data/rules.json; re-running extract may renumber them.",
+  "rocket.txt": {
+    "band": "FAIL",
+    "must_flag": ["CU-02", "CC-03"],
+    "why": "Misleading return promise ('get rich tomorrow') and emotional/excitement exploitation (🚀). No risk warning."
+  },
+  "borderline.txt": {
+    "band": "WARN",
+    "must_flag": [],
+    "why": "Clean, balanced promo (risk warning present, costs pointed to) with exactly one unverifiable promotional claim — the '30 million users' figure. Expect needs_review on it (acceptable if true, so neither compliant-on-trust nor non_compliant-on-suspicion). Earlier fixture versions stacked three superlatives and sat ON the WARN/FAIL boundary — bistable across runs; fixtures must sit inside a band, not on a line."
+  },
+  "compliant.txt": {
+    "band": "PASS",
+    "must_flag": [],
+    "why": "Balanced description, costs disclosed, prominent capital-at-risk warning, anti-pressure language. Note: contains the red-flag-adjacent phrase 'Take your time' — a keyword-matcher would misfire; a judge should not."
+  }
+}

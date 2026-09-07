@@ -1,0 +1,347 @@
+{
+  "band": "WARN",
+  "counts": {
+    "non_compliant_high": 0,
+    "non_compliant_medium": 0,
+    "non_compliant_low": 0,
+    "needs_review": 4,
+    "compliant": 16,
+    "not_applicable": 13
+  },
+  "summary": "The communication is concise, balanced and includes appropriate risk warnings and a clear indication that other costs apply, supporting informed decisions and good outcomes. The main regulatory sensitivity is the unsubstantiated market claim about being trusted by more than 30 million users worldwide, which must be factually supportable; this drives several needs_review verdicts. To strengthen compliance, the firm should ensure that user-number claim is robustly evidenced (or suitably qualified or removed), while retaining the existing clear risk and fee qualifiers.",
+  "verdicts": [
+    {
+      "rule_id": "CP-01",
+      "reasoning": "The message is balanced: it highlights access and zero commission but clearly discloses that investing involves risk and that capital is at risk. There is one market claim about being trusted by 30 million users, which would be acceptable if accurate but is not substantiated in the text, so it needs external verification rather than being presumed true or false.",
+      "evidence": "trusted by more than 30 million users worldwide.",
+      "verdict": "needs_review",
+      "fact_to_verify": "Whether NovaTrade in fact has more than 30 million users worldwide who use and trust the platform.",
+      "severity": "high",
+      "principle": "A firm must act to deliver good outcomes for retail customers in its retail market business communications.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CC-01",
+      "reasoning": "Benefits (wide access, zero commission) are presented alongside clear mention of other costs and risk warnings. There is no indication of hidden fees or contradictory small print. The user-number claim is factual in nature and must be evidence-based, which cannot be confirmed from the text alone and thus requires verification.",
+      "evidence": "trusted by more than 30 million users worldwide.",
+      "verdict": "needs_review",
+      "fact_to_verify": "Whether NovaTrade has more than 30 million users worldwide as claimed.",
+      "severity": "high",
+      "principle": "A firm must act in good faith towards retail customers in its communications, dealing honestly, fairly, openly and consistently with their reasonable expectations.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CC-02",
+      "reasoning": "Key elements—product scope, zero commission with a pointer to other costs, and clear risk statements—are straightforward and not obscured in favour of hype. The layout is simple and the downside risk is explicitly stated, so customers’ interests are reasonably taken into account.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must not design or present information in a way that fails to take account of retail customers’ interests.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CC-03",
+      "reasoning": "The text does not use emotional pressure, FOMO, social proof beyond a simple user-count reference, or deadlines. It is informational and includes a sober risk warning, not language that would create inappropriate demand.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must not seek to manipulate or exploit retail customers’ emotions or behavioural biases in a way that misleads or creates inappropriate demand for a product.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CC-04",
+      "reasoning": "There is no targeting of people in financial distress or other vulnerable circumstances, nor any suggestion that investing will solve money problems. The language is neutral and generic.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must avoid communications that take advantage of retail customers’ characteristics of vulnerability in a manner likely to cause detriment.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CC-05",
+      "reasoning": "The text does not encourage harmful behaviour, and it clearly states that investing involves risk and capital is at risk. There is no leverage, borrowing, or unrealistic reassurance about liquidity or safety.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must avoid causing foreseeable harm to retail customers through the design, terms, marketing, sale or support of their products.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CC-06",
+      "reasoning": "There is no evidence of exploiting behavioural biases through defaults, framing, or ‘only sensible choice’ claims. The communication is short and descriptive with balanced risk language.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must ensure that no aspect of their business, including marketing, unfairly exploits retail customers’ behavioural biases or vulnerabilities.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CC-07",
+      "reasoning": "The text briefly explains relevant features (range of instruments, zero commission with other fees) and includes core risk warnings, which helps customers relate the service to common investing objectives without implying it suits all goals or is effortless.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Firms must enable and support retail customers to pursue their financial objectives, including through information and support in communications.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CC-08",
+      "reasoning": "The message does not discuss declining or withdrawing products or accounts, so this subject matter is absent.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Where a firm declines to provide a particular product, it should, where appropriate, provide fair, clear and reliable signposting information to help the customer pursue their financial objectives.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-01",
+      "reasoning": "For a short promotional snippet, customers get key headline information: breadth of products, fee headline with reference to other costs on a pricing page, and direct risk warnings. This is appropriate for the early stage of a decision journey.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms’ communications must support and enable consumers to make informed decisions about financial products and services by providing the information they need, at the right time, in a way they can understand.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-02",
+      "reasoning": "Overall the wording is clear and not misleading. The main potential issue is the factual user-count and trust claim, which must be capable of substantiation; this cannot be validated from the text and therefore requires external review rather than being assumed accurate.",
+      "evidence": "trusted by more than 30 million users worldwide.",
+      "verdict": "needs_review",
+      "fact_to_verify": "Whether NovaTrade genuinely has more than 30 million users worldwide and can substantiate this figure.",
+      "severity": "high",
+      "principle": "All retail communications, including financial promotions and post‑sale materials, must be clear, fair and not misleading.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CU-03",
+      "reasoning": "The core risks (investment value can go down as well as up, capital at risk) and existence of other costs are explicitly mentioned, with signposting to detailed pricing. For a brief ad, that meets typical information needs at this stage.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Communications must meet the information needs of the retail customers they are intended for, taking account of the product’s target market or the firm’s customer base.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-04",
+      "reasoning": "The language is simple (stocks, ETFs, zero commission, other costs, pricing page, investing involves risk). No technical jargon appears beyond commonplace terms for retail investors. A typical retail audience can understand it without specialist knowledge.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Communications must be likely to be understood by the retail customers intended to receive them, taking account of customer characteristics and product complexity.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-05",
+      "reasoning": "Information is logically ordered: features, fees with qualifier, then risks. Risk statements are short and prominent enough in this small text block. No key conditions are hidden or obscured.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Communications should use plain and intelligible language, present information logically, and make key information prominent and easy to identify.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-06",
+      "reasoning": "The text is concise and free of excessive disclaimers. It includes only materially relevant caveats (other costs apply, investment risk), so there is no overload.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "low",
+      "principle": "Communications should avoid unnecessary disclaimers and avoid overloading consumers with excessive information that prevents effective decision‑making.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-07",
+      "reasoning": "As a pre-sale promotional communication, it provides essential information before commitment—there is no urging to transact immediately without seeing any risks or costs. Timing issues beyond this snippet are not implicated.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must communicate information on a timely basis, including before purchase and at suitable points throughout the product lifecycle, so that customers can make effective decisions.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-08",
+      "reasoning": "The format appears to be a persistent text block (e.g. web or app copy); there is no indication of transient or obstructive presentation like fleeting pop-ups, so the channel as implied supports reviewing the information.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "The communication channel chosen must support effective decision‑making by enabling customers to receive, review and, where relevant, assess information and options.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-09",
+      "reasoning": "The message is pitched at a generic retail investing audience with appropriate simplicity and clear risk caveats. There is no sign of advice-like wording or neglect of foreseeable vulnerabilities in this short, neutral text.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Firms must tailor communications to the characteristics of their retail customers, including characteristics of vulnerability, the complexity of the product, the channels used, and the firm’s role.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-10",
+      "reasoning": "This is generic marketing copy, not a one-to-one scripted interaction; there is no individual tailoring or dialogue context, so the rule’s scenario does not apply.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "When interacting one‑to‑one, firms must tailor communications to the individual and ask whether the customer understands key information and has further questions.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-11",
+      "reasoning": "There is no reference to prior confusion or testing, but also no signs of wording known to cause misunderstanding (e.g. unqualified “free”). Zero commission is immediately qualified by mention of other costs. Nothing suggests continued use of problematic language.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Where appropriate, firms must test communications in advance and monitor their impact, then adapt communications, products or processes where they are not supporting good outcomes.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-12",
+      "reasoning": "The text does not mention other firms’ communications or distribution chains, so this obligation is not engaged.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "low",
+      "principle": "If a firm becomes aware that another firm’s communication in its distribution chain is not delivering good outcomes, it must notify that firm.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-13",
+      "reasoning": "There is no reference to missing information from other firms or to distribution-chain issues; it simply describes NovaTrade’s own service.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Firms in a distribution chain must provide information in good time to other firms where reasonably required so that it can be communicated to retail customers.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-14",
+      "reasoning": "The products (stocks and ETFs through a retail-style platform) are not described as professional-only instruments, and there is no indication that the promotion is for non-retail instruments, so this rule does not apply.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "For financial instruments intended only for professional or eligible counterparty investors, marketing materials must prominently and clearly state that the instrument is not intended for retail customers and is offered only to eligible investors.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-15",
+      "reasoning": "The communication is clearly aimed at retail users and does not claim the product is limited to professional or non-retail clients, so the exemption context in this rule is not in scope.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Activities carried out only in relation to non‑retail financial instruments or products only marketed and approved for distribution to non‑retail customers are outside the Consumer Duty, provided communications and distribution are in fact restricted as described.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CS-01",
+      "reasoning": "Customer support processes or barriers are not described; there is no mention of how to contact the firm, make changes, or complain, so this rule’s subject matter is absent from the text.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must design and deliver customer support so that customers can use their product as reasonably anticipated and are not subject to unreasonable barriers when making enquiries, changing or cancelling products, claiming benefits or complaining.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CS-02",
+      "reasoning": "The snippet does not describe an in-app or web journey flow, confirmations, or friction steps—only static marketing claims—so there is nothing to assess regarding journey friction or speed into high-risk decisions.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Customer journeys must include appropriate friction where necessary to mitigate the risk of harm and give customers time to understand and assess their options, including risks.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CS-03",
+      "reasoning": "Support channels or their limitations are not mentioned at all, so the requirement to disclose channel restrictions before sale is not triggered by this particular communication.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must ensure that where products offer support mainly or only through one channel (such as digital‑only), this limitation is clearly communicated before sale so consumers can assess whether the product meets their needs.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CS-04",
+      "reasoning": "There is no content about support channels or willingness to adjust communications for vulnerabilities; the text focuses solely on product features, pricing headline, and risks.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must be able to provide support through different or adapted channels to meet the needs of customers with characteristics of vulnerability, and communications should not indicate refusal to make reasonable adjustments.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CS-05",
+      "reasoning": "Support journeys are not discussed or depicted; only product access and costs/risks are mentioned, so this rule’s topic does not arise.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Support channels and journeys, especially digital ones, must be clear and not confusing so that customers can realise the benefits of their product and act in their interests without unreasonable barriers.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CS-06",
+      "reasoning": "No cooperation with other firms or handling of third-party requests is referenced, so there is nothing to assess under this rule.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Firms must deal with reasonable requests from other firms effectively and in good time so those firms can support retail customers, and communications must not misrepresent such cooperation.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "VU-01",
+      "reasoning": "The language is neutral and non-exclusionary, with clear risk warnings that are relevant to all investors, including potentially vulnerable ones. It does not shame or belittle those who might struggle, though it also does not explicitly address diverse needs; for a short generic ad, this is acceptable.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Firms must consider the diverse needs and characteristics (including characteristics of vulnerability) of customers in their target market when designing and communicating about products and services.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "VU-02",
+      "reasoning": "The communication is generic investing promotion and does not address consumers in financial difficulty or other vulnerable circumstances. There is no indication that it is a collections or arrears context where signposting to independent help would be expected.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Firms’ communications should, where appropriate, signpost consumers in vulnerable circumstances to independent and reliable third‑party information or support when this can help them pursue their financial objectives.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "FM-01",
+      "reasoning": "This is plainly a financial promotion for a retail trading platform. It includes core risk warnings, avoids exaggerated performance claims, and qualifies the ‘zero commission’ statement by noting other costs and pointing to a pricing page. The only factual market claim requiring substantiation is user count, which needs external verification rather than being accepted or rejected here.",
+      "evidence": "trusted by more than 30 million users worldwide.",
+      "verdict": "needs_review",
+      "fact_to_verify": "Whether NovaTrade can substantiate that it is trusted by more than 30 million users worldwide.",
+      "severity": "high",
+      "principle": "Principle 12 and PRIN 2A communications standards apply to financial promotions and other retail communications relating to retail market business.",
+      "evidence_verified": true
+    }
+  ],
+  "input_text": "NovaTrade gives you access to over 3,000 stocks and ETFs from a single account,\nand is trusted by more than 30 million users worldwide.\n\nZero commission on US stocks — other costs, including currency conversion fees,\napply and are listed on our pricing page.\n\nInvesting involves risk. The value of your investments can go down as well as up.\nCapital at risk.",
+  "rules_file": "data/rules.json",
+  "model": "gpt-5.1"
+}

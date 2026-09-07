@@ -8,7 +8,8 @@
     "extract": "tsx src/cli.ts extract",
     "check": "tsx src/cli.ts check",
     "typecheck": "tsc --noEmit",
-    "scan": "tsx src/cli.ts scan"
+    "scan": "tsx src/cli.ts scan",
+    "check:fixtures": "tsx src/cli.ts check:fixtures"
   },
   "license": "ISC",
   "type": "module",

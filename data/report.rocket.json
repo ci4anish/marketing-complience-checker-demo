@@ -1,0 +1,347 @@
+{
+  "band": "FAIL",
+  "counts": {
+    "non_compliant_high": 11,
+    "non_compliant_medium": 4,
+    "non_compliant_low": 0,
+    "needs_review": 0,
+    "compliant": 2,
+    "not_applicable": 16
+  },
+  "summary": "The communication is a single, highly misleading hype line promising customers they will “get rich tomorrow” simply by installing a trading/investment app. It lacks any explanation of the product, risks, or limitations, and exploits behavioural biases with an unrealistic, near‑guaranteed‑style wealth claim. Multiple high‑severity rules on good outcomes, fairness, non‑misleading promotions, and risk disclosure are breached. To comply, the firm would need to remove the instant‑riches claim, add clear and prominent risk warnings, and provide at least basic, balanced information about what the app does and the uncertainty of investment outcomes before urging installation.",
+  "verdicts": [
+    {
+      "rule_id": "CP-01",
+      "reasoning": "The slogan promises rapid wealth (“get rich tomorrow”) with no risk, effort, or caveats, which would predictably lead to poor outcomes by encouraging unrealistic expectations and potentially harmful behaviour. This is a misleading performance claim that would be problematic even if some users did profit, because it implies near‑certain, immediate riches.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "A firm must act to deliver good outcomes for retail customers in its retail market business communications.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CC-01",
+      "reasoning": "The message is not honest or fair: it creates the expectation that simply installing the app will make the customer rich by tomorrow, with no mention of risk, uncertainty, or effort. A reasonable customer could be misled about what the product can deliver.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "A firm must act in good faith towards retail customers in its communications, dealing honestly, fairly, openly and consistently with their reasonable expectations.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CC-02",
+      "reasoning": "The information is presented in an extremely one‑sided way, focusing solely on instant wealth and omitting any risks or limitations. This fails to take account of customers’ interests because it obscures the speculative and risky nature of trading/investing behind a ‘get rich’ promise.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must not design or present information in a way that fails to take account of retail customers’ interests.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CC-03",
+      "reasoning": "The communication clearly exploits behavioural biases such as overconfidence and fear of missing out by promising immediate riches and using rocket emojis to signal explosive gains, likely creating inappropriate demand for a risky product.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must not seek to manipulate or exploit retail customers’ emotions or behavioural biases in a way that misleads or creates inappropriate demand for a product.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CC-04",
+      "reasoning": "While the message is problematic, it does not specifically reference or target known vulnerable circumstances (e.g. debt, hardship, illness); it is a generic hype statement. There is no explicit exploitation of identified vulnerabilities in the text itself.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must avoid communications that take advantage of retail customers’ characteristics of vulnerability in a manner likely to cause detriment.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CC-05",
+      "reasoning": "By suggesting users will “get rich tomorrow” just by installing the app, the promotion encourages impulsive use of a presumably high‑risk product without any mention of risks or that capital can be lost, which creates a foreseeable risk of financial harm.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must avoid causing foreseeable harm to retail customers through the design, terms, marketing, sale or support of their products.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CC-06",
+      "reasoning": "The message leverages behavioural biases (excitement, overconfidence, instant‑gratification framing) and presents installing the app as an obvious route to quick riches, steering customers into decisions they might not make if information were neutrally and clearly presented.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must ensure that no aspect of their business, including marketing, unfairly exploits retail customers’ behavioural biases or vulnerabilities.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CC-07",
+      "reasoning": "The communication does not explain how the product relates to any financial objectives, nor does it mention risks, suitability, or limitations; it simply promises instant wealth. It therefore does not support customers in pursuing realistic financial objectives.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Firms must enable and support retail customers to pursue their financial objectives, including through information and support in communications.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CC-08",
+      "reasoning": "The text is not about declining or withdrawing a product; it is a simple acquisition promotion.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Where a firm declines to provide a particular product, it should, where appropriate, provide fair, clear and reliable signposting information to help the customer pursue their financial objectives.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-01",
+      "reasoning": "The message provides no meaningful information about the product’s nature, risks, or costs. It is impossible for a customer to make an informed decision from this; instead, it is pure hype around getting rich quickly.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms’ communications must support and enable consumers to make informed decisions about financial products and services by providing the information they need, at the right time, in a way they can understand.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CU-02",
+      "reasoning": "The overall communication is misleading: it asserts that installing the app will make the user rich by tomorrow, which is an unqualified and unrealistic performance claim without any context or basis.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "All retail communications, including financial promotions and post‑sale materials, must be clear, fair and not misleading.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CU-03",
+      "reasoning": "Key information that customers would reasonably need—risks of loss, that returns are uncertain, fees or costs, eligibility—is entirely absent, while a guaranteed‑style benefit is suggested. This fails to meet information needs.",
+      "evidence": null,
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Communications must meet the information needs of the retail customers they are intended for, taking account of the product’s target market or the firm’s customer base.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-04",
+      "reasoning": "The language is simple, but it is simplistically misleading rather than explanatory. It does not attempt to explain the product at all, so typical customers cannot understand what is being offered in a meaningful way.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Communications must be likely to be understood by the retail customers intended to receive them, taking account of customer characteristics and product complexity.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CU-05",
+      "reasoning": "Key information such as risks and conditions is not made prominent or explained; instead, only a bold promise is given. This fails the requirement to make key information easy to identify and use plain, informative language.",
+      "evidence": null,
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Communications should use plain and intelligible language, present information logically, and make key information prominent and easy to identify.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-06",
+      "reasoning": "The issue here is not overload or excessive disclaimers; the text is extremely brief and not cluttered. It therefore does not breach this rule on information overload or unnecessary disclaimers.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "low",
+      "principle": "Communications should avoid unnecessary disclaimers and avoid overloading consumers with excessive information that prevents effective decision‑making.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-07",
+      "reasoning": "The communication pushes immediate installation (“Install our app”) without providing any essential pre‑commitment information (features, risks, costs). This encourages action before the customer has the information needed for a decision.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must communicate information on a timely basis, including before purchase and at suitable points throughout the product lifecycle, so that customers can make effective decisions.",
+      "evidence_verified": true
+    },
+    {
+      "rule_id": "CU-08",
+      "reasoning": "The text snippet does not indicate channel design aspects like persistence or ability to review; it could appear in various formats, but nothing in the wording itself breaches or addresses this requirement.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "The communication channel chosen must support effective decision‑making by enabling customers to receive, review and, where relevant, assess information and options.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-09",
+      "reasoning": "The message is a one‑size‑fits‑all hype line with no tailoring to audience capabilities or product complexity. For a likely mass‑market, high‑risk trading app, this is insufficient and misleading because it ignores the need for more nuanced explanation and risk framing.",
+      "evidence": null,
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Firms must tailor communications to the characteristics of their retail customers, including characteristics of vulnerability, the complexity of the product, the channels used, and the firm’s role.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-10",
+      "reasoning": "This is not a one‑to‑one scripted interaction; it is a generic promotional slogan, so obligations about checking individual understanding do not apply.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "When interacting one‑to‑one, firms must tailor communications to the individual and ask whether the customer understands key information and has further questions.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-11",
+      "reasoning": "There is no reference to testing or past confusion, and no obvious pattern like re‑used contested wording; the rule on testing/monitoring cannot be assessed from this brief slogan alone.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Where appropriate, firms must test communications in advance and monitor their impact, then adapt communications, products or processes where they are not supporting good outcomes.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-12",
+      "reasoning": "The text does not refer to other firms’ communications or any distribution chain issues.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "low",
+      "principle": "If a firm becomes aware that another firm’s communication in its distribution chain is not delivering good outcomes, it must notify that firm.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-13",
+      "reasoning": "There is no reference to missing information from other firms or distribution‑chain cooperation; the rule is not engaged.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Firms in a distribution chain must provide information in good time to other firms where reasonably required so that it can be communicated to retail customers.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-14",
+      "reasoning": "The communication does not indicate that the product is professional‑only or relate to non‑retail instruments.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "For financial instruments intended only for professional or eligible counterparty investors, marketing materials must prominently and clearly state that the instrument is not intended for retail customers and is offered only to eligible investors.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CU-15",
+      "reasoning": "There is no suggestion that the product is limited to professional or non‑retail clients, so the carve‑out for non‑retail products is not in scope here.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Activities carried out only in relation to non‑retail financial instruments or products only marketed and approved for distribution to non‑retail customers are outside the Consumer Duty, provided communications and distribution are in fact restricted as described.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CS-01",
+      "reasoning": "The text does not describe customer support channels, processes, or barriers; it is solely a promotional tagline for acquisition.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must design and deliver customer support so that customers can use their product as reasonably anticipated and are not subject to unreasonable barriers when making enquiries, changing or cancelling products, claiming benefits or complaining.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CS-02",
+      "reasoning": "Although the tagline encourages quick action, it does not describe the in‑app journey or specific absence of friction such as one‑tap activation of high‑risk features. The rule about journey friction cannot be directly assessed from this wording alone.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Customer journeys must include appropriate friction where necessary to mitigate the risk of harm and give customers time to understand and assess their options, including risks.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CS-03",
+      "reasoning": "No information is given about support channels or their limitations, so the specific duty to disclose channel limitations is not triggered by this snippet alone.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must ensure that where products offer support mainly or only through one channel (such as digital‑only), this limitation is clearly communicated before sale so consumers can assess whether the product meets their needs.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CS-04",
+      "reasoning": "The communication says nothing about support channels or adjustments for vulnerable customers, so this rule is not engaged.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Firms must be able to provide support through different or adapted channels to meet the needs of customers with characteristics of vulnerability, and communications should not indicate refusal to make reasonable adjustments.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CS-05",
+      "reasoning": "There is no description of support journeys or how to get help; this is purely an acquisition message and does not touch on support journey design.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Support channels and journeys, especially digital ones, must be clear and not confusing so that customers can realise the benefits of their product and act in their interests without unreasonable barriers.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "CS-06",
+      "reasoning": "The text does not mention cooperation with other firms or transfers/complaints, so this obligation is not engaged.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Firms must deal with reasonable requests from other firms effectively and in good time so those firms can support retail customers, and communications must not misrepresent such cooperation.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "VU-01",
+      "reasoning": "The messaging assumes all recipients are in a position to ‘get rich’ quickly without recognising diverse needs or vulnerabilities; however, the rule is more about recognising vulnerability in design rather than banning generic hype. There is no explicit exclusion or shaming of vulnerable groups in the text itself.",
+      "evidence": null,
+      "verdict": "compliant",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Firms must consider the diverse needs and characteristics (including characteristics of vulnerability) of customers in their target market when designing and communicating about products and services.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "VU-02",
+      "reasoning": "The message is not directed at customers in financial difficulty or similar vulnerable circumstances, nor does it discuss handling such situations, so signposting to independent support is not in scope.",
+      "evidence": null,
+      "verdict": "not_applicable",
+      "fact_to_verify": null,
+      "severity": "medium",
+      "principle": "Firms’ communications should, where appropriate, signpost consumers in vulnerable circumstances to independent and reliable third‑party information or support when this can help them pursue their financial objectives.",
+      "evidence_verified": null
+    },
+    {
+      "rule_id": "FM-01",
+      "reasoning": "As a financial promotion, this clearly fails Consumer Duty standards: it omits key risk warnings and makes a highly misleading performance claim about getting rich tomorrow just by installing the app, with no caveats or substantiation.",
+      "evidence": "Install our app and get rich tomorrow 🚀🚀🚀",
+      "verdict": "non_compliant",
+      "fact_to_verify": null,
+      "severity": "high",
+      "principle": "Principle 12 and PRIN 2A communications standards apply to financial promotions and other retail communications relating to retail market business.",
+      "evidence_verified": true
+    }
+  ],
+  "input_text": "Install our app and get rich tomorrow 🚀🚀🚀",
+  "rules_file": "data/rules.json",
+  "model": "gpt-5.1"
+}
