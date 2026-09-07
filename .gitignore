@@ -1,0 +1,12 @@
+# secrets
+.env
+
+# deps/build
+node_modules/
+dist/
+
+# confidential — do not publish
+eToro - BizOps AI Task (1).pdf
+
+# misc
+.DS_Store
