@@ -241,3 +241,25 @@ Residual soft anchors, accepted: FCA-flavored example lists in the scanner's inc
 classes and the extractor's few-shot — illustrations of general classes (conduct principles,
 process noise), left as-is to avoid re-tuning a validated prompt; noted for a future
 multi-domain test.
+
+**D18 — Soft anchors addressed: multi-domain scanner examples, annotated few-shot.**
+Follow-up to D17's audit. The scanner's include/exclude classes now carry cross-domain
+examples ("required warnings or disclosures (risk, health, age, data-use)", "fairness duties",
+"breach notification procedures") with an explicit instruction to match the CLASS, not the
+example vocabulary; the extractor's few-shot is labelled as FORM calibration from a
+financial-conduct regulation. Left alone on purpose: the checker/extractor calibration
+clauses (substantiation, presumed-accurate-≠-acceptable, presentation-rules — advertising
+universals) and the per-document eval sets (correct design: new document → new mini golden
+set; known follow-up: stable rule IDs keyed on source citation to eliminate re-pinning).
+Validation, full temp chain (live artifacts untouched): re-scan selected every golden-critical
+range (Ch4/Ch5/Ch8/P12+2A.2 complete; 2A.5 tail pages 130–131 dropped this run) → cut →
+extract scored 13/13 golden with substantiation intact — the dropped tail cost nothing
+because regulations state obligations redundantly (prose + instrument), the safety net D14
+identified. True multi-domain proof (a second, non-financial regulation end-to-end) remains
+the top "with more time" item.
+
+**D1 amendment — regulations.pdf moved out of the repo.** The source PDF now lives in
+gitignored `.temp/` (both PDFs; history no longer carries the 1.4MB file — leaner public
+repo). CLI defaults updated to `.temp/regulations.pdf`; the README must tell reviewers to
+download PS22/9 and drop it there (or pass --pdf). Committed pipeline artifacts
+(scan/subset/rules) keep the repo runnable for `check` without the PDF.

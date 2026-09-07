@@ -28,7 +28,7 @@ switch (command) {
     const { values } = parseArgs({
       args: rest,
       options: {
-        pdf: { type: "string", default: "regulations.pdf" },
+        pdf: { type: "string", default: ".temp/regulations.pdf" },
         "window-size": { type: "string", default: "12" },
         out: { type: "string", default: "data/scan.json" },
       },
@@ -45,7 +45,7 @@ switch (command) {
     const { values } = parseArgs({
       args: rest,
       options: {
-        pdf: { type: "string", default: "regulations.pdf" },
+        pdf: { type: "string", default: ".temp/regulations.pdf" },
         "toc-pages": { type: "string", default: "10" },
         out: { type: "string", default: "data/extraction-plan.json" },
       },
@@ -62,7 +62,7 @@ switch (command) {
     const { values } = parseArgs({
       args: rest,
       options: {
-        pdf: { type: "string", default: "regulations.pdf" },
+        pdf: { type: "string", default: ".temp/regulations.pdf" },
         scan: { type: "string", default: "data/scan.json" },
         out: { type: "string", default: "data/subset.md" },
         extra: { type: "string", multiple: true, default: [] },

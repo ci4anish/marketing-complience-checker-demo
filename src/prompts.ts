@@ -57,16 +57,16 @@ COMPLIANCE GOAL: ${TASK_INTENT}
 
 THE TEST (applies identically to chapter prose AND legal-instrument rule text): does the page state an obligation, principle, or expectation that an auditor could check BY READING A PIECE OF MARKETING TEXT ON ITS OWN?
 
-Mark a page as relevant if it contains ANY of:
-- normative obligations about what communications must/must not contain or how they must be presented (clear/fair/not misleading, risk warnings, balance, prominence, timing, tailoring, plain language);
-- overarching conduct principles that a communication itself could breach (good outcomes, good faith, avoiding foreseeable harm, not exploiting emotions or behavioural biases);
+Mark a page as relevant if it contains ANY of (examples span domains — match the CLASS, not the example vocabulary):
+- normative obligations about what communications must/must not contain or how they must be presented — e.g. clear/fair/not misleading, required warnings or disclosures (risk, health, age, data-use), balance, prominence, timing, tailoring, plain language, substantiation of claims;
+- overarching conduct principles that a communication itself could breach — e.g. good faith or fairness duties, avoiding foreseeable harm or detriment, not exploiting emotions, biases or vulnerable audiences, honesty/transparency principles;
 - definitions that directly scope such communication rules.
 
 Mark a page as NOT relevant if it contains ONLY:
-- consultation narrative ("respondents said", "we agree"), question lists, respondent lists, abbreviations;
-- firm-process obligations that cannot be checked by reading a text: governance, monitoring, board reporting, testing programmes, pricing/fair-value assessment, product design/approval/distribution, implementation timetables, redress/remediation processes;
-- cover pages, tables of contents, cost-benefit analysis;
-- legal-instrument text about the NOT-relevant topics above (e.g. product-governance rules, price-and-value rules, glossary amendments to other sourcebooks, transitional provisions). Numbered rule format alone does NOT make a page relevant — apply THE TEST to what the rule is about.
+- drafting/consultation narrative ("respondents said", "we agree", recital-style commentary), question lists, respondent lists, abbreviations;
+- organisation-process obligations that cannot be checked by reading a text: governance, monitoring, board reporting, testing programmes, pricing or value assessments, product design/approval/distribution, record-keeping, breach notification procedures, implementation timetables, redress/remediation processes;
+- cover pages, tables of contents, cost-benefit or impact analysis;
+- legal-instrument text about the NOT-relevant topics above (e.g. product-governance or pricing rules, glossary/consequential amendments to other instruments, transitional provisions). Numbered rule format alone does NOT make a page relevant — apply THE TEST to what the rule is about.
 
 A page is NOT relevant merely because it mentions communications while imposing a process obligation (e.g. "firms must review their communications by the deadline" is a process duty, not a content rule).
 
@@ -103,7 +103,7 @@ FIELD REQUIREMENTS
 - category: a short snake_case label derived from the document's OWN structure — its named principles, outcomes, or chapter themes. Do not invent a taxonomy; mirror the regulation's. Keep the set small (one label per document theme), so rules group naturally.
 - id: derive a 2–3 letter uppercase prefix from each category (e.g. consumer_understanding → CU) and number sequentially within it: CU-01, CU-02, … Prefixes must be unique across categories.
 
-EXAMPLE OF A GOOD RULE (calibrate to this)
+EXAMPLE OF A GOOD RULE (from a financial-conduct regulation — calibrate to its FORM: atomic principle, concrete check, pattern-level red flags. Your rules take their domain and vocabulary from THIS document, not from this example)
   principle: "Communications must not emphasise potential benefits without giving a fair and prominent indication of relevant risks."
   check: "Does the text present potential benefits (returns, gains, outcomes) together with an equally prominent indication of the relevant risks?"
   red_flags: ["profit claims with no risk statement", "risk warning only in small print or footnote", "upside examples with no downside example"]
