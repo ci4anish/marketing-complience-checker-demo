@@ -1158,6 +1158,298 @@ to, harm. We expect firms to consider this evidence and to assure
 themselves that their relevant conduct complies with FCA regulation
 and the Equality Act 2010.
 
+## Appendix 1 / Principle 12 and PRIN 2A.1–2A.2 cross-cutting obligations — made rules  (PDF p.104–110 — operator-added range)
+
+[PDF p.104]
+FCA 2022/31
+Page 12 of 68
+Annex B
+Amendments to the Principles for Businesses (PRIN)
+In this Annex, underlining indicates new text and striking through indicates deleted text,
+unless otherwise stated.
+1 Introduction
+…
+1.2 Clients and the Principles
+Characteristics of the client
+1.2.1 G Principles 6 (Customers’ interests), 7 (Communications with clients), 8
+(Conflicts of interest), 9 (Customers: relationships of trust) and, 10 (Clients’
+assets) and 12 (Consumer Duty) impose requirements on firms expressly in
+relation to their clients or customers. These requirements depend, in part, on
+the characteristics of the client or customer concerned. This is because what
+is “due regard” (in Principles 6 and 7), “fairly” (in Principles 6 and 8),
+“clear, fair and not misleading” (in Principle 7), “reasonable care”
+(in Principle 9), or “adequate” (in Principle 10) or “good outcomes” (in
+Principle 12) will, of course, depend on those characteristics. For example,
+the information needs of a general insurance broker will be different from
+those of a retail general insurance policyholder.
+…
+2 The Principles
+2.1 The Principles
+2.1.1 R The Principles
+…
+12 Consumer
+Duty
+A firm must act to deliver good outcomes for retail
+customers.
+Insert the following new chapter PRIN 2A, after PRIN 2 (The Principles). All of the text is
+new and is not underlined.
+2A The Consumer Duty
+2A.1 Application and purpose
+Application
+
+[PDF p.105]
+FCA 2022/31
+Page 13 of 68
+2A.1.1 R References in PRIN to the obligations on firms under Principle 12 include
+the obligations imposed by rules in PRIN 2A.
+2A.1.2 R References in PRIN to obligations imposed on firms under PRIN 2A include
+the obligation imposed by Principle 12.
+2A.1.3 G The application of Principle 12 is set out in PRIN 3, including PRIN 3.2.6R
+to PRIN 3.2.12G. Principle 12 only applies in relation to a firm’s retail
+market business. To the extent that Principle 12 applies, Principles 6 and 7
+do not apply.
+2A.1.4 G The definition of a product for the purposes of Principle 12 and PRIN 2A
+includes both products and services.
+2A.1.5 G The definition of a retail customer for the purposes of Principle 12 and
+PRIN 2A includes a prospective customer.
+2A.1.6 G The rules in Principle 12 and PRIN 2A are to be interpreted in accordance
+with the standard that could reasonably be expected of a prudent firm
+carrying on the same activity in relation to the same product and taking
+appropriate account of the needs and characteristics of retail customers as
+set out in PRIN 2A.7.1R. Further guidance about what can reasonably be
+expected and the needs and characteristics of retail customers is set out at
+PRIN 2A.7.2G to 2A.7.5G.
+2A.1.7 R References in this chapter (including those within Glossary definitions used
+in this chapter) to regulated activities include payment services and issuing
+electronic money (whether or not the activity of issuing electronic
+money specified in article 9B of the Regulated Activities Order); and unless
+otherwise stated are to be taken to include activities connected to the
+provision of payment services and to the issuing of electronic money
+(whether or not the activity of issuing electronic money specified in article
+9B of the Regulated Activities Order).
+Purpose
+2A.1.8 G Principle 12 reflects a general expectation by the FCA that firms should
+conduct their business to a standard which ensures an appropriate level of
+protection for retail customers.
+2A.1.9 G While recognising the general principle that consumers should take
+responsibility for their decisions, having regard to the other factors set out
+in s.1C of the Act, it is appropriate to require a high level of protection for
+retail customers for reasons including:
+(1) that they typically face a weak bargaining position in their
+relationships with firms;
+(2) that they are susceptible to cognitive and behavioural biases;
+
+[PDF p.106]
+FCA 2022/31
+Page 14 of 68
+(3) that they may lack experience or expertise in relation to products
+offered through retail market business; and
+(4) that there are frequently information asymmetries involved in retail
+market business.
+2A.1.10 G (1) The cross-cutting obligations at PRIN 2A.2 set out the overarching
+conduct which firms must demonstrate when they act to deliver good
+outcomes for retail customers.
+(2) The main elements of firms’ conduct obligations under Principle 12
+and PRIN 2A are set out in PRIN 2A.3 to PRIN 2A.11.
+(3) The retail customer outcome rules and guidance at PRIN 2A.3 to
+PRIN 2A.6 set out firms’ key obligations in relation to product
+governance, price and value, consumer understanding and supporting
+consumers.
+(4) There are particular provisions concerning closed products and
+existing products distributed to retail customers before 31 July 2023
+in PRIN 2A.3 and PRIN 2A.4.
+2A.1.11 G Principle 12 does not change the nature of a firm’s relationship with any
+given retail customer. In particular, it does not create a fiduciary
+relationship where one would not otherwise exist nor require a firm to
+provide advice or carry out any other regulated activity where it would not
+otherwise have done so.
+2A.1.12 G The FCA has issued guidance on the Consumer Duty in FG22/5, which
+firms should read alongside Principle 12 and PRIN 2A as a guide to the
+FCA’s view as to how Principle 12 and PRIN 2A might be complied with.
+Guidance on responsibilities of firms in a product’s distribution chain
+2A.1.13 G (1) Principle 12 imposes obligations on firms towards retail customers of
+products irrespective of whether the customer is a client of the firm.
+(2) This extended application aims to ensure the effectiveness of
+obligations under Principle 12 which may properly relate to activities
+which determine or materially influence retail customer outcomes
+carried out by a firm with whom the retail customer is not in a client
+relationship.
+(3) A firm’s role in the distribution chain may mean it is unable to
+determine or materially influence retail customer outcomes in
+connection with the product. If so, the firm may not be subject to any
+obligation under Principle 12.
+2A.1.14 G Obligations on firms in the distribution chain of a product must be
+interpreted reasonably, in a manner that reflects the firm’s role in that
+
+[PDF p.107]
+FCA 2022/31
+Page 15 of 68
+distribution chain and the degree to which it can determine or materially
+influence retail customer outcomes.
+2A.1.15 G The extent of a firm’s responsibilities under Principle 12 in any one case
+will turn on the substance of the firm’s role in the arrangements relating to
+the product. A firm which determines or has a material influence over retail
+customer outcomes is accountable notwithstanding that the retail customer
+may not be its client due to the indirect nature of their relationship.
+Relevance of guidance about Principles 6 and 7
+2A.1.16 G Given the high-level nature and breadth of application of the Principles,
+guidance about a Principle cannot exhaustively cover its implications (see
+also PRIN 1.1.9G).
+2A.1.17 G (1) In general terms, Principle 12 imposes a higher and more exacting
+standard of conduct in relation to a firm’s retail market business
+relative to what Principles 6 or 7 would have otherwise required.
+Principle 12 also has a broader application in relation to a firm’s
+retail market business relative to Principles 6 and 7, with a greater
+focus on consumer protection outcomes for retail customers,
+including where those retail customers do not stand in a client
+relationship with that firm in the distribution chain.
+(2) While existing, formal guidance on Principles 6 and 7 will remain
+relevant to firms in considering their obligations under Principle 12,
+firms should also take due account of the inherent limits of such
+guidance in light of the factors in (1). See also PRIN 2A.1.3G.
+(3) To the extent that a firm is not acting in accordance with existing
+guidance on Principles 6 and 7 and the behaviour would amount to a
+breach of Principle 6 or 7 in the event that they had continued to
+apply, the behaviour is likely to amount to a breach of Principle 12.
+(4) Where a firm is acting in accordance with guidance on Principles 6
+and 7 that should not be relied on alone in considering how to
+comply with Principle 12. Firms also need to consider all their
+obligations not only under the Principles, but under any other
+applicable law, including other FCA rules such as those expanding
+upon Principle 12 as set out in PRIN 2A.
+2A.1.18 G The effect of PRIN 3.2.10R is that the application of Principles 6 and 7 is
+unchanged with respect to a firm’s activities insofar as they are not subject
+to Principle 12.
+2A.2 Cross-cutting obligations
+Act in good faith
+2A.2.1 R A firm must act in good faith towards retail customers.
+
+[PDF p.108]
+FCA 2022/31
+Page 16 of 68
+2A.2.2 R Acting in good faith is a standard of conduct characterised by honesty, fair
+and open dealing and acting consistently with the reasonable expectations
+of retail customers.
+2A.2.3 G Examples of where a firm is not acting in good faith would include:
+(a) failing to take account of retail customers’ interests, for example in
+the way it designs a product or presents information;
+(b) seeking inappropriately to manipulate or exploit retail customers, for
+example by manipulating or exploiting their emotions or behavioural
+biases to mis-lead or create a demand for a product;
+(c) taking advantage of a retail customer or their circumstances, for
+example any characteristics of vulnerability, in a manner which is
+likely to cause detriment;
+(d) carrying out the same activity to a higher standard or more quickly
+when it benefits the firm than when it benefits the retail customer,
+without objective justification.
+2A.2.4 G Acting in good faith does not mean a firm is prevented from pursuing
+legitimate commercial interests or seeking a profit, provided it does so in a
+manner which is compliant with Principle 12 and PRIN 2A. Acting in good
+faith does not require a firm to act in a fiduciary capacity where it was not
+already obliged to do so.
+2A.2.5 R If a firm identifies through complaints, its internal monitoring or from any
+other source, that retail customers have suffered foreseeable harm as a
+result of acts or omissions by the firm, it must act in good faith and take
+appropriate action to rectify the situation, including providing redress
+where appropriate.
+[Note: PRIN 2A.10 contains rules which are relevant when a firm is
+considering what “appropriate action” it must take.]
+2A.2.6 R PRIN 2A.2.5 does not apply where the harm identified was caused by risks
+inherent in a product, provided the firm reasonably believed that retail
+customers or the relevant retail customer (as the context requires)
+understood and accepted those risks.
+2A.2.7 G Whether such a belief is reasonable will depend (among other things) on
+the nature of the product offered by the firm; the adequacy of the firm’s
+product design, communications and customer services; the needs and
+characteristics of retail customers or the relevant retail customer (as the
+context requires); and the extent to which the firm is compliant with
+applicable law in relation to the sale of that product, including the rules set
+out in PRIN 2A.
+Avoid causing foreseeable harm
+
+[PDF p.109]
+FCA 2022/31
+Page 17 of 68
+2A.2.8 R A firm must avoid causing foreseeable harm to retail customers.
+2A.2.9 R Foreseeable harm may be caused by both act and omission, in a firm’s
+direct relationship with a retail customer or through its role in the
+distribution chain even where another firm in that chain also contributes to
+the harm.
+2A.2.10 G Avoiding causing foreseeable harm to retail customers includes:
+(1) ensuring all aspects of the design, terms, marketing, sale of and
+support for its products avoid causing foreseeable harm;
+(2) ensuring that no aspect of its business involves unfairly exploiting
+behavioural biases displayed or characteristics of vulnerability held
+by retail customers;
+(3) identifying the potential for harm that might arise if it withdraws a
+product, its products change or its understanding about the impact on
+retail customers changes;
+(4) responding to emerging trends that identify new sources of harm,
+including FCA supervisory action and/or communications; and
+(5) taking appropriate action to mitigate the risk of actual or foreseeable
+harm, including for example by:
+(i) updating or otherwise amending the design of the product or
+distribution strategy;
+(ii) updating information about a product or updating investment
+advice;
+(iii) ensuring that retail customers do not face unreasonable
+barriers (including unreasonable additional costs), for
+example when they want to switch products or providers or to
+complain;
+(iv) allowing time and support for retail customers to find suitable
+alternatives where a product is withdrawn.
+2A.2.11 G A firm with an ongoing relationship with a retail customer in relation to a
+product would need to act to avoid causing foreseeable harm to that
+customer throughout the lifecycle of that product.
+2A.2.12 G A firm which is involved with the provision of a product at a point in time
+and without an ongoing relationship with the retail customer does not need
+to act to avoid causing harm which only later becomes foreseeable.
+2A.2.13 G Avoiding causing foreseeable harm to retail customers does not mean a
+firm has a responsibility to prevent all harm. For example:
+
+[PDF p.110]
+FCA 2022/31
+Page 18 of 68
+(1) a product may have inherent risks which retail customers accept by
+selecting that product. Where a firm reasonably believes a retail
+customer understands and accepts such risks, it will not breach the
+rule if it fails to prevent them;
+(2) whether such a belief is reasonable will depend (among other things)
+on the nature of the product offered by the firm, the adequacy of the
+firm’s product design, communications and customer services; and
+the extent to which it is compliant with applicable law in relation to
+the sale of that product, including the rules set out in PRIN 2A; and
+(3) examples of risks which are inherent to a product include that a
+mortgage carries a risk of repossession and most investments carry a
+risk that the market may move resulting in capital loss.
+Enable and support retail customers
+2A.2.14 R A firm must enable and support retail customers to pursue their financial
+objectives.
+2A.2.15 G The conclusions a firm can properly reach about the financial objectives of
+retail customers will depend on the type of product it provides.
+2A.2.16 G A firm which provides an execution-only service or a non-advised service
+can assume (unless it knows or could reasonably be expected to have
+known otherwise) that the financial objectives of retail customers are to
+purchase, use and enjoy the full benefits of the product in question.
+2A.2.17 G A firm which provides advisory or discretionary services is entitled to rely
+on the objectives that retail customers have disclosed unless it knows or
+could reasonably be expected to know that information disclosed is
+manifestly out of date, inaccurate or incomplete.
+2A.2.18 G Information a firm must obtain under a provision of law (including, but not
+limited to, information required by COBS 9.2.1R, COBS 9A.2.1R, COBS
+10.2.1R, COBS 10A.2.1R, ICOBS 5.2.2R, MCOB 4.7A.6 R, MCOB
+11.6.2R and CONC 5.2A.5R) is relevant to whether a firm knew or could
+reasonably be expected to know that a customer has different financial
+objectives for the purposes of PRIN 2A.2.16G and 2A.2.17G.
+2A.2.19 G To the extent that a firm becomes aware or should reasonably have become
+aware of a specific financial objective sought by a retail customer in
+connection with a product, it should consider how to support progress
+towards achieving that objective in its interactions with that retail
+customer.
+2A.2.20 G Enabling and supporting retail customers to pursue their financial
+objectives includes acting to empower retail customers to make good
+choices in their interests, including by:
+
 ## Appendix 1 / PRIN 2A.5 Consumer understanding — made rules  (PDF p.127–131 — operator-added range)
 
 [PDF p.127]

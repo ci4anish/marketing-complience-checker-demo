@@ -73,8 +73,16 @@ point at whatever their org has enabled. Small BYOK courtesy, future-proofs the 
   legal instrument the TOC doesn't paginate. Located via a content probe; added through an
   explicit `cut --extra` operator override rather than faking planner output. Result: 27/31
   extracted rules cite made-rules numbers (2A.5.3R…) instead of only chapter prose.
-- **One extraction defect kept deliberately:** CC-02's `check` has inverted polarity
+- **Eval-driven fix (see evaluations/extraction-eval.md):** scored the pipeline against an
+  independently hand-curated golden ruleset. Round 1: 12/13 recall — the miss (no standalone
+  "don't exploit emotions/behavioural biases" rule, i.e. the urgency/FOMO/🚀 rule) root-caused
+  to a subset gap: PRIN 2A.2 (pp.104–110) wasn't in the operator-added ranges. Widened the
+  range, re-extracted → 13/13. Lesson: the dominant extraction-quality lever is subset
+  coverage, not prompt wording. Bonus: the pipeline caught a gap in the golden set itself
+  (the firm's-role/advice-boundary limb of 2A.5.8R, which golden's CU-08 omits).
+- **One extraction defect kept deliberately (round 1):** CC-02's `check` had inverted polarity
   ("Could a customer suffer harm…?" — YES = breach, against the prompt's YES = complies rule).
   Downstream verdicts don't depend on polarity (the check stage returns an explicit
   compliant/non_compliant enum), and `rules.json` is committed exactly as the model produced
-  it — no hand-editing, so reviewers see true extraction quality.
+  it — no hand-editing, so reviewers see true extraction quality. Amusingly, the independently
+  produced golden set made the *identical* polarity slip on the same foreseeable-harm rule.
