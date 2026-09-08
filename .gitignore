@@ -12,5 +12,6 @@ eToro - BizOps AI Task (1).pdf
 .DS_Store
 
 .temp
-# eval scratch reports
-data/checker-eval-reports/
+
+# generated pipeline artifacts (scan/cut/extract/check output + eval reports)
+data/

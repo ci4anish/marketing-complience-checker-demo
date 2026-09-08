@@ -2,35 +2,40 @@ import { readFile } from "node:fs/promises";
 import { runCheck, type Band, type CheckReport } from "./check.js";
 
 /**
- * Scorer for evaluations/checker-eval — 24 golden cases for the check stage.
- * Scoring semantics follow that dataset's README:
- *   HARD (gate):  band match · must_flag ⊆ non_compliant · no unverified evidence
- *   DIAGNOSTIC:   must_not_flag ∩ non_compliant = ∅ · ≥1 of expect_needs_review
- *                 is needs_review · expect_not_applicable scored as a proportion
+ * Scorer for evaluations/checker-eval — 24 golden cases, ID-FREE (see DECISIONS D16).
+ * Anchors to the band + verbatim fixture PHRASES, never rule IDs (which drift when
+ * `extract` re-runs). A phrase is "caught" if some verdict quotes it in its evidence.
+ * Scoring:
+ *   HARD (gate): band match
+ *              · every must_catch phrase quoted by some non_compliant verdict
+ *              · no forbid_flag phrase quoted by any non_compliant verdict
+ *              · no dishonest evidence (a quote not present in the input)
+ *   DIAGNOSTIC:  ≥1 expect_needs_review phrase quoted by a needs_review verdict
  */
 
 interface CaseExpectation {
   band: Band;
-  must_flag: string[];
-  must_not_flag: string[];
-  expect_needs_review: string[];
-  expect_not_applicable: string[];
+  must_catch?: string[];
+  expect_needs_review?: string[];
+  forbid_flag?: string[];
   scenario?: string;
 }
+
+const CONCURRENCY = 6;
+
+/** Same normalization the check stage uses for its evidence substring test. */
+const norm = (s: string) =>
+  s.toLowerCase().replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/[–—]/g, "-").replace(/\s+/g, " ").trim();
 
 interface CaseScore {
   name: string;
   band: { expected: Band; got: Band; ok: boolean };
-  mustFlagMissing: string[];
+  mustCatchMissing: string[];
+  forbidViolations: string[];
   evidenceUnverified: string[];
-  hardOk: boolean;
-  falsePositives: string[]; // must_not_flag that WERE flagged
   needsReviewOk: boolean | null; // null = not asserted
-  naHit: number;
-  naTotal: number;
+  hardOk: boolean;
 }
-
-const CONCURRENCY = 6;
 
 export async function runCheckerEval(): Promise<boolean> {
   const dir = "evaluations/checker-eval";
@@ -64,29 +69,32 @@ export async function runCheckerEval(): Promise<boolean> {
 }
 
 function scoreCase(name: string, exp: CaseExpectation, r: CheckReport): CaseScore {
-  const byId = new Map(r.verdicts.map((v) => [v.rule_id, v]));
-  const flagged = new Set(r.verdicts.filter((v) => v.verdict === "non_compliant").map((v) => v.rule_id));
+  // Evidence text grouped by verdict kind (only quotes that are real strings).
+  const evidenceOf = (kind: string) =>
+    r.verdicts
+      .filter((v) => v.verdict === kind && typeof v.evidence === "string")
+      .map((v) => norm(v.evidence as string));
+  const ncEvidence = evidenceOf("non_compliant");
+  const nrEvidence = evidenceOf("needs_review");
 
-  const mustFlagMissing = exp.must_flag.filter((id) => !flagged.has(id));
+  const caught = (phrase: string, haystacks: string[]) => haystacks.some((e) => e.includes(norm(phrase)));
+
+  const mustCatchMissing = (exp.must_catch ?? []).filter((p) => !caught(p, ncEvidence));
+  const forbidViolations = (exp.forbid_flag ?? []).filter((p) => caught(p, ncEvidence));
   const evidenceUnverified = r.verdicts.filter((v) => v.evidence_verified === false).map((v) => v.rule_id);
-  const bandOk = r.band === exp.band;
 
-  const falsePositives = (exp.must_not_flag ?? []).filter((id) => flagged.has(id));
   const nr = exp.expect_needs_review ?? [];
-  const needsReviewOk = nr.length === 0 ? null : nr.some((id) => byId.get(id)?.verdict === "needs_review");
-  const na = exp.expect_not_applicable ?? [];
-  const naHit = na.filter((id) => byId.get(id)?.verdict === "not_applicable").length;
+  const needsReviewOk = nr.length === 0 ? null : nr.some((p) => caught(p, nrEvidence));
 
+  const bandOk = r.band === exp.band;
   return {
     name,
     band: { expected: exp.band, got: r.band, ok: bandOk },
-    mustFlagMissing,
+    mustCatchMissing,
+    forbidViolations,
     evidenceUnverified,
-    hardOk: bandOk && mustFlagMissing.length === 0 && evidenceUnverified.length === 0,
-    falsePositives,
     needsReviewOk,
-    naHit,
-    naTotal: na.length,
+    hardOk: bandOk && mustCatchMissing.length === 0 && forbidViolations.length === 0 && evidenceUnverified.length === 0,
   };
 }
 
@@ -94,29 +102,25 @@ function printCase(s: CaseScore): void {
   const hard = s.hardOk ? "✅" : "❌";
   const parts: string[] = [];
   if (!s.band.ok) parts.push(`band ${s.band.expected}→got ${s.band.got}`);
-  if (s.mustFlagMissing.length) parts.push(`must_flag missed: ${s.mustFlagMissing.join(",")}`);
-  if (s.evidenceUnverified.length) parts.push(`unverified evidence: ${s.evidenceUnverified.join(",")}`);
-  if (s.falsePositives.length) parts.push(`⚠ false-positive: ${s.falsePositives.join(",")}`);
+  if (s.mustCatchMissing.length) parts.push(`not caught: ${s.mustCatchMissing.map((p) => `"${p}"`).join(", ")}`);
+  if (s.forbidViolations.length) parts.push(`⚠ false-positive: ${s.forbidViolations.map((p) => `"${p}"`).join(", ")}`);
+  if (s.evidenceUnverified.length) parts.push(`dishonest evidence: ${s.evidenceUnverified.join(",")}`);
   if (s.needsReviewOk === false) parts.push("⚠ expected needs_review not raised");
-  const na = s.naTotal ? ` n/a ${s.naHit}/${s.naTotal}` : "";
-  console.log(`${hard} ${s.name.padEnd(36)} ${s.band.got.padEnd(4)}${na}${parts.length ? "  — " + parts.join("; ") : ""}`);
+  console.log(`${hard} ${s.name.padEnd(36)} ${s.band.got.padEnd(4)}${parts.length ? "  — " + parts.join("; ") : ""}`);
 }
 
 function printSummary(scores: CaseScore[]): boolean {
   const hardPass = scores.filter((s) => s.hardOk).length;
   const bandPass = scores.filter((s) => s.band.ok).length;
-  const fpCases = scores.filter((s) => s.falsePositives.length > 0).length;
+  const fpCases = scores.filter((s) => s.forbidViolations.length > 0).length;
   const nrAsserted = scores.filter((s) => s.needsReviewOk !== null);
   const nrPass = nrAsserted.filter((s) => s.needsReviewOk === true).length;
-  const naHit = scores.reduce((a, s) => a + s.naHit, 0);
-  const naTotal = scores.reduce((a, s) => a + s.naTotal, 0);
 
   console.log(`\n━━━ SUMMARY ━━━`);
-  console.log(`HARD  band+must_flag+evidence : ${hardPass}/${scores.length} cases`);
-  console.log(`      bands alone             : ${bandPass}/${scores.length}`);
-  console.log(`DIAG  false-positive cases    : ${fpCases} (must_not_flag violations)`);
-  console.log(`      needs_review raised     : ${nrPass}/${nrAsserted.length} asserted cases`);
-  console.log(`      not_applicable hit rate : ${naHit}/${naTotal} (${naTotal ? Math.round((100 * naHit) / naTotal) : 0}%)`);
+  console.log(`HARD  band + must_catch + no false-positive + honest evidence : ${hardPass}/${scores.length} cases`);
+  console.log(`      bands alone                                            : ${bandPass}/${scores.length}`);
+  console.log(`DIAG  false-positive cases (forbid_flag violated)            : ${fpCases}`);
+  console.log(`      needs_review raised                                    : ${nrPass}/${nrAsserted.length} asserted cases`);
 
   return hardPass === scores.length;
 }
