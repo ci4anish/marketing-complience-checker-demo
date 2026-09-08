@@ -13,8 +13,10 @@ validates the judgments made against it. A regression in either is caught indepe
 
 - **`extraction-eval/`** — `golden_rules.json` (an independent full-document extraction of
   FCA PS22/9) plus `extraction-eval.md` (the scoring log of `data/rules.json` against it).
-- **`checker-eval/`** — `cases/*.txt` (24 realistic marketing artifacts spanning all bands,
-  all four verdict types, and all six rule categories) plus `expected.json` (golden
-  expectations). See its README for coverage and scoring semantics.
+- **`checker-eval/`** — `cases/*.txt` (24 realistic marketing artifacts spanning all bands and
+  all four verdict types) plus `expected.json`. **ID-free**: it anchors expectations to the
+  band + verbatim fixture phrases, never to rule IDs (which drift when `extract` re-runs), so it
+  needs no re-mapping. See its README for the design and scoring semantics. Its `smoke/` subfolder
+  holds the fast 3-case fixture set wired to `npm run check:fixtures`.
 
 Each folder's `README.md` has the details, including how to run and score it.

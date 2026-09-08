@@ -9,12 +9,13 @@ interface Expectation {
 
 /**
  * Smoke test for the whole check stage: run every fixture and diff the result
- * against tests/fixtures/expected.json. Expectations pin bands + a few
- * must-flag rule IDs only (full verdict goldens would be brittle — see the
- * _note in expected.json). Exit non-zero on any mismatch.
+ * against evaluations/checker-eval/smoke/expected.json. Expectations pin bands
+ * + a few must-flag rule IDs only (full verdict goldens would be brittle — see
+ * the _note in expected.json). Exit non-zero on any mismatch.
  */
 export async function runCheckFixtures(): Promise<boolean> {
-  const expected = JSON.parse(await readFile("tests/fixtures/expected.json", "utf8")) as Record<
+  const dir = "evaluations/checker-eval/smoke";
+  const expected = JSON.parse(await readFile(`${dir}/expected.json`, "utf8")) as Record<
     string,
     Expectation | string
   >;
@@ -25,7 +26,7 @@ export async function runCheckFixtures(): Promise<boolean> {
 
     console.log(`\n━━━ fixture: ${fixture} (expect ${exp.band}) ━━━`);
     const report = await runCheck({
-      input: `tests/fixtures/${fixture}`,
+      input: `${dir}/${fixture}`,
       rules: "data/rules.json",
       out: `data/report.${fixture.replace(/\.txt$/, "")}.json`,
     });

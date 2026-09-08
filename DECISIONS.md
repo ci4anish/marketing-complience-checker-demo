@@ -125,24 +125,36 @@ A/B-scored against the golden set.
 **D15 — Two eval sets, one per LLM stage: `evaluations/extraction-eval/` and `evaluations/checker-eval/`.**
 Extraction and checking are separate LLM stages with separate failure modes, so they get
 separate golden sets that compose: extraction-eval validates the *rulebook* (recall/precision
-vs an independent golden ruleset); checker-eval validates the *verdicts* made against it. The
-checker set is 14 realistic marketing artifacts (synthetic copy modelled on real FCA
-financial-promotion enforcement themes — crypto FOMO, guaranteed returns, vulnerability
-targeting, CFD leverage, bonus/urgency, profit testimonials, unverifiable awards, jargon,
-exit barriers, professional-product scope leakage, redress notices) engineered to cover, by
-construction, all three bands (FAIL/WARN/PASS), all four verdict types (non_compliant,
-needs_review, not_applicable, compliant) and all six extracted rule categories
-(CP/CC/CU/CS/FM/RM — the last three are untested by `tests/fixtures/`). Design choices that
-matter: (1) pin conservatively — hard-assert only `band` + `must_flag` (+ the existing
-evidence-verbatim check), keep `must_not_flag`/`expect_needs_review`/`expect_not_applicable`
-as softer diagnostics, because exact verdict partitions drift run-to-run (same reason
-`tests/fixtures/expected.json` pins bands not full verdicts); (2) deliberate false-positive
-guards — a present risk warning (case 04) and anti-pressure phrasing (cases 09/10) must NOT
-be flagged, catching keyword-matcher regressions; (3) one clean case per hard-to-test verdict
-— `needs_review` (case 07, verifiable-fact claims only) and mass `not_applicable` (case 11,
-an operational notice). `tests/fixtures/` remains the fast smoke test; this is the thorough
-graded set. Rule IDs are pinned to the committed `data/rules.json` and must be re-mapped if
-`extract` is re-run.
+vs an independent golden ruleset, matched by MEANING not ID); checker-eval validates the
+*verdicts* made against it. The checker set is 24 realistic marketing artifacts (synthetic copy
+modelled on real FCA financial-promotion enforcement themes — crypto FOMO, guaranteed returns,
+vulnerability targeting, CFD leverage, bonus/urgency, profit testimonials, unverifiable awards,
+jargon, exit barriers, professional-product scope leakage, redress notices, plus format-
+appropriateness and false-positive traps) engineered to cover, by construction, all three bands
+(FAIL/WARN/PASS) and all four verdict types (non_compliant, needs_review, not_applicable,
+compliant).
+
+**D16 — Checker-eval is ID-FREE: anchor to band + verbatim fixture phrases, never rule IDs.**
+First cut of the checker-eval pinned expectations to rule IDs (`must_flag: ["CU-02"]`). That
+broke immediately: `extract` is non-deterministic (D13's free-string `category` regenerates a
+different taxonomy/numbering each run — observed live: 38→32→33 rules, categories renamed each
+time), so ID-pinned expectations rot on the next `extract`. Root-cause fix: the eval references
+NO rule IDs. It asserts only on things that don't change when you re-extract — (1) the `band`
+(deterministic from verdict counts, names no rule), and (2) verbatim PHRASES from the fixture
+text: `must_catch` (an offending phrase must be quoted as `evidence` by some non_compliant
+verdict), `expect_needs_review` (an unverifiable claim must land as needs_review), `forbid_flag`
+(an innocent phrase — risk warning, anti-pressure wording — must NOT be flagged). This reuses the
+judge's existing verbatim-`evidence` mechanism and tests whether it caught the right *problem*,
+which matters more than which rule ID it attached. `validate.mjs` consequently drops its
+`rules.json`/fingerprint dependency and instead verifies every asserted phrase actually occurs in
+its fixture (no unsatisfiable assertions) + band consistency — so it never needs re-running after
+`extract`. Deliberate false-positive guards live in `forbid_flag`: a present risk warning
+(case 04/20), anti-pressure phrasing (09/10), and red-flag phrases used in negation (case 21) must
+not trip the judge. Remaining coupling: `smoke/expected.json` + `check-fixtures.ts` still use
+`must_flag` IDs (the wired 3-case smoke test); converting that harness to band/phrase is the
+follow-up to make the project fully ID-free. General principle (mirrors D13): evals key on the
+document's stable surface (regulation text, input text, band), never on the extractor's ephemeral
+output vocabulary.
 
 **D15 — Check stage: design locked by grilling, then two lessons from fixture testing.**
 Design (agreed via Q&A): single call over all rules (category-batching as future escape
