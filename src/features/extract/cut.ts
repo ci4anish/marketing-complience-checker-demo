@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
-import { extractPdfPages } from "../pdf.js";
-import { ScanResult } from "../schemas.js";
+import { extractPdfPages } from "../../core/pdf.js";
+import { ScanResult } from "./schemas.js";
 
 export interface CutOptions {
   pdf: string;

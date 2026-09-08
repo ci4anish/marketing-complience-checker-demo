@@ -50,6 +50,10 @@ export type ScanResult = z.infer<typeof ScanResult>;
  * `check` is the operationalization: the concrete yes/no question an evaluator
  * asks of a piece of marketing text. This is what makes a rule *checkable*
  * rather than a restated paragraph.
+ *
+ * `Rule`/`RuleSet` are the artifact contract between the two features: the
+ * extract feature PRODUCES data/rules.json; the check feature CONSUMES it
+ * (see src/features/check/schemas.ts).
  */
 export const Rule = z.object({
   id: z.string().describe("Stable short ID, e.g. CU-01 (consumer understanding), CC-02 (cross-cutting)"),
@@ -72,30 +76,3 @@ export const RuleSet = z.object({
   rules: z.array(Rule),
 });
 export type RuleSet = z.infer<typeof RuleSet>;
-
-/**
- * Stage 4 (`check`) — one verdict per rule. Field order is deliberate:
- * `reasoning` precedes `verdict` so the model writes its analysis before
- * committing (structured outputs generate fields in schema order — the
- * verdict tokens are conditioned on the reasoning already written).
- */
-export const Verdict = z.object({
-  rule_id: z.string(),
-  reasoning: z.string().describe("The analysis that leads to the verdict — written BEFORE the verdict"),
-  evidence: z
-    .string()
-    .nullable()
-    .describe("VERBATIM quote from the input text for commission breaches; null for omission breaches (reasoning must name what is absent) and for non-breach verdicts"),
-  verdict: z.enum(["compliant", "non_compliant", "not_applicable", "needs_review"]),
-  fact_to_verify: z
-    .string()
-    .nullable()
-    .describe("Required when verdict is needs_review: the specific external fact to verify. null otherwise"),
-});
-export type Verdict = z.infer<typeof Verdict>;
-
-export const CheckOutput = z.object({
-  verdicts: z.array(Verdict).describe("Exactly one verdict per rule in the ruleset"),
-  summary: z.string().describe("One short paragraph: overall assessment of the text"),
-});
-export type CheckOutput = z.infer<typeof CheckOutput>;

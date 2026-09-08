@@ -1,9 +1,9 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
-import { extractPdfPages, renderPageRange } from "../pdf.js";
-import { structuredCall, modelName } from "../llm.js";
-import { WindowScan, type ScanResult } from "../schemas.js";
-import { SCANNER_SYSTEM, scannerUser } from "../prompts.js";
+import { extractPdfPages, renderPageRange } from "../../core/pdf.js";
+import { structuredCall, modelName } from "../../core/llm.js";
+import { WindowScan, type ScanResult } from "./schemas.js";
+import { SCANNER_SYSTEM, scannerUser } from "./prompts.js";
 
 export interface ScanOptions {
   pdf: string;

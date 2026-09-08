@@ -1,8 +1,8 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
-import { structuredCall, modelName } from "../llm.js";
-import { RuleSet } from "../schemas.js";
-import { EXTRACTOR_SYSTEM, extractorUser } from "../prompts.js";
+import { structuredCall, modelName } from "../../core/llm.js";
+import { RuleSet } from "./schemas.js";
+import { EXTRACTOR_SYSTEM, extractorUser } from "./prompts.js";
 
 export interface ExtractOptions {
   subset: string;

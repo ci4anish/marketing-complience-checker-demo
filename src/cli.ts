@@ -33,7 +33,7 @@ switch (command) {
         out: { type: "string", default: "data/scan.json" },
       },
     });
-    const { runScan } = await import("./commands/scan.js");
+    const { runScan } = await import("./features/extract/scan.js");
     await runScan({
       pdf: values.pdf,
       windowSize: Number(values["window-size"]),
@@ -50,7 +50,7 @@ switch (command) {
         out: { type: "string", default: "data/extraction-plan.json" },
       },
     });
-    const { runPlan } = await import("./commands/plan.js");
+    const { runPlan } = await import("./features/extract/plan.js");
     await runPlan({
       pdf: values.pdf,
       tocPages: Number(values["toc-pages"]),
@@ -68,7 +68,7 @@ switch (command) {
         extra: { type: "string", multiple: true, default: [] },
       },
     });
-    const { runCut } = await import("./commands/cut.js");
+    const { runCut } = await import("./features/extract/cut.js");
     await runCut({ pdf: values.pdf, scan: values.scan, out: values.out, extra: values.extra });
     break;
   }
@@ -80,7 +80,7 @@ switch (command) {
         out: { type: "string", default: "data/rules.json" },
       },
     });
-    const { runExtract } = await import("./commands/extract.js");
+    const { runExtract } = await import("./features/extract/extract.js");
     await runExtract({ subset: values.subset, out: values.out });
     break;
   }
@@ -98,7 +98,7 @@ switch (command) {
       process.exit(2);
     }
     try {
-      const { runCheck } = await import("./commands/check.js");
+      const { runCheck } = await import("./features/check/check.js");
       const report = await runCheck({ input: values.input, rules: values.rules, out: values.out });
       process.exitCode = report.band === "FAIL" ? 1 : 0; // CI-friendly (Q8)
     } catch (err) {
@@ -108,13 +108,13 @@ switch (command) {
     break;
   }
   case "check:fixtures": {
-    const { runCheckFixtures } = await import("./commands/check-fixtures.js");
+    const { runCheckFixtures } = await import("./features/check/check-fixtures.js");
     const ok = await runCheckFixtures();
     process.exitCode = ok ? 0 : 1;
     break;
   }
   case "eval:checker": {
-    const { runCheckerEval } = await import("./commands/checker-eval.js");
+    const { runCheckerEval } = await import("./features/check/checker-eval.js");
     const ok = await runCheckerEval();
     process.exitCode = ok ? 0 : 1;
     break;

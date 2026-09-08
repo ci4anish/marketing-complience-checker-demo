@@ -1,9 +1,9 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
-import { extractPdfPages, renderPageRange } from "../pdf.js";
-import { structuredCall } from "../llm.js";
-import { ExtractionPlan } from "../schemas.js";
-import { PLANNER_SYSTEM, plannerUser } from "../prompts.js";
+import { extractPdfPages, renderPageRange } from "../../core/pdf.js";
+import { structuredCall } from "../../core/llm.js";
+import { ExtractionPlan } from "./schemas.js";
+import { PLANNER_SYSTEM, plannerUser } from "./prompts.js";
 
 export interface PlanOptions {
   pdf: string;

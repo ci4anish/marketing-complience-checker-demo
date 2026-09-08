@@ -1,8 +1,8 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
-import { structuredCall, modelName } from "../llm.js";
-import { CheckOutput, RuleSet, type Rule, type Verdict } from "../schemas.js";
-import { CHECKER_SYSTEM, checkerUser } from "../prompts.js";
+import { structuredCall, modelName } from "../../core/llm.js";
+import { CheckOutput, RuleSet, type Rule, type Verdict } from "./schemas.js";
+import { CHECKER_SYSTEM, checkerUser } from "./prompts.js";
 
 export interface CheckOptions {
   input: string; // path or "-" for stdin
