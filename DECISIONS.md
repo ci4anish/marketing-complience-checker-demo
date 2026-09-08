@@ -11,7 +11,7 @@ rules kept the work honest throughout:
 
 - **Keep it generic** — never tune to this one document; it should work on other regulations too.
 - **Keep the guarantees in code** — the model is allowed to *judge*, but the code decides anything
-  that has to be reliable.
+that has to be reliable.
 
 The decisions below are just this story in more detail.
 
@@ -24,14 +24,13 @@ Before writing any pipeline code I fixed two things in my head that everything e
 serve:
 
 1. *A closed loop of evaluation.* I needed an independent way to measure every version of my
-   extraction. So I asked AI to generate a result structure (the schema) for the policies/rules,
+  extraction. So I asked AI to generate a result structure (the schema) for the policies/rules,
    and then — in a **separate session** — asked Opus to extract the policies from the document on
    its own, with no constraints or pipeline in the way. That unconstrained extraction became my
    **golden dataset**: a strong-model reference I could hold my own pipeline up against and ask
    "does this reach the same accuracy?"
-
 2. *Generic from the start, no overfitting.* The golden set was built independently and the
-   solution had to stay generic — it must work on different kinds of documents, not just this one.
+  solution had to stay generic — it must work on different kinds of documents, not just this one.
    Keeping the golden reference separate from the pipeline is what stops me tuning my prompts *to
    the one document* instead of to the general problem. Every change is judged against that outside
    set, so the design stays general by default rather than by willpower.
@@ -97,14 +96,14 @@ checker golden set instead of me hand-tuning it.
 A couple of insights the loop surfaced during those iterations, as examples:
 
 - *The rulebook beats the referee.* The checker kept flip-flopping on an unverifiable claim
-  ("trusted by 30M users") no matter how much we strengthened the checker prompt. The real cause:
-  no extracted rule mentioned substantiation, so the model was *correctly* applying the rules and
-  ignoring our checker-side instructions. The fix belonged in the extractor (add the
-  substantiation rule), not the checker — fix the rulebook, not the referee.
+("trusted by 30M users") no matter how much we strengthened the checker prompt. The real cause:
+no extracted rule mentioned substantiation, so the model was *correctly* applying the rules and
+ignoring our checker-side instructions. The fix belonged in the extractor (add the
+substantiation rule), not the checker — fix the rulebook, not the referee.
 - *The substantiation rule needs a boundary.* A first version sent every factual claim to review,
-  so a clean ad got flagged over its own "$10 minimum". The line I drew: outward claims (user
-  counts, rankings, returns, awards) need substantiation; the firm's own product terms (fees,
-  minimums, range) are presumed accurate and judged only on how they're presented.
+so a clean ad got flagged over its own "$10 minimum". The line I drew: outward claims (user
+counts, rankings, returns, awards) need substantiation; the firm's own product terms (fees,
+minimums, range) are presumed accurate and judged only on how they're presented.
 
 **D6 — Code owns the guarantees; the model only judges.**
 *Takeaway: the model gives opinions; the code decides anything that has to be reliable.*
@@ -114,10 +113,10 @@ the *guarantees*. Everything that has to be reliable is computed in code around 
 returns a per-rule verdict, but:
 
 - the overall **PASS/WARN/FAIL result** is computed in code from the verdict counts (any
-  high-severity breach = FAIL), never decided by the model;
+high-severity breach = FAIL), never decided by the model;
 - **completeness** is enforced as a hard error: exactly one verdict per rule, or the run fails;
 - **evidence is checked** in code — a quoted breach must actually appear word-for-word in the input
-  text, so the model can't cite something it made up;
+text, so the model can't cite something it made up;
 - the program exits with proper **CI exit codes** based on that computed result, not on model prose.
 
 So the split is clean: correctness lives in code; only the judgment call lives in the model.
@@ -136,23 +135,25 @@ I never parse free-form text.
 **D8 — Last step: manual end-to-end verification.**
 *Takeaway: I ran and read the whole thing myself before calling it done.*
 
-As the final step I verified the whole thing working end to end myself — ran the pipeline through,
-read the code, made a few small adjustments and refactorings, and that was it.
+As the final step I verified the whole thing working end to end myself — ran the pipeline through, read the code, made a few small adjustments and refactorings, improved the presantation, and that was it.
 
 ## What I'd do next
 
 - **Extract while scanning.** Since scan already reads every page, it could emit rules as it goes —
-  one pass instead of two. I didn't build it because the same rule appears in several places, so
-  I'd get duplicates and need a separate step to merge them away; the current two-step approach
-  already works well for a demo. Marked as a future experiment.
+one pass instead of two. I didn't build it because the same rule appears in several places, so
+I'd get duplicates and need a separate step to merge them away; the current two-step approach
+already works well for a demo. Marked as a future experiment.
 - **Prove it on a second, non-finance document.** Everything is designed to be generic, but I've
-  only run it end-to-end on the one FCA document. The real test of that genericity is a different
-  regulation in a different domain — that's the top thing I'd do with more time.
+only run it end-to-end on the one FCA document. The real test of that genericity is a different
+regulation in a different domain — that's the top thing I'd do with more time.
+
+
 
 ## Implementation notes
 
 - **Printed page numbers ≠ PDF page indices.** The table of contents cites *printed* page numbers,
-  but the PDF's own page order is offset by the cover/contents pages. Fix: every page fed to the
-  model is prefixed with a `=== PDF PAGE n ===` marker and the model is told to return PDF indices,
-  not printed numbers; `cut` then slices exactly the pages it named. (One of the small things that
-  surprised me.)
+but the PDF's own page order is offset by the cover/contents pages. Fix: every page fed to the
+model is prefixed with a `=== PDF PAGE n ===` marker and the model is told to return PDF indices,
+not printed numbers; `cut` then slices exactly the pages it named. (One of the small things that
+surprised me.)
+

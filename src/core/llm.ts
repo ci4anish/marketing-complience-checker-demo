@@ -15,7 +15,10 @@ export function modelName(): string {
   return process.env.OPENAI_MODEL || DEFAULT_MODEL;
 }
 
-const client = new OpenAI(); // reads OPENAI_API_KEY from env
+// Lazy: constructed on first LLM call, not at import time — so tooling that
+// only renders/scores existing reports can import this module without a key.
+let _client: OpenAI | null = null;
+const client = (): OpenAI => (_client ??= new OpenAI()); // reads OPENAI_API_KEY from env
 
 export async function structuredCall<T extends z.ZodType>(opts: {
   schema: T;
@@ -23,7 +26,7 @@ export async function structuredCall<T extends z.ZodType>(opts: {
   system: string;
   user: string;
 }): Promise<z.infer<T>> {
-  const response = await client.responses.parse({
+  const response = await client().responses.parse({
     model: modelName(),
     instructions: opts.system,
     input: opts.user,

@@ -4,311 +4,303 @@
   "relevant_pages": [
     {
       "page": 3,
-      "reason": "Describes firms misleading or difficult-to-understand information and poor sales practices, setting expectations that communications enable informed decisions"
+      "reason": "Describes misleading or hard-to-understand information in firm communications as a current harm and links Duty to enabling informed decisions"
     },
     {
       "page": 5,
-      "reason": "Introduces Consumer Principle and cross‑cutting rules about acting in good faith, avoiding foreseeable harm and enabling customers’ financial objectives, which marketing communications could breach"
+      "reason": "Introduces the Consumer Principle and cross-cutting rules (act in good faith, avoid foreseeable harm, enable customers’ objectives) that set high-level behavioural standards applicable to marketing communications"
     },
     {
       "page": 6,
-      "reason": "Outcomes include consumers being put in a position to make informed decisions and act in their interests, which imposes expectations on the clarity and adequacy of communications"
+      "reason": "Defines outcome of consumer confidence including being equipped with the right information to make effective, timely and properly informed decisions"
     },
     {
       "page": 7,
-      "reason": "States that consumers must be equipped with the right information to make effective, timely and properly informed decisions about products and services, directly constraining communication content"
+      "reason": "Specifies that consumers should be equipped with the right information to make effective, timely and properly informed decisions about products and services, a direct communication-content expectation"
     },
     {
       "page": 13,
-      "reason": "mentions firms may change communications standards for different customer types, implying communication content expectations"
+      "reason": "mentions that firms can change communications standards between in-scope and out-of-scope customers, implying differing communication requirements"
     },
     {
       "page": 14,
-      "reason": "discusses developing different communications for retail vs non‑retail customers as part of proportionate application of rules"
+      "reason": "discusses possibility of developing different communications for retail vs non-retail customer groups under the Duty"
     },
     {
       "page": 15,
-      "reason": "sets scope for firms preparing and approving communications issued to retail customers, which frames which communications are subject to Duty rules"
+      "reason": "sets scope of Duty for firms preparing and approving communications issued to retail customers"
     },
     {
       "page": 18,
-      "reason": "states that incorrectly classifying and then distributing to retail customers would breach the Duty, a principle that can be assessed via how products are described/marketed"
+      "reason": "creates rule that incorrectly classifying products as non-retail to avoid the Duty (including its communication standards) breaches the Duty"
     },
     {
       "page": 23,
-      "reason": "explicitly cites problems with firm communications and financial promotions, indicating standards communications must meet under the Duty"
-    },
-    {
-      "page": 25,
-      "reason": "references the consumer understanding and consumer support outcome rules applying to communications for existing and closed products"
+      "reason": "states that for regulated buy-to-let mortgages only the communications-related aspects of the Duty apply, tying Duty scope directly to financial promotions and communications content"
     },
     {
       "page": 31,
-      "reason": "discusses replacing Principle 7 (communications) with a higher Consumer Principle about delivering good outcomes that marketing texts could breach"
+      "reason": "introduces the Consumer Principle requiring firms to act to deliver good outcomes for retail customers, a high‑level standard applicable to marketing and communications content"
     },
     {
       "page": 32,
-      "reason": "explains the Consumer Principle standard of ‘good outcomes’ which applies to how firms communicate with and treat retail customers"
+      "reason": "confirms final wording of the Consumer Principle and explains it sets a higher standard than treating customers fairly, framing expectations that marketing and other communications help deliver good outcomes"
     },
     {
       "page": 33,
-      "reason": "links Consumer Duty to consumers needing sufficient information and support to make informed decisions, setting expectations communications must meet"
+      "reason": "discusses consumers needing information and support to make informed decisions, implying expectations on the clarity and sufficiency of firm communications"
     },
     {
       "page": 34,
-      "reason": "describes outcomes‑based, proportionate rules and expectations on firms’ conduct that encompass fairness and good faith in customer communications"
+      "reason": "explains outcomes‑based rules and proportional, scalable application of the Duty, including that firms should apply the same standards to delivering good consumer outcomes as to generating sales, which covers marketing communications"
     },
     {
       "page": 35,
-      "reason": "Explains that existing Principle 6/7 guidance (eg ‘to treat customers fairly a firm should…’) remains relevant under Principle 12, shaping fairness standards that apply to communications"
+      "reason": "links Treating Customers Fairly guidance and Principle 6/7 standards to the new Duty, setting conduct expectations that marketing communications must not breach"
     },
     {
       "page": 37,
-      "reason": "Sets out cross‑cutting rules including acting in good faith and avoiding foreseeable harm, broad principles that marketing and consumer communications must not breach"
+      "reason": "sets cross‑cutting rules on acting in good faith, avoiding foreseeable harm, and supporting customers’ financial objectives, all of which can be breached by misleading or manipulative communications"
     },
     {
       "page": 38,
-      "reason": "Clarifies good‑faith expectations, including acting consistently with customers’ reasonable expectations, which can be assessed against the content and tone of communications"
+      "reason": "clarifies ‘reasonable expectations’ of customers and notes firms must consider consumers’ limited experience and behavioural biases, principles directly constraining how communications are framed"
     },
     {
       "page": 39,
-      "reason": "States that firms must consider consumers’ limited experience and behavioural biases and require monitoring communications to ensure customers understand them"
+      "reason": "states firms must consider consumers’ limited experience and behavioural biases and that consumer understanding rules require firms to monitor communications to ensure understanding"
     },
     {
       "page": 40,
-      "reason": "Requires firms to establish an environment where consumers can act in their own interests and to take account of behavioural biases and vulnerability, which informs how communications should be framed"
+      "reason": "requires firms to create an environment where consumers can act in their own interests and to take account of behavioural biases and vulnerability characteristics, which governs acceptable communication content and tone"
+    },
+    {
+      "page": 42,
+      "reason": "discusses inclusive‑design considerations and the need to account for vulnerable customers’ characteristics, which can influence accessibility and presentation of marketing and customer communications"
     },
     {
       "page": 43,
-      "reason": "Discusses avoiding detriment/foreseeable harm and notes that harms may be addressed by amending communications and testing consumer understanding, guiding communication content and presentation"
+      "reason": "addresses use and limits of additional disclosure and stresses risks of information overload and complexity, setting expectations for how remedial and marketing communications should be designed to avoid harm"
     },
     {
       "page": 44,
-      "reason": "States that features visible to consumers must be likely to be understood by the target market and that increased disclosure alone may not mitigate harm, directly constraining how information is communicated"
-    },
-    {
-      "page": 45,
-      "reason": "Links fair value to non‑monetary costs and benefits and references practices like price walking and differential pricing that often manifest in marketing and renewal communications"
+      "reason": "requires that visible product features are likely to be understood by the target market and warns that increased disclosure can cause overload or complexity, giving explicit communication‑content and clarity expectations"
     },
     {
       "page": 46,
-      "reason": "States that upfront discounts must be clear and transparent and references transparency of how products are sold, which are checkable in marketing communications"
+      "reason": "states that upfront discounts and differential pricing must be clear and transparent to customers and refers to information customers need about benefits and limitations"
     },
     {
       "page": 50,
-      "reason": "Introduces the consumer understanding outcome and sets expectations that communications give needed information at the right time and in an understandable way"
+      "reason": "sets high-level obligation that communications must give consumers needed information at the right time and in an understandable way"
     },
     {
       "page": 51,
-      "reason": "Sets obligations on how firms’ communications should be presented (layered approaches, simple explanations, likely to be understood) and that all consumer communications, including marketing, fall under this outcome"
+      "reason": "requires firms to design explanations so they are likely to be understood and equips customers to make effective, timely and properly informed decisions"
     },
     {
       "page": 52,
-      "reason": "Clarifies firms can and should support consumer understanding within data protection and PECR constraints, distinguishing marketing from service messages"
+      "reason": "discusses firms’ ability to give stronger steers in communications, distinguishes marketing from service messages, and references PECR/ICO rules on direct marketing communications"
     },
     {
       "page": 53,
-      "reason": "Requires communications to be understandable to the intended recipients, taking into account vulnerability and characteristics of the target market, which constrains marketing language and presentation"
+      "reason": "requires communications to be understandable to the intended recipients, with examples on simplifying language and signposting support, especially for vulnerable groups"
     },
     {
       "page": 54,
-      "reason": "Requires tailoring of one‑to‑one communications where appropriate, which can apply to individually‑targeted marketing or follow‑up communications"
+      "reason": "requires tailoring of one‑to‑one communications where appropriate based on customer needs or vulnerability"
     },
     {
       "page": 55,
-      "reason": "Explains that testing of communications is required where appropriate and links testing standards to those used for sales‑generating communications, imposing content and presentation expectations"
-    },
-    {
-      "page": 56,
-      "reason": "Requires that customer support channels and related communications meet customer needs, including vulnerable customers, which can be audited in service‑type communications text"
+      "reason": "sets expectations on testing communications to demonstrate consumer understanding and ensure key features, benefits, costs and risks are communicated effectively"
     },
     {
       "page": 57,
-      "reason": "sets expectations that firms clearly communicate limited support channels and adapt communications (e.g. format, channel) to meet vulnerable customers’ needs"
+      "reason": "specifies how firms must communicate channel limitations and adapt communications for vulnerable customers, including poor practice example about format and medium of customer communications"
     },
     {
       "page": 58,
-      "reason": "states that limited-channel products must have support that is clear and not confusing, and that limited channels must be clearly communicated to customers before sale"
+      "reason": "states that unclear or confusing digital customer journeys and communication about limited support channels will not meet required standards"
     },
     {
-      "page": 62,
-      "reason": "introduces expectations that when firms decline access to a product or service they should provide information or signposting to help customers meet their financial objectives"
-    },
-    {
-      "page": 63,
-      "reason": "clarifies that firms must consider needs of vulnerable customers and those with protected characteristics, which shapes how marketing and communications should be framed toward these groups"
-    },
-    {
-      "page": 64,
-      "reason": "reinforces obligations linked to Equality Act 2010 and expectations that firms’ conduct toward customers with protected characteristics avoids disproportionate harm, affecting how communications are drafted"
+      "page": 61,
+      "reason": "introduces expectations that declined customers receive signposting and other information to help meet financial objectives, which can be checked in declination letters or messages"
     },
     {
       "page": 67,
-      "reason": "mentions communications needing review and amendment, implying marketing materials must meet new Duty standards"
+      "reason": "notes that a large volume of consumer communications must be reviewed and potentially amended under the Duty, indicating applicability of content rules, though not detailing them here"
+    },
+    {
+      "page": 70,
+      "reason": "mentions expectations to review the most significant communications first, implying standards communications must meet"
     },
     {
       "page": 71,
-      "reason": "mentions prioritising review of the most significant communications, implying content must meet Consumer Duty standards"
-    },
-    {
-      "page": 78,
-      "reason": "mentions staff understanding obligations under the Duty, which include expectations about conduct that can encompass how communications are framed, though detail is limited"
+      "reason": "states firms should prioritise reviewing the most significant communications, which links to communication content obligations elsewhere in the Duty"
     },
     {
       "page": 84,
-      "reason": "states that consumers should be put in a position to make informed decisions and act in their own interests, an overarching communication-related principle checkable against marketing materials"
+      "reason": "states that firms must put consumers in a position to make informed decisions, implying expectations about clarity and informativeness of communications that can be checked from marketing text"
     },
     {
       "page": 95,
-      "reason": "Defines ‘non-retail financial instrument’ in part by specifying required marketing-material disclosures and targeting of promotional communications"
+      "reason": "Defines ‘non-retail financial instrument’ partly by required wording and prominence of disclosures in marketing materials and prospectuses"
     },
     {
       "page": 96,
-      "reason": "Continues definition of ‘non-retail financial instrument’ including requirements about marketing materials and associated promotional communications being directed only to certain investors"
+      "reason": "Continues definition of ‘non-retail financial instrument’ including requirements for promotional communications to be directed only to certain investors, which constrains how offers and associated promotions are framed"
     },
     {
       "page": 97,
-      "reason": "Defines ‘retail market business’ partly by carving out offers and associated promotional communications that meet specified criteria"
+      "reason": "Defines ‘retail market business’ carving out certain offers and associated promotional communications, which scopes which marketing communications must meet Consumer Duty rules"
     },
     {
       "page": 100,
-      "reason": "Glossary definition of ‘financial promotion rules’ explicitly refers to Principles and PRIN rules imposing requirements on financial promotions"
+      "reason": "Defines ‘financial promotion rules’ in PRIN by reference to Principles 7 and 12 and PRIN 2A rules that impose requirements on financial promotions, directly scoping obligations for marketing content"
     },
     {
       "page": 104,
-      "reason": "sets out Principle 7 on ‘Communications with clients’ and links it with Principle 12, framing standards such as clear, fair and not misleading that apply to marketing"
+      "reason": "Explains Principles 7 and 12 including ‘clear, fair and not misleading’ communications and duty to deliver good outcomes, which marketing text can breach"
     },
     {
       "page": 105,
-      "reason": "describes Consumer Duty purpose and high-level expectations about consumer protection outcomes that marketing and communications must support"
+      "reason": "Sets out Consumer Duty purpose and expectations around consumer protection outcomes, which marketing and consumer communications must reflect"
     },
     {
       "page": 106,
-      "reason": "defines acting in good faith, including not manipulating or exploiting customers via the way information is presented, which can be checked in marketing text"
+      "reason": "Defines ‘acting in good faith’ including not manipulating or exploiting customers via how information is presented, directly constraining marketing content and style"
     },
     {
       "page": 107,
-      "reason": "imposes obligation to act in good faith and avoid foreseeable harm, including examples involving product design and presentation of information affecting communications"
+      "reason": "Cross-cutting obligations to avoid foreseeable harm and related guidance include requirements about product marketing and information provided to customers"
     },
     {
       "page": 108,
-      "reason": "requires firms to avoid causing foreseeable harm, including through marketing and sale of products and avoiding exploitation of behavioural biases in communications"
+      "reason": "Further guidance on avoiding foreseeable harm and inherent product risks links compliance to adequacy of communications about risks"
     },
     {
       "page": 109,
-      "reason": "requires enabling and supporting retail customers to pursue financial objectives, including through design, terms, marketing, and information and support provided to them"
+      "reason": "Obligation to enable and support customers to pursue financial objectives includes requirements on information provision, switching and barriers as expressed in customer communications"
     },
     {
       "page": 110,
-      "reason": "explains that enabling and supporting objectives includes giving customers the information and support they need when they need it and avoiding unreasonable barriers, which applies to communications content"
+      "reason": "Guidance on enabling/supporting customers emphasises ensuring product terms, marketing and support information meet customer objectives and are provided when needed"
     },
     {
       "page": 111,
-      "reason": "clarifies cross-cutting obligations apply at all stages of the customer journey and lifecycle, covering ongoing communications and how information is presented"
+      "reason": "sets expectations about provision and reliability of information to customers and support in communications"
     },
     {
       "page": 112,
-      "reason": "states that cross-cutting obligations apply when designing communications at target-market level"
+      "reason": "states that cross-cutting obligations apply when designing communications for target markets"
+    },
+    {
+      "page": 119,
+      "reason": "links marketing and distribution timing to completion of value assessments, constraining when products may be marketed"
     },
     {
       "page": 120,
-      "reason": "links value assessment duties to when a product is marketed or distributed, affecting how value-related information may need to be framed in marketing materials"
+      "reason": "defines ‘value’ and ‘fair value’ in a way that constrains price-related representations in marketing"
     },
     {
       "page": 121,
-      "reason": "defines value assessment factors including disclosure of prices, charges, contingent fees and non-financial costs that may need to appear in customer-facing communications"
+      "reason": "includes consideration of non-financial costs such as provision and use of personal data, relevant to disclosures in communications"
     },
     {
       "page": 122,
-      "reason": "requires manufacturers to give distributors information to understand value provided, which constrains the content of product communications"
+      "reason": "requires manufacturers to give distributors necessary information about intended value, shaping what may be communicated about product value and benefits"
     },
     {
       "page": 127,
-      "reason": "Sets explicit communication content and presentation obligations (clear, fair, not misleading; meet info needs; likely understood; prominence; plain language; avoid unnecessary disclaimers)"
+      "reason": "Sets explicit content and presentation standards for consumer communications (clear, fair, not misleading; likely to be understood; meeting information needs; prominence and plain language guidance)"
     },
     {
       "page": 128,
-      "reason": "Imposes communication tailoring obligations based on customer characteristics, product complexity, channel and advice role, which can be checked from marketing/communication text"
+      "reason": "Imposes obligations on tailoring and clarity of communications, including plain language, prominence, and timing, which can be checked directly against marketing or customer text"
     },
     {
       "page": 129,
-      "reason": "Requires one‑to‑one communications to meet information needs and check understanding; includes duties to test, monitor, and adapt communications when not supporting good outcomes"
+      "reason": "Requires tailoring of communications to customer characteristics and sets duties for one‑to‑one interactions that can be assessed from scripts and written/recorded communications"
     },
     {
       "page": 130,
-      "reason": "Guidance on when and how to test and adapt communications based on purpose, context, vulnerability and risk of harm—relevant to assessing adequacy of marketing/consumer communications"
+      "reason": "Requires testing, monitoring and adapting communications to support good outcomes; some obligations (e.g. adapting communications when misunderstandings identified) can be assessed from the resulting communication content"
     },
     {
       "page": 131,
-      "reason": "Obligation to notify where another firm’s communication is not delivering good outcomes; duty to provide information so it can be communicated to retail customers"
+      "reason": "Requires firms to notify issues in other firms’ communications where not delivering good outcomes and to provide information so it can be communicated to customers, which can bear on the content of resulting communications"
     },
     {
       "page": 133,
-      "reason": "Sets standards for customer support that include avoiding unreasonable delays and distress, which can be breached by the wording and framing of cancellation/change communications"
+      "reason": "Sets expectations about prioritising prospective over existing customers and delays in processing payments which can be reflected or implied in cancellation/servicing communications"
     },
     {
       "page": 134,
-      "reason": "Defines “reasonable” conduct including how firms should promote and support consumer understanding, directly constraining how complex or higher‑risk products are described in communications"
+      "reason": "Defines the standard of a prudent firm and discusses targeting, complexity, and promoting/monitoring consumer understanding, which frame how marketing and customer communications must be designed and assessed"
     },
     {
       "page": 135,
-      "reason": "Sets prudence and vulnerability expectations that shape how communications to vulnerable or at‑risk customers must be framed to avoid foreseeable harm"
+      "reason": "Contains general conduct principles about acting reasonably toward customers, including at high‑risk stages such as long‑term investment decisions, which communications at those stages could breach"
     },
     {
       "page": 136,
-      "reason": "Links vulnerability and protected characteristics to firms’ duties under Principle 12, informing how communications should be designed not to disadvantage vulnerable or disabled customers"
+      "reason": "Sets principles on considering vulnerable customers’ needs and characteristics, which constrain how communications should be framed for such audiences"
+    },
+    {
+      "page": 138,
+      "reason": "Refers to specific requirements on testing and monitoring retail customer communications, and mandates monitoring outcomes from communications, linking directly to communication content and effectiveness"
     },
     {
       "page": 141,
-      "reason": "Requires firms to explain harm and remedial decisions to customers in a way that is fair, clear and not misleading, a directly checkable standard for redress communications"
-    },
-    {
-      "page": 143,
-      "reason": "Clarifies that Principle 12 and PRIN 2A (which include communication standards) must be applied to product books post‑sale, affecting how ongoing and inherited customer communications must comply"
+      "reason": "Requires firms to explain identified harm to customers in a way that is fair, clear and not misleading, setting a checkable communication standard for remedial notices"
     },
     {
       "page": 144,
-      "reason": "Application rules specify that Principle 12 and PRIN 2A (including communication and financial promotion rules) govern certain activities, scoping which marketing and communication texts are subject to these obligations"
+      "reason": "Clarifies that Principle 12 and PRIN 2A (which include communication standards such as fair, clear and not misleading and financial promotion application) apply only for retail customers and certain activities, scoping the communication rules"
     },
     {
       "page": 145,
-      "reason": "Clarifies when Principle 12 and PRIN 2A apply to retail market business and distribution chains, which frames scope of marketing-communication duties"
+      "reason": "discusses interaction between Principle 12 and Principles 6 and 7, which govern fair treatment and communications with customers"
     },
     {
       "page": 146,
-      "reason": "Extends Principles 6,7,12 territorial scope and treats certain guarantors as retail customers for Principles 6,7,12, affecting who marketing and customer-facing communications protections cover"
-    },
-    {
-      "page": 147,
-      "reason": "Explains disapplication limits of Principles including 6,7,12 and PRIN 2A in relation to MiFID conduct of business duties, which can affect how marketing and disclosure rules apply"
+      "reason": "treats certain guarantors as retail customers for purposes of Principles 6, 7 and 12, affecting how customer-facing communications to them must comply"
     },
     {
       "page": 151,
-      "reason": "Introduces Individual Conduct Rule 6 (act to deliver good outcomes for retail customers), which can be breached by unfair or harmful customer communications"
+      "reason": "introduces COCON Rule 6 (act to deliver good outcomes for retail customers), an overarching conduct standard that marketing or consumer communications could breach"
+    },
+    {
+      "page": 152,
+      "reason": "details the scope of Rule 6 in COCON, tying it to Principle 12 and thus to customer-facing conduct including communications"
+    },
+    {
+      "page": 153,
+      "reason": "states that where Rule 6 applies, Rule 4 (pay due regard to the interests of customers and treat them fairly) does not, clarifying which fairness obligation governs communications"
     },
     {
       "page": 154,
-      "reason": "Sets core obligations for staff to act in good faith, avoid foreseeable harm, and support customers’ financial objectives—principles directly checkable against the tone and content of marketing or customer communications"
+      "reason": "sets out Rule 6 obligations (good faith, avoiding foreseeable harm, enabling financial objectives) which can be infringed by the content or tone of marketing and consumer communications"
     },
     {
       "page": 155,
-      "reason": "States that PRIN 2A cross‑cutting and outcome rules help define what Rule 6 requires, tying communication-related Consumer Duty rules to staff conduct"
+      "reason": "links Rule 6 obligations to PRIN 2A cross-cutting and outcomes rules, which inform standards for fair, non-harmful customer communications"
     },
     {
       "page": 156,
-      "reason": "describes the heightened standard of conduct towards retail customers under Rule 6, relevant to fairness of communications"
+      "reason": "Describes Rule 6 duty to deliver good outcomes for retail customers, an overarching conduct standard that marketing and consumer communications must not undermine"
     },
     {
       "page": 157,
-      "reason": "sets expectations about staff conduct towards retail customers, including scripted interactions, which can include marketing or support communications"
+      "reason": "Explains factors for reasonable standard under Rule 6, including where staff follow scripts or processes when dealing with retail customers, directly bearing on compliant wording and conduct in scripted communications"
     },
     {
       "page": 158,
-      "reason": "explains responsibilities of sales and customer support staff in influencing retail customer outcomes, applicable to how they communicate products"
+      "reason": "Discusses influence of salespersons and customer support staff on outcomes for retail customers, implying expectations on how they communicate and support customers"
     },
     {
       "page": 160,
-      "reason": "links product governance obligations to Principle 12 and PRIN 2A, whose consumer-duty content rules cover communications"
+      "reason": "Links Product Governance rules to Principle 12 and PRIN 2A, whose communication‑content duties apply to products and thus to associated marketing and disclosures"
     }
   ],
   "ranges": [
@@ -333,10 +325,6 @@
       "to": 23
     },
     {
-      "from": 25,
-      "to": 25
-    },
-    {
       "from": 31,
       "to": 35
     },
@@ -345,28 +333,32 @@
       "to": 40
     },
     {
-      "from": 43,
+      "from": 42,
+      "to": 44
+    },
+    {
+      "from": 46,
       "to": 46
     },
     {
       "from": 50,
+      "to": 55
+    },
+    {
+      "from": 57,
       "to": 58
     },
     {
-      "from": 62,
-      "to": 64
+      "from": 61,
+      "to": 61
     },
     {
       "from": 67,
       "to": 67
     },
     {
-      "from": 71,
+      "from": 70,
       "to": 71
-    },
-    {
-      "from": 78,
-      "to": 78
     },
     {
       "from": 84,
@@ -385,7 +377,7 @@
       "to": 112
     },
     {
-      "from": 120,
+      "from": 119,
       "to": 122
     },
     {
@@ -397,19 +389,19 @@
       "to": 136
     },
     {
+      "from": 138,
+      "to": 138
+    },
+    {
       "from": 141,
       "to": 141
     },
     {
-      "from": 143,
-      "to": 147
+      "from": 144,
+      "to": 146
     },
     {
       "from": 151,
-      "to": 151
-    },
-    {
-      "from": 154,
       "to": 158
     },
     {

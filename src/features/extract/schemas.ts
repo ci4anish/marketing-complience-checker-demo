@@ -56,3 +56,17 @@ export const RuleSet = z.object({
   rules: z.array(Rule),
 });
 export type RuleSet = z.infer<typeof RuleSet>;
+
+/**
+ * Map-reduce extractor (alternative strategy, `extract:mapreduce`).
+ * `DraftRule` is a Rule WITHOUT an id: the per-window MAP step extracts rules
+ * from a single window with no global view, so it can't assign stable IDs —
+ * the REDUCE (dedupe) step merges the drafts and numbers the survivors.
+ */
+export const DraftRule = Rule.omit({ id: true });
+export type DraftRule = z.infer<typeof DraftRule>;
+
+export const WindowRules = z.object({
+  rules: z.array(DraftRule).describe("Checkable rules whose obligation appears on the pages in this window; empty if none"),
+});
+export type WindowRules = z.infer<typeof WindowRules>;

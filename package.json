@@ -8,6 +8,7 @@
     "scan": "tsx src/cli.ts scan",
     "cut": "tsx src/cli.ts cut",
     "decompose": "tsx src/cli.ts decompose",
+    "extract:mapreduce": "tsx src/cli.ts extract:mapreduce",
     "eval:checker": "tsx src/cli.ts eval:checker",
     "typecheck": "tsc --noEmit"
   },
