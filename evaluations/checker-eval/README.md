@@ -14,7 +14,6 @@ eval asks "are the rules right?"; checker eval asks "given the rules, are the ju
   outcome (a breach type, a `needs_review`, a clean pass, a false-positive trap).
 - `expected.json` — golden expectations per case.
 - `validate.mjs` — deterministic structural checker (no LLM, no `rules.json`).
-- `smoke/` — the fast 3-case smoke test wired into `npm run check:fixtures`.
 
 ## No rule IDs — and why
 
@@ -143,8 +142,6 @@ passed. Findings:
 - The judge is non-deterministic, so borderline cases (08/18) may flip run-to-run; the band is
   the stable signal.
 
-## Note on `smoke/`
-
-`smoke/expected.json` (the 3-case wired smoke test) still uses `must_flag` with rule IDs, because
-`check-fixtures.ts` reads that field. To make the project fully ID-free, that harness + its
-expectations would move to the same band/phrase scheme — a small code change, offered separately.
+The former `tests/fixtures/` smoke suite (rocket/borderline/compliant) has been removed — those
+cases are subsumed by eval cases 01, 07 and 09/10. One harness, one semantics (`eval:checker`).
+The `rocket` example lives on as the README demo command, not as a test.

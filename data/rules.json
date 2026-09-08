@@ -1,0 +1,530 @@
+{
+  "source_document": "FCA PS22/9 and instrument FCA 2022/31 – Consumer Duty (Principle 12, PRIN 2A, linked DISP/COCON amendments)",
+  "scope_note": "This ruleset covers all obligations that can be checked directly against the content, tone, structure and targeting of marketing materials and customer‑facing communications (including financial promotions, adverts, web/app copy, letters, scripts, and post‑sale/service messages) within the scope of the Consumer Duty (Principle 12 and PRIN 2A). It excludes purely internal or process obligations (governance, MI, testing methodologies, board reports, pricing calculations, product design mechanics, internal value assessments, distribution-chain contracts, staff training records) except where the rule is explicitly framed in terms of what must or must not appear in customer communications. It also excludes sector‑specific rules from other sourcebooks (COBS, ICOBS, etc.) except where PS22/9/PRIN 2A explicitly re‑states or elevates them. Each rule is written so that a reviewer can decide compliance by reading the communication itself plus, where relevant, its evident targeting and prominence, without needing firm records.",
+  "rules": [
+    {
+      "id": "CP-01",
+      "category": "consumer_principle",
+      "principle": "A firm must act to deliver good outcomes for retail customers in its retail market business, including through its marketing and customer communications.",
+      "check": "Taking the communication as a whole, is it reasonably consistent with delivering good outcomes for the retail customers it targets (for example by not misleading them, not steering them toward poor‑value or unsuitable products, and equipping them to make informed decisions)?",
+      "red_flags": [
+        "overall message encourages choices obviously against customer interests",
+        "campaign built around complexity or obfuscation",
+        "communications normalise poor value or obvious consumer detriment",
+        "messaging downplays customer agency or rights",
+        "claims of benefit that clearly conflict with known product limitations"
+      ],
+      "source": "PRIN 2.1.1R Principle 12; PRIN 2A.1.8G–2A.1.10G; PS22/9 Ch.4 §4.7–4.11",
+      "severity": "high"
+    },
+    {
+      "id": "CC-01",
+      "category": "cross_cutting",
+      "principle": "A firm must act in good faith towards retail customers in its communications, characterised by honesty, fair and open dealing and acting consistently with customers’ reasonable expectations.",
+      "check": "Does the communication present information and promises honestly and openly, in a way that aligns with what a reasonable retail customer would expect from the product or service, without hiding material downsides or conditions?",
+      "red_flags": [
+        "headline promise contradicted in fine print",
+        "material conditions hidden in footnotes or separate links",
+        "‘teaser’ messaging that implies features the product does not have",
+        "using reassuring language that conflicts with actual product risks",
+        "suggesting rights or protections that do not exist"
+      ],
+      "source": "PRIN 2A.2.1R–2A.2.3G; PRIN 1.2.1G; PS22/9 Ch.5 §5.5–5.8, Ch.4 §4.6–4.7",
+      "severity": "high"
+    },
+    {
+      "id": "CC-02",
+      "category": "cross_cutting",
+      "principle": "Communications must not seek inappropriately to manipulate or exploit retail customers’ emotions, behavioural biases, vulnerability or circumstances to mislead them or create artificial demand.",
+      "check": "Is the communication free from content or design that inappropriately exploits customers’ emotions, behavioural biases, or known vulnerabilities to mislead them or to create demand that would not arise under balanced, neutral presentation?",
+      "red_flags": [
+        "‘only losers miss out’ type social‑pressure language",
+        "using fear or guilt (e.g. ‘your family will suffer if…’) to push a sale",
+        "urgency countdowns or scarcity claims not grounded in real limits",
+        "designs that make decline/options hard to see (e.g. pre‑ticked consent)",
+        "targeting obviously distressed groups with pushy sales language"
+      ],
+      "source": "PRIN 2A.2.2R–2A.2.3G(b)–(c); 2A.2.10G(2); 2A.2.25G; PS22/9 Ch.5 §5.9–5.11, Ch.5 §5.39–5.40",
+      "severity": "high"
+    },
+    {
+      "id": "CC-03",
+      "category": "cross_cutting",
+      "principle": "Communications must not take advantage of customers’ characteristics of vulnerability in a way that is likely to cause detriment.",
+      "check": "Where the communication is aimed at or likely to reach customers with characteristics of vulnerability, does it avoid exploiting their situation (financial difficulty, disability, low resilience) and instead treat them with appropriate care and sensitivity?",
+      "red_flags": [
+        "pressure‑selling high‑cost credit as ‘solution’ to arrears",
+        "messaging suggesting customers ignore arrears or priority debts",
+        "complex small print aimed at older or impaired customers",
+        "referring to vulnerable groups in a dismissive or exploitative way",
+        "withholding information on help or support options from at‑risk groups"
+      ],
+      "source": "PRIN 2A.2.3G(c); 2A.7.4G–2A.7.5G; PS22/9 Ch.5 §5.5–5.8, Ch.10 §10.15–10.19",
+      "severity": "high"
+    },
+    {
+      "id": "CC-04",
+      "category": "cross_cutting",
+      "principle": "A firm must avoid causing foreseeable harm to retail customers through the design, marketing, sale or support of its products, including via its communications.",
+      "check": "Is it unlikely, judged objectively, that the content, tone, or structure of the communication will cause foreseeable harm to the retail customers targeted (for example by inducing them to misunderstand key risks, incur avoidable charges, or forgo better options)?",
+      "red_flags": [
+        "promotion of obviously unsuitable high‑risk products to unsophisticated mass‑market audiences",
+        "omitting mention of significant fees where decision is framed as cost‑free",
+        "messages that could prompt customers to cancel valuable cover without warning of consequences",
+        "encouraging repeated costly short‑term borrowing as a ‘solution’",
+        "suggesting customers ignore or delay dealing with arrears, defaults or repossession risks"
+      ],
+      "source": "PRIN 2A.2.8R–2A.2.10G; 2A.2.13G; PS22/9 Ch.5 §5.9–5.11, Ch.6 §6.10–6.11",
+      "severity": "high"
+    },
+    {
+      "id": "CC-05",
+      "category": "cross_cutting",
+      "principle": "Communications must not unfairly exploit retail customers’ cognitive or behavioural biases, such as by designing journeys or wording that steer them into harmful choices or unreasonable barriers.",
+      "check": "Does the communication avoid using framing, defaults, or presentation that unfairly steers customers, via behavioural biases, toward options that are more beneficial to the firm but foreseeably harmful or sub‑optimal for customers?",
+      "red_flags": [
+        "defaulting customers into expensive add‑ons described as ‘recommended’ without justification",
+        "prominent ‘buy now’ with hidden ‘learn more’ or ‘no thanks’ options",
+        "presenting complex fee structures in a way that obscures total cost",
+        "‘set and forget’ language around products that need active review",
+        "language implying that not accepting an offer is irrational or irresponsible"
+      ],
+      "source": "PRIN 2A.2.10G(2)–(5); 2A.7.2G(1)(b); 2A.2.25G; PS22/9 Ch.5 §5.39–5.40, Ch.8 §8.11–8.12",
+      "severity": "high"
+    },
+    {
+      "id": "CC-06",
+      "category": "cross_cutting",
+      "principle": "A firm must enable and support retail customers to pursue their financial objectives by ensuring its products, terms, marketing, information and support do not frustrate those objectives.",
+      "check": "Is the communication framed in a way that helps customers pursue plausible financial objectives for the product (e.g. saving, protection, debt reduction), rather than frustrating them by obscuring key information, overstating benefits, or creating undue obstacles to switching or exit?",
+      "red_flags": [
+        "implying that customers cannot switch or exit when they in fact can",
+        "discouraging customers from shopping around or comparing offers",
+        "positioning high‑cost credit as a long‑term solution to structural debt",
+        "downplaying limitations that materially affect achieving the purported objective",
+        "failing to mention that better terms may be available at renewal or elsewhere where this is central to value"
+      ],
+      "source": "PRIN 2A.2.14R–2A.2.21G; PS22/9 Ch.5 §5.12–5.15, Ch.10 §10.20–10.22",
+      "severity": "high"
+    },
+    {
+      "id": "CC-07",
+      "category": "cross_cutting",
+      "principle": "When a firm declines a customer access to a product or service, any communication should, where appropriate, provide information or signposting to help the customer pursue their financial objectives.",
+      "check": "Where the communication informs a customer they are declined or rejected for a product or service, does it, where reasonably appropriate, provide helpful information or signpost them to independent guidance or alternative options in line with typical financial objectives (e.g. MoneyHelper, specialist providers)?",
+      "red_flags": [
+        "simple rejection with no information on next steps or sources of help",
+        "discouraging customers from seeking independent guidance or advice",
+        "language that blames or shames customers for being declined",
+        "implying there are no alternatives where they may reasonably exist",
+        "withholding known suitable alternative channels for help or products"
+      ],
+      "source": "PRIN 2A.2.21G; PS22/9 Ch.10 §10.20–10.22",
+      "severity": "medium"
+    },
+    {
+      "id": "CU-01",
+      "category": "consumer_understanding",
+      "principle": "All retail customer communications, including financial promotions and marketing, must support customer understanding by meeting customers’ information needs, being likely to be understood, and equipping them to make effective, timely and properly informed decisions.",
+      "check": "Does the communication, viewed in context, provide the information a typical intended customer needs, in a form they are likely to understand, at a point in time that allows them to make an effective, timely and properly informed decision about taking, holding, changing or exiting the product or service?",
+      "red_flags": [
+        "key eligibility or cost information missing from pre‑sale materials",
+        "decision prompts without explanation of implications",
+        "complex or technical wording where a mass‑market audience is targeted",
+        "presenting only upside without explaining material downsides needed for an informed choice",
+        "sending critical information only after the customer has effectively committed"
+      ],
+      "source": "PRIN 2A.5.1R–2A.5.5R; 2A.2.20G(2); PS22/9 Ch.8 §8.1–8.7, Ch.1 §1.5–1.7",
+      "severity": "high"
+    },
+    {
+      "id": "CU-02",
+      "category": "consumer_understanding",
+      "principle": "All communications to retail customers must be clear, fair and not misleading.",
+      "check": "Is every statement, claim and overall impression in the communication clear, fair and not misleading, including all market or performance claims such as ‘best’, ‘most trusted’, growth stats, user numbers, awards or endorsements, which must be capable of substantiation?",
+      "red_flags": [
+        "‘guaranteed returns’ for investment products",
+        "‘risk‑free’ for products that carry risk",
+        "‘no fees’ where other charges or non‑monetary costs apply",
+        "‘best on the market’ or ‘UK’s No.1’ with no indication of basis",
+        "quoting performance figures without time periods or context"
+      ],
+      "source": "PRIN 2A.5.3R(2); PRIN 1.2.1G; Glossary ‘financial promotion rules’; PS22/9 Ch.1 §1.5, Ch.8 §8.4",
+      "severity": "high"
+    },
+    {
+      "id": "CU-03",
+      "category": "consumer_understanding",
+      "principle": "Where firms must include complex mandated disclosures, they should present them using techniques such as layering and simple upfront explanations so that consumers can understand key points.",
+      "check": "If the communication contains complex or lengthy prescribed disclosures, does it use aids such as simple upfront explanations, layering, headings or signposting so that key information can be grasped without the customer having to parse dense legal or technical text?",
+      "red_flags": [
+        "long blocks of dense legal text with no headings or summaries",
+        "burying key warnings in annexes or links without upfront explanation",
+        "no simple explanation accompanying mandated numeric disclosures (e.g. APR, charges)",
+        "using the existence of prescribed forms as a reason not to explain them",
+        "presenting multi‑page terms without any overview of key points"
+      ],
+      "source": "PRIN 2A.5.3R–2A.5.7G; PS22/9 Ch.8 §8.6–8.7, §8.11",
+      "severity": "medium"
+    },
+    {
+      "id": "CU-04",
+      "category": "consumer_understanding",
+      "principle": "Communications must be designed so that the customers intended to receive them are likely to understand them, taking into account the characteristics of the target market, including vulnerability and typical literacy/numeracy levels.",
+      "check": "Is the language, structure and complexity of the communication appropriate for the intended recipients, including customers with common literacy, numeracy and vulnerability characteristics in the relevant target market, so that they are likely to understand it?",
+      "red_flags": [
+        "jargon‑heavy explanations for simple mass‑market products",
+        "use of unexplained acronyms or technical terms critical to decisions",
+        "complex numerical examples without plain‑language interpretation",
+        "high reading‑age text aimed at sub‑prime or financially stressed customers",
+        "no adjustments for audiences known to have low literacy/numeracy"
+      ],
+      "source": "PRIN 2A.5.2G–2A.5.4R; 2A.5.7G; 2A.7.2G(1)(b); PS22/9 Ch.8 §8.9–8.11, Ch.5 §5.39",
+      "severity": "high"
+    },
+    {
+      "id": "CU-05",
+      "category": "consumer_understanding",
+      "principle": "Communications should be presented in a logical manner using plain and intelligible language, with key information made prominent and unnecessary disclaimers avoided.",
+      "check": "Is the information in the communication organised logically, written in plain and intelligible language for the intended audience, with key points (such as costs, risks, limitations and customer actions) made prominent, and without cluttering the message with unnecessary disclaimers that could obscure understanding?",
+      "red_flags": [
+        "important conditions or risks only in small print or footnotes",
+        "headline price or benefit prominent but material caveats hidden",
+        "long strings of generic disclaimers overshadowing key information",
+        "use of legalistic or highly formal language for retail audiences",
+        "scattergun layout that makes it hard to see what matters most"
+      ],
+      "source": "PRIN 2A.5.7G(1)–(4); PS22/9 Ch.8 §8.5, §8.11",
+      "severity": "high"
+    },
+    {
+      "id": "CU-06",
+      "category": "consumer_understanding",
+      "principle": "Communications must provide an appropriate level of detail—enough to inform decisions but not so much that information overload prevents effective decision‑making.",
+      "check": "Does the communication strike a reasonable balance between brevity and completeness—providing sufficient detail on key features, costs, risks and actions without overwhelming the customer with unnecessary or duplicative information?",
+      "red_flags": [
+        "pages of marginal detail that obscure critical terms",
+        "omitting material limitations while expanding on minor features",
+        "excessive cross‑references and footnotes for simple products",
+        "hyper‑detailed risk lists that drown out the most relevant risks",
+        "copy‑pasted long legal terms sent as the only pre‑contract information"
+      ],
+      "source": "PRIN 2A.5.7G(5); 2A.5.12G(1)–(3); PS22/9 Ch.8 §8.5–8.7",
+      "severity": "medium"
+    },
+    {
+      "id": "CU-07",
+      "category": "consumer_understanding",
+      "principle": "The timing of communications must allow customers to receive and review key information in good time before purchase and at suitable points during the product lifecycle.",
+      "check": "Does the communication reach customers early enough, and at appropriate points thereafter, that they have a fair chance to read, understand and act on the information before being committed or exposed to material changes?",
+      "red_flags": [
+        "sending essential fee information only in post‑sale welcome packs",
+        "‘act now’ offers where full terms are only available after clicking ‘buy’",
+        "informing customers of adverse changes (e.g. fee increases) only after they take effect",
+        "renewal notices sent too late to allow shopping around",
+        "lifecycle communications that announce changes without time to respond"
+      ],
+      "source": "PRIN 2A.5.3R(1)(c); 2A.5.5R; 2A.2.20G(2)–(3); PS22/9 Ch.8 §8.1–8.3",
+      "severity": "high"
+    },
+    {
+      "id": "CU-08",
+      "category": "consumer_understanding",
+      "principle": "Communication channels chosen must enable relevant information to be conveyed in a way that supports effective decision‑making and allows customers an appropriate opportunity to review it.",
+      "check": "Given the channel used or proposed (e.g. SMS, social, push notification, banner ad), does the communication ensure that customers can access the relevant information they need and have a reasonable opportunity to review more detailed terms before deciding?",
+      "red_flags": [
+        "critical terms only in character‑limited formats with no clear link to more detail",
+        "using channels that are ill‑suited to complex decisions without signposting to fuller information",
+        "pop‑up messages that disappear too quickly to read key details",
+        "relying solely on automated in‑app notices for significant negative changes",
+        "no clear route to view full terms from abbreviated headlines"
+      ],
+      "source": "PRIN 2A.5.1R(1)(c); 2A.5.3R–2A.5.6R; PS22/9 Ch.9 §9.6–9.7, Ch.8 §8.8",
+      "severity": "medium"
+    },
+    {
+      "id": "CU-09",
+      "category": "consumer_understanding",
+      "principle": "When interacting with a customer on a one‑to‑one basis, firms should tailor communications to that individual’s needs and, where appropriate, check that they understand key information.",
+      "check": "Where the text is a script, email template or other one‑to‑one communication, does it allow or encourage staff to tailor key explanations to the individual’s situation and to ask whether the customer understands and has further questions when delivering key information or prompts to decide?",
+      "red_flags": [
+        "rigid scripts with no opportunity to clarify or simplify for customers",
+        "no prompt to ask the customer if they have understood or have questions",
+        "templates that ignore explicitly disclosed vulnerabilities or needs",
+        "tones that discourage questions (e.g. ‘just click here to finish quickly’)",
+        "instructions to avoid clarifying unless the customer explicitly insists"
+      ],
+      "source": "PRIN 2A.5.8R; 2A.5.9R; PS22/9 Ch.8 §8.11–8.12",
+      "severity": "medium"
+    },
+    {
+      "id": "CU-10",
+      "category": "consumer_understanding",
+      "principle": "Where appropriate, firms must test communications before use and monitor their impact to see if they are supporting good outcomes, adapting communications if they are not.",
+      "check": "Where the communication is clearly important (e.g. mass‑market promotion, key disclosure, major change notice), is there any indication in or around the communication that it has been or will be adapted in light of customer understanding (e.g. clarity improvements, explanatory aids), and does its design avoid obvious signs that typical customers are likely to misunderstand it?",
+      "red_flags": [
+        "complex, high‑impact promotions with no evidence of simplification or iteration",
+        "continuing to use known confusing wording (e.g. from widespread complaints)",
+        "ignoring clear behavioural evidence of misunderstanding (e.g. low response to required action prompts) in follow‑up messages",
+        "re‑using legacy disclosures known to be ineffective",
+        "no response in communications to recurring customer errors or confusions"
+      ],
+      "source": "PRIN 2A.5.10R–2A.5.13G; PS22/9 Ch.8 §8.11–8.12",
+      "severity": "medium"
+    },
+    {
+      "id": "CU-11",
+      "category": "consumer_understanding",
+      "principle": "If a firm becomes aware that another firm’s communication in the same distribution chain is not delivering good outcomes, it must promptly notify the relevant firm.",
+      "check": "Where the communication comments on or re‑uses another firm’s marketing or disclosure within the same distribution chain, does it avoid endorsing or repeating content that is clearly unclear, unfair or misleading, and, where it highlights concerns, does it state that issues have been raised with the originating firm?",
+      "red_flags": [
+        "re‑circulating manufacturer material that is obviously confusing or misleading without caveat",
+        "adding local branding to problematic central campaigns with no qualification",
+        "internal notes instructing staff to ‘just use the manufacturer leaflet as is’ despite known problems",
+        "text that tacitly accepts others’ misleading claims (e.g. ‘as you’ve seen, this is risk‑free’)"
+      ],
+      "source": "PRIN 2A.5.14R; 2A.5.1R(1)(a); PS22/9 Ch.5 §5.15, Ch.6 §6.11",
+      "severity": "medium"
+    },
+    {
+      "id": "CU-12",
+      "category": "consumer_understanding",
+      "principle": "A firm must provide other firms in the distribution chain with information reasonably required so it can be communicated to retail customers in good time.",
+      "check": "Where the communication is aimed at downstream distributors (e.g. broker info sheets, rate cards), does it provide the key customer‑facing information (benefits, limitations, target market, value drivers) clearly enough that those firms can communicate it properly to retail customers?",
+      "red_flags": [
+        "distributor‑facing materials that omit key customer risks or limitations",
+        "telling intermediaries only about commissions or incentives, not consumer value",
+        "instructions to ‘keep messaging high‑level’ that suppress important caveats",
+        "failing to describe target market or vulnerability considerations anywhere in distributor packs",
+        "value‑sensitive conditions (e.g. teaser end dates) not highlighted for onward communication"
+      ],
+      "source": "PRIN 2A.5.15R; 2A.4.15R; PS22/9 Ch.6 §6.11, Ch.7 §7.5–7.8",
+      "severity": "medium"
+    },
+    {
+      "id": "PV-01",
+      "category": "price_value",
+      "principle": "Where upfront discounts or differential pricing are offered, communications must make these features clear and transparent so that both new and existing customers can assess whether they receive fair value.",
+      "check": "If the communication promotes introductory discounts, renewal pricing, or different prices across brands, does it clearly explain the nature and duration of discounts, how and when prices may change, and avoid implying that temporary benefits are permanent?",
+      "red_flags": [
+        "‘12 months half price’ offer without stating what happens after 12 months",
+        "‘new customer price’ highlighted with no indication of higher renewal pricing",
+        "suggesting discounts are permanent when they are time‑limited",
+        "failing to mention significant exit or change fees that affect value",
+        "presenting different brand prices as identical offers without clarifying differences"
+      ],
+      "source": "PRIN 2A.4.5R; 2A.4.8R–2A.4.12G; PS22/9 Ch.7 §7.5–7.8, §7.23–7.26",
+      "severity": "high"
+    },
+    {
+      "id": "PV-02",
+      "category": "price_value",
+      "principle": "Communications about free or low‑priced products must not hide material non‑monetary costs such as data use, foregone interest, associated fees or other trade‑offs that are central to value.",
+      "check": "Where the communication describes a product or service as ‘free’, ‘no cost’, ‘no fees’ or similar, does it also make clear any material non‑monetary costs or indirect ways customers pay (foregone interest, data usage, cross‑selling, ancillary fees) that are significant to the product’s value?",
+      "red_flags": [
+        "‘completely free account’ where income is clearly from high overdraft or FX fees",
+        "emphasising ‘no monthly fee’ while obscuring high per‑use charges",
+        "‘free debt advice’ messaging that does not disclose strong product‑sales incentives",
+        "using customers’ data extensively without any mention in ‘free’ offer",
+        "stating ‘no cost ever’ where trade‑offs like lower interest or bundled fees exist"
+      ],
+      "source": "PRIN 2A.4.8R(3); 2A.4.10G; PS22/9 Ch.7 §7.6–7.7",
+      "severity": "high"
+    },
+    {
+      "id": "PV-03",
+      "category": "price_value",
+      "principle": "Where communications describe total price, fees or charges, they must reflect the main elements of cost the customer will pay, including contingent fees that are reasonably likely, in a way customers can understand.",
+      "check": "Does the communication present the main prices, regular charges and reasonably likely contingent fees (e.g. common admin fees, arrears charges, transfer fees) in a way that a typical customer can understand and factor into their value assessment?",
+      "red_flags": [
+        "headline monthly price given without mentioning mandatory extra fees",
+        "‘no setup fees’ messaging where other upfront fees exist",
+        "omitting common arrears or default fees from ‘key facts’ price summaries",
+        "complex rate tables that obscure typical total cost",
+        "burying important contingent charges deep in T&Cs only"
+      ],
+      "source": "PRIN 2A.4.8R(3); 2A.4.10G(2); PS22/9 Ch.7 §7.5–7.6",
+      "severity": "high"
+    },
+    {
+      "id": "PV-04",
+      "category": "price_value",
+      "principle": "Communications aimed at groups likely to include vulnerable customers must not present pricing or value in a way that makes it harder for them to receive fair value.",
+      "check": "Where the communication targets or is likely to reach customers with characteristics of vulnerability, does it explain pricing, fees and value implications particularly clearly and avoid complexity or framing that would make it harder for them to assess whether they are receiving fair value?",
+      "red_flags": [
+        "promoting complex fee structures to sub‑prime or distressed borrowers without simple explanation",
+        "emphasising low upfront cost to vulnerable groups while hiding high back‑end charges",
+        "suggesting customers in difficulty should ignore total cost and ‘focus on monthly payment’",
+        "encouraging repeat roll‑overs or renewals without highlighting cumulative cost",
+        "omitting signposts to help for those who cannot afford the product"
+      ],
+      "source": "PRIN 2A.4.8R(4); 2A.4.11G; 2A.7.4G–2A.7.5G; PS22/9 Ch.7 §7.6–7.8, Ch.10 §10.17–10.19",
+      "severity": "high"
+    },
+    {
+      "id": "CS-01",
+      "category": "consumer_support",
+      "principle": "Communications about support channels and customer service must accurately describe the channels available and must make clear any limitations, such as digital‑only support, before sale.",
+      "check": "Does the communication clearly and prominently describe the actual support channels customers will have (e.g. phone, branch, digital‑only), including any significant limitations, so that customers can judge whether the support model meets their needs before taking the product?",
+      "red_flags": [
+        "advertising ‘24/7 support’ where only an FAQ or chatbot is available",
+        "describing support as ‘phone and online’ where, in practice, some issues are digital‑only",
+        "selling a digital‑only service without stating that there is no phone or branch support",
+        "hiding limitations to support channels in small print",
+        "implying that vulnerable customers will receive tailored support where no such channel exists"
+      ],
+      "source": "PRIN 2A.6.1R; 2A.6.2R; PS22/9 Ch.9 §9.6–9.7, §9.56–9.58",
+      "severity": "high"
+    },
+    {
+      "id": "CS-02",
+      "category": "consumer_support",
+      "principle": "Support‑related customer journeys described or linked in communications must not contain unreasonable barriers, including unreasonable additional costs, delay, distress or inconvenience, compared with sales journeys.",
+      "check": "Where the communication describes how to change, cancel, complain, or claim, does it indicate processes that are reasonably as accessible and prompt as those for purchase, and free from obvious unreasonable barriers, extra costs or deterrent language?",
+      "red_flags": [
+        "stating that cancellation can only be made in writing while purchase is instant online",
+        "admitting to long waits or limited hours for cancellation/complaints vs 24/7 sales",
+        "threatening language around exit or complaint rights",
+        "mention of high exit fees without justification or explanation",
+        "instructions that require unnecessary documents or steps to make a change"
+      ],
+      "source": "PRIN 2A.6.2R–2A.6.4G; 2A.2.10G(3),(5)(iii); PS22/9 Ch.9 §9.4–9.7",
+      "severity": "high"
+    },
+    {
+      "id": "CS-03",
+      "category": "consumer_support",
+      "principle": "Firms should indicate in their communications that they can adapt formats or channels to meet the needs of customers with characteristics of vulnerability, such as disability.",
+      "check": "Where the communication covers contact or support, does it either explicitly offer alternative formats or channels (or an easy way to request them) for customers who may have disabilities or other characteristics of vulnerability affecting their ability to use standard channels?",
+      "red_flags": [
+        "only providing a single rigid channel with no mention of adjustments",
+        "examples where a customer request for alternative format is impliedly brushed off",
+        "no indication that disabled customers can request reasonable adjustments",
+        "statements suggesting customers must fit firm’s preferred channel regardless of needs",
+        "fine print disclaimers that the firm cannot accommodate special needs"
+      ],
+      "source": "PRIN 2A.6.1R; 2A.7.4G–2A.7.5G; PS22/9 Ch.9 §9.6–9.7, §9.56–9.58",
+      "severity": "medium"
+    },
+    {
+      "id": "CS-04",
+      "category": "consumer_support",
+      "principle": "Where support is mainly or only through a limited channel (such as digital‑only), communications must also explain any contingency arrangements for non‑standard issues and operational disruptions.",
+      "check": "If the product communication promotes a limited‑channel support model (e.g. app‑only), does it explain in plain terms how customers will be supported in non‑standard situations (fraud, technical issues, security problems) or outages, including access to a real‑time human interface where likely needed?",
+      "red_flags": [
+        "digital‑only offers with no mention of what happens in case of fraud or outage",
+        "implying that all issues can be solved via self‑service when some plainly cannot",
+        "no mention of any real‑time help option for complex or urgent problems",
+        "language suggesting customers are ‘on their own’ in unusual scenarios",
+        "downplaying impacts of outages or access loss without offering solutions"
+      ],
+      "source": "PRIN 2A.6.1R–2A.6.3G; PS22/9 Ch.9 §9.56–9.58",
+      "severity": "medium"
+    },
+    {
+      "id": "CS-05",
+      "category": "consumer_support",
+      "principle": "Where communications refer to dealing with authorised representatives (such as those with power of attorney), firms must not suggest that such representatives will receive a lower level of support than the customer would.",
+      "check": "If the communication mentions attorneys, representatives or similar, does it make clear (or at least not contradict) that they will receive the same level of support in dealing with the customer’s affairs as the customer themselves would?",
+      "red_flags": [
+        "statements that attorneys will have ‘limited access’ to support compared with customers",
+        "implying representatives must use slower or more complex channels",
+        "suggesting the firm may refuse to deal with a duly authorised representative",
+        "language discouraging customers from appointing representatives due to ‘hassle’",
+        "omitting support info for representatives while detailing it for direct customers"
+      ],
+      "source": "PRIN 2A.6.5R; PS22/9 Ch.9 §9.8–9.9",
+      "severity": "medium"
+    },
+    {
+      "id": "EO-01",
+      "category": "equality_vulnerability",
+      "principle": "Communications must take account of the needs of customers with characteristics of vulnerability and ensure they are not put at a disadvantage compared with other customers in understanding, value or support.",
+      "check": "Does the communication appear designed so that customers with reasonably foreseeable characteristics of vulnerability in the target market (e.g. poor literacy, health issues, financial difficulty) can understand key information and access fair value and support on terms no worse than other customers?",
+      "red_flags": [
+        "using complex language for products heavily used by vulnerable groups",
+        "no mention of help or support in materials for products targeted at people in financial difficulty",
+        "pricing or offer terms that clearly disadvantage those with protected characteristics without justification",
+        "communications that ignore evident accessibility needs (e.g. no alternative formats)",
+        "tone that stigmatises or shames vulnerable customers"
+      ],
+      "source": "PRIN 2A.7.4G–2A.7.5G; 2A.2.25G; PS22/9 Ch.10 §10.17–10.19, Ch.5 §5.39–5.40",
+      "severity": "high"
+    },
+    {
+      "id": "EO-02",
+      "category": "equality_vulnerability",
+      "principle": "Communications should be consistent with firms’ obligations under the Equality Act 2010, avoiding discrimination or messaging that could disproportionately harm customers with protected characteristics.",
+      "check": "Is the communication free from discriminatory content, unjustified exclusionary language, or practices that plainly risk disproportionate harm to people with protected characteristics (such as disability, age, race or sex)?",
+      "red_flags": [
+        "explicitly excluding protected groups without lawful justification",
+        "stereotyping or derogatory language about older, disabled or minority customers",
+        "eligibility wording that appears to indirectly exclude protected groups without explanation",
+        "marketing that clearly targets only ‘ideal’ customers in a way that marginalises others",
+        "claims that suggest lesser rights or support for customers with disabilities"
+      ],
+      "source": "PRIN 2A.7.5G; PS22/9 Ch.10 §10.17–10.19, §10.23–10.24",
+      "severity": "high"
+    },
+    {
+      "id": "RD-01",
+      "category": "redress_communications",
+      "principle": "When communicating about identified harm and remedial action or redress, firms must explain that harm has been identified, the assessment, and the chosen action in a way that is fair, clear and not misleading, and must explain the customer’s right to complain.",
+      "check": "In any redress or remediation communication, does the firm clearly and fairly explain that harm has been identified, what that harm is, what remedial action or redress will be taken, and that the customer can complain if they are not satisfied?",
+      "red_flags": [
+        "vague references to a ‘review’ without admitting identifiable harm",
+        "downplaying the seriousness or impact of the harm",
+        "offering redress without explaining how it was calculated in simple terms",
+        "omitting any mention of the right to complain",
+        "language that suggests acceptance of redress waives complaint rights where that is not accurate"
+      ],
+      "source": "DISP 1.4.1R (as modified by PRIN 2A.10.9R); PRIN 2A.2.5R; PS22/9 Annex B p.141",
+      "severity": "high"
+    },
+    {
+      "id": "FP-01",
+      "category": "financial_promotion_rules",
+      "principle": "Financial promotions and associated communications must comply with Principle 12 and PRIN 2A, including the consumer understanding rules and cross‑cutting obligations, whenever they are aimed at or likely to reach retail customers.",
+      "check": "Where the communication is a financial promotion or clearly promotional in nature, is it consistent with all relevant Consumer Duty rules (clear, fair, not misleading; supports understanding; avoids foreseeable harm; does not exploit biases; enables customers’ objectives)?",
+      "red_flags": [
+        "any of the red flags under CC‑01 to CC‑06 or CU‑01 to CU‑05 present in promotional materials",
+        "‘too good to be true’ offers with minimal explanation",
+        "performance or market leadership claims that are bold but unsubstantiated",
+        "disclaimers that attempt to negate clear headline impressions",
+        "marketing designed to circumvent retail protections by hinting at ‘professional only’ while plainly appealing to retail customers"
+      ],
+      "source": "Glossary ‘financial promotion rules’ (8); PRIN 2A.5.1R(1)(a); PRIN 3.1.10R; PRIN 3.3.1R; PS22/9 Ch.4 §4.12–4.15, Annex A p.100",
+      "severity": "high"
+    },
+    {
+      "id": "NR-01",
+      "category": "non_retail_instruments_scope",
+      "principle": "Marketing materials for non‑retail financial instruments must feature prominent and clear disclosures that they are only for professional clients or eligible counterparties and not intended for retail customers, and must not be directed at retail customers.",
+      "check": "If the communication relates to a financial instrument claimed to be ‘non‑retail’, does it prominently and clearly state that it is only for professional clients or eligible counterparties and not intended for retail customers, and is the language and targeting consistent with being aimed only at such investors?",
+      "red_flags": [
+        "no or tiny disclaimer about ‘professional investors only’",
+        "using retail‑friendly language (‘perfect for everyday investors’) while claiming non‑retail status",
+        "placing ‘not for retail’ disclaimer in obscure locations (e.g. footer in small font)",
+        "distributing via obviously retail channels or lists",
+        "suggesting that ordinary consumers can easily access the instrument despite the label"
+      ],
+      "source": "Glossary ‘non-retail financial instrument’ (1)(a)–(b); ‘retail market business’ (2)–(3); PS22/9 Ch.2 §2.21–2.23",
+      "severity": "high"
+    },
+    {
+      "id": "SC-01",
+      "category": "scope_retail_market_business",
+      "principle": "Communications for products that are only marketed and approved for distribution to non‑retail customers must not be framed or distributed in a way that targets or attracts retail customers, otherwise the Consumer Duty will apply.",
+      "check": "Where the communication asserts that a product is only for non‑retail customers (e.g. corporates, professional investors), is the content, tone and placement free from indications that it is actually being marketed to or is likely to attract retail customers?",
+      "red_flags": [
+        "using consumer‑style imagery and language for ‘professional only’ products",
+        "simple ‘everyday’ messaging on pages nominally for institutional clients",
+        "calls to action clearly aimed at individuals (e.g. ‘open your personal account today’) on non‑retail products",
+        "omitting explicit non‑retail restrictions in prominent places",
+        "encouraging intermediaries to ‘fit’ retail customers into non‑retail classifications"
+      ],
+      "source": "PRIN 3.2.6R–3.2.8R; Glossary ‘retail market business’ (1)–(3); PS22/9 Ch.2 §2.18–2.23",
+      "severity": "high"
+    }
+  ]
+}

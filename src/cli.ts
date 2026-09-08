@@ -10,14 +10,15 @@ try {
 const USAGE = `Regulation Compliance Agent — pipeline stages as subcommands
 
 Usage:
-  npm run scan     [-- --pdf <file>] [--window-size <n>] [--out <file>]
-  npm run cut      [-- --pdf <file>] [--scan <file>] [--out <file>]
+  npm run scan     -- --pdf <file> [--window-size <n>] [--out <file>]
+  npm run cut      -- --pdf <file> [--scan <file>] [--out <file>]
   npm run extract  [-- --subset <file>] [--out <file>]
   npm run check    -- --input <file|-> [--rules <file>] [--out <file>]
 
-Pipeline: scan → cut → extract → check. The source PDF is expected at
-.temp/regulations.pdf (gitignored — see README); scan/cut/extract regenerate
-the data/ artifacts, and check consumes data/rules.json.
+Pipeline: scan → cut → extract → check. Pass the source regulation PDF via
+--pdf (no hardcoded location). The committed data/ artifacts (scan.json,
+subset.md, rules.json) let \`check\` run without a PDF; scan/cut/extract
+rebuild them from whatever --pdf you point at.
 `;
 
 const [command] = process.argv.slice(2);
@@ -28,11 +29,15 @@ switch (command) {
     const { values } = parseArgs({
       args: rest,
       options: {
-        pdf: { type: "string", default: ".temp/regulations.pdf" },
+        pdf: { type: "string" },
         "window-size": { type: "string", default: "12" },
         out: { type: "string", default: "data/scan.json" },
       },
     });
+    if (!values.pdf) {
+      console.error("scan: --pdf <file> is required (path to the regulation PDF)");
+      process.exit(2);
+    }
     const { runScan } = await import("./features/extract/scan.js");
     await runScan({
       pdf: values.pdf,
@@ -45,12 +50,16 @@ switch (command) {
     const { values } = parseArgs({
       args: rest,
       options: {
-        pdf: { type: "string", default: ".temp/regulations.pdf" },
+        pdf: { type: "string" },
         scan: { type: "string", default: "data/scan.json" },
         out: { type: "string", default: "data/subset.md" },
         extra: { type: "string", multiple: true, default: [] },
       },
     });
+    if (!values.pdf) {
+      console.error("cut: --pdf <file> is required (path to the regulation PDF)");
+      process.exit(2);
+    }
     const { runCut } = await import("./features/extract/cut.js");
     await runCut({ pdf: values.pdf, scan: values.scan, out: values.out, extra: values.extra });
     break;

@@ -13,5 +13,10 @@ eToro - BizOps AI Task (1).pdf
 
 .temp
 
-# generated pipeline artifacts (scan/cut/extract/check output + eval reports)
-data/
+# generated pipeline artifacts: ignore everything in data/ EXCEPT the three
+# canonical BYOK artifacts, which are committed so `check` runs without a PDF.
+# (must ignore data/* not data/ — git can't re-include under an ignored dir)
+data/*
+!data/rules.json
+!data/scan.json
+!data/subset.md
