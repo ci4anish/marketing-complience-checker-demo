@@ -22,8 +22,9 @@ around them.
 - `npm install`
 - `cp .env.example .env`, then set `OPENAI_API_KEY`. Optional `OPENAI_MODEL` (defaults to `gpt-5.1`).
 - **No build step** — [`tsx`](https://tsx.is) runs the TypeScript directly.
-- The regulation **PDF is gitignored** (`.temp/regulations.pdf`). It's only needed for
-  `extract`/`scan`/`cut`. `check` runs from the committed `data/` artifacts without any PDF.
+- The FCA source **PDF is committed** at `policies-docs/regulations.pdf`; pass `--pdf <file>` to
+  target another regulation. It's only needed for `extract`/`scan`/`cut`. `check` runs from the
+  committed `data/` artifacts without any PDF.
 
 ## Commands
 

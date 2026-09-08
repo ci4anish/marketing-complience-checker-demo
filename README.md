@@ -37,11 +37,12 @@ report to `data/report.json`. Exit code is non-zero on FAIL (CI-friendly).
 decompose):
 
 ```bash
-npm run extract -- --pdf path/to/regulation.pdf
+npm run extract -- --pdf policies-docs/regulations.pdf
 ```
 
-The FCA source PDF isn't committed; drop it at `.temp/regulations.pdf` or pass `--pdf`. `check`
-needs no PDF — the committed `data/` artifacts keep it runnable on their own.
+The FCA source PDF is committed at `policies-docs/regulations.pdf` (pass `--pdf` to point at any
+other regulation). `check` needs no PDF — the committed `data/` artifacts keep it runnable on their
+own.
 
 Full command reference and contributor/agent notes: **[AGENTS.md](AGENTS.md)**.
 
