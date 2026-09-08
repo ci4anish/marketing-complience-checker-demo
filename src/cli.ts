@@ -18,9 +18,6 @@ Granular build stages (for debugging one step):
   npm run cut       -- --pdf <file> [--scan <file>] [--out <file>]
   npm run decompose [-- --subset <file>] [--out <file>]
 
-Alternative extractor (map-reduce; A/B against the default):
-  npm run extract:mapreduce -- --pdf <file> [--window-size <n>] [--out <file>]
-
 \`extract\` builds data/rules.json from a --pdf (no hardcoded location); \`check\`
 evaluates a text against it. The committed data/ artifacts (scan.json, subset.md,
 rules.json) let \`check\` run without a PDF.
@@ -91,32 +88,6 @@ switch (command) {
     await runScan({ pdf: values.pdf, windowSize: Number(values["window-size"]), out: "data/scan.json" });
     await runCut({ pdf: values.pdf, scan: "data/scan.json", out: "data/subset.md", extra: [] });
     await runExtract({ subset: "data/subset.md", out: values.out });
-    break;
-  }
-  case "extract:mapreduce": {
-    // Alternative extractor (DECISIONS.md D3/D14): fused per-window scan+extract
-    // (map) → single LLM dedupe (reduce). Writes a separate rules file by
-    // default so it can be A/B-scored against the scan→cut→extract pipeline.
-    const { values } = parseArgs({
-      args: rest,
-      options: {
-        pdf: { type: "string" },
-        "window-size": { type: "string", default: "12" },
-        out: { type: "string", default: "data/rules.mapreduce.json" },
-        raw: { type: "string", default: "data/rules.mapreduce.raw.json" },
-      },
-    });
-    if (!values.pdf) {
-      console.error("extract:mapreduce: --pdf <file> is required (path to the regulation PDF)");
-      process.exit(2);
-    }
-    const { runExtractMapReduce } = await import("./features/extract/mapreduce.js");
-    await runExtractMapReduce({
-      pdf: values.pdf,
-      windowSize: Number(values["window-size"]),
-      out: values.out,
-      raw: values.raw,
-    });
     break;
   }
   case "decompose": {
