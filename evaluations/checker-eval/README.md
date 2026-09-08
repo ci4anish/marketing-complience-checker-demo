@@ -114,8 +114,34 @@ ID-free design.
 - This is one reviewer's judgment, not ground truth. Case 06 (testimonial) sits near the
   WARN/FAIL line — pinned FAIL on the misleading-framing reading, but a judge routing the £5,000
   claim to `needs_review` is defensible.
-- Expected verdicts are reasoned predictions; the 24 cases have not yet been run through `check`
-  against a live key.
+## First run (gpt-5.1, 31-rule autonomous ruleset)
+
+`npm run eval:checker` → **22/24 hard, 22/24 bands, needs_review 3/3, false-positives 0**
+(after fixing the one eval bug below). Every unambiguous case passed: all FAIL cases failed for
+the right reason with honest evidence, all clear PASS cases passed, the strongest false-positive
+guard (case 21, red-flags-in-negation) and format case (20) passed, evidence-localization (19)
+passed. Findings:
+
+- **case 04 — eval bug, fixed.** `forbid_flag: ["Capital at risk"]` was wrong: the judge
+  correctly cited the inadequate risk line as *evidence* of the benefit/risk imbalance, which is
+  a right finding, not a false positive. Removed it (band FAIL + `must_catch` already carry the
+  "bare risk line ≠ auto-pass" intent).
+- **cases 08 & 18 — judge finding, kept.** The judge returned PASS (zero findings) on the
+  jargon ad and the disclaimer wall — it is **lenient on presentation-only (medium/low) defects**
+  (unexplained jargon, disclaimer overload). Left as WARN deliberately: this is the actionable
+  signal (nudge the checker prompt to flag plain-language / overload defects), not something to
+  hide by relaxing the golden to match the model. Both are the CALIBRATION cases flagged below.
+
+## Caveats
+
+- `must_catch` matches a specific phrasing. Where a text has several equivalent offending phrases
+  (e.g. case 08's jargon terms), we pick the most likely-quoted one and lean on the band; those
+  are marked CALIBRATION cases. A mismatch there is a prompt-tuning signal, not necessarily a bug.
+- This is one reviewer's judgment, not ground truth. Case 06 (testimonial) sits near the
+  WARN/FAIL line — pinned FAIL on the misleading-framing reading, but a judge routing the £5,000
+  claim to `needs_review` is defensible.
+- The judge is non-deterministic, so borderline cases (08/18) may flip run-to-run; the band is
+  the stable signal.
 
 ## Note on `smoke/`
 

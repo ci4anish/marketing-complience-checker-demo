@@ -38,8 +38,8 @@
     "band": "FAIL",
     "must_catch": ["Amplify your profits"],
     "expect_needs_review": [],
-    "forbid_flag": ["Capital at risk"],
-    "why": "Upside emphasised while leverage's symmetric amplification of losses is unstated; a token risk line does not balance it. The risk line itself must NOT be cited as the breach (forbid_flag) — this is the 'a risk phrase is present but the ad is still unbalanced' test."
+    "forbid_flag": [],
+    "why": "Upside emphasised while leverage's symmetric amplification of losses is unstated; a token risk line does not balance it. The 'bare risk line does not auto-pass' intent is carried by band FAIL + must_catch. NB: we do NOT forbid quoting 'Capital at risk' — a judge citing the inadequate risk line as EVIDENCE of the imbalance is correct, not a false positive (an earlier forbid_flag on it was miscalibrated and failed this case in the first run)."
   },
   "05-deposit-bonus-urgency.txt": {
     "scenario": "Deposit bonus ('free money') + hard 48-hour deadline.",

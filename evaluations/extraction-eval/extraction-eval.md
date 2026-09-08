@@ -109,6 +109,51 @@ Final state: recall 13/13 against golden with zero human page selection. The two
 generalize: (a) scan criteria must apply one uniform checkability test to all text forms;
 (b) extraction needs an explicit floor tied to the document's own enumerated structure.
 
+## Round 4 — re-run after cleaning `data/` (autonomous scan → cut → extract)
+
+Regenerated from scratch (empty `data/`, no hardcoded ranges). Scan: **73/161 pages, 28 ranges**
+selected autonomously (incl. the PRIN 2A instrument pp.104–112, 127–131). Extract: **31 rules**
+across 7 self-derived categories (`consumer_principle`, `cross_cutting`, `consumer_understanding`,
+`consumer_support`, `price_and_value`, `scope_and_territorial`, `redress_and_harm_communications`;
+prefixes CP/CC/CU/CS/PV/SC/RD). Note: a *third distinct taxonomy* from earlier runs (38→33→31
+rules, prefixes reshuffled each time) — confirms the extractor's non-determinism (D13/D16). Recall
+is unaffected because we score by MEANING, not ID.
+
+**Recall vs golden: 13/13.** Mapping (golden → this run):
+
+| Golden | This run | Notes |
+|---|---|---|
+| CP-01 good outcomes | CP-01 | ✓ |
+| CC-01 good faith | CC-01 | ✓ |
+| CC-02 foreseeable harm | CC-03 | ✓ |
+| CC-03 enable/support objectives | CC-04 (+CC-05 declining-product signposting) | ✓ |
+| CC-04 no exploit emotions/biases/vuln | CC-02 (+CC-06 account for biases/vuln) | ✓ |
+| CU-01 clear/fair/not misleading | CU-02 | ✓ |
+| CU-02 support understanding | CU-01 | ✓ |
+| **CU-03 benefit/risk balance** | **distributed: CC-03 + CU-02 + CU-07** | covered, not standalone (see below) |
+| CU-04 plain language/jargon | CU-06 | ✓ |
+| CU-05 prominence + avoid disclaimers | CU-07 + CU-08 | golden's one rule → two |
+| CU-06 appropriate detail | CU-08 | ✓ |
+| CU-07 timely/before purchase | CU-04 | ✓ |
+| CU-08 tailor to audience/vuln/complexity | CU-09 (+CU-03 target-market) | ✓ |
+
+**One thing to watch — the benefit/risk-balance obligation is not a standalone rule.** Golden's
+CU-03 ("promote benefits ⇒ show risks with prominence") is woven into three rules' `check` fields
+instead: CC-03 ("claims framed without downplaying associated risks"), CU-02 ("balanced… capable
+of substantiation") and CU-07 ("significant risks… sufficient prominence"). Functionally covered
+— the checker still catches unbalanced ads (checker-eval case 04) — but a reviewer scanning
+`rules.json` for a dedicated risk-warning rule won't find one. If risk-balance is a priority, the
+coverage-floor instruction could name it explicitly.
+
+**Precision / scope — broader than golden (31 vs 13), by design not by error.** Golden was
+deliberately scoped to marketing-text-checkable rules only; this run additionally extracts
+price & value (PV-01…03), professional-only scope (SC-01/02), redress (RD-01) and consumer
+support (CS-01…05) — all legitimate document obligations, several genuinely checkable against a
+promotion (intro-discount transparency PV-02, free/"data-cost" PV-03, professional-only disclosure
+SC-01). Mild scope creep: CU-10 (one-to-one), CU-11 (testing), CU-12/CU-13 (distribution-chain)
+are firm-process rules not verifiable from a static text — harmless (the checker returns
+`not_applicable`) but trimmable if a tighter marketing-only ruleset is wanted. No hallucinations.
+
 ## Takeaway
 
 The extractor itself is strong (92% recall on first sight of the text, 100% after the subset
