@@ -15,6 +15,36 @@ that has to be reliable.
 
 The decisions below are just this story in more detail.
 
+## Quick start
+
+**Requirements:** Node ≥ 24.
+
+```bash
+npm install
+cp .env.example .env      # then set OPENAI_API_KEY (optional: OPENAI_MODEL, default gpt-5.1)
+```
+
+**Check a marketing text** — works out of the box against the committed `data/rules.json`:
+
+```bash
+npm run check -- --input path/to/ad.txt     # or:  echo "Get rich fast 🚀" | npm run check -- --input -
+```
+
+Prints a PASS / WARN / FAIL verdict with per-rule findings and quoted evidence, and writes the full
+report to `data/report.json`. Exit code is non-zero on FAIL (CI-friendly).
+
+**Rebuild the rulebook from a regulation PDF** — regenerates `data/rules.json` (runs scan → cut →
+decompose):
+
+```bash
+npm run extract -- --pdf path/to/regulation.pdf
+```
+
+The FCA source PDF isn't committed; drop it at `.temp/regulations.pdf` or pass `--pdf`. `check`
+needs no PDF — the committed `data/` artifacts keep it runnable on their own.
+
+Full command reference and contributor/agent notes: **[AGENTS.md](AGENTS.md)**.
+
 ## Decisions
 
 **D1 — Two commitments from the start: a closed evaluation loop, and a generic solution.**
