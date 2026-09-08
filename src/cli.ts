@@ -90,12 +90,6 @@ switch (command) {
     }
     break;
   }
-  case "check:fixtures": {
-    const { runCheckFixtures } = await import("./features/check/check-fixtures.js");
-    const ok = await runCheckFixtures();
-    process.exitCode = ok ? 0 : 1;
-    break;
-  }
   case "eval:checker": {
     const { runCheckerEval } = await import("./features/check/checker-eval.js");
     const ok = await runCheckerEval();
