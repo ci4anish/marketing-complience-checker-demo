@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "LLM-powered Regulation Compliance Agent — eToro BizOps AI task",
   "scripts": {
-    "plan": "tsx src/cli.ts plan",
     "cut": "tsx src/cli.ts cut",
     "extract": "tsx src/cli.ts extract",
     "check": "tsx src/cli.ts check",

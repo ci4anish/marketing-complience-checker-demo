@@ -275,3 +275,10 @@ gitignored `.temp/` (both PDFs; history no longer carries the 1.4MB file — lea
 repo). CLI defaults updated to `.temp/regulations.pdf`; the README must tell reviewers to
 download PS22/9 and drop it there (or pass --pdf). Committed pipeline artifacts
 (scan/subset/rules) keep the repo runnable for `check` without the PDF.
+
+**D19 — Vestigial `plan` stage deleted.** The TOC-planner was superseded by `scan` (D11) and
+had degraded to "optional section titles" — dead weight: an extra prompt to read, an extra
+stage to explain, zero pipeline role. Removed (command, prompt, schema, npm script). The
+design journey it represents — TOC planning, the printed-vs-PDF page-offset fix, its blind
+spot on unpaginated appendices — remains told in D5/D11 and git history; the code now shows
+only the current architecture: scan → cut → extract → check.

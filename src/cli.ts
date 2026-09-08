@@ -11,13 +11,13 @@ const USAGE = `Regulation Compliance Agent — pipeline stages as subcommands
 
 Usage:
   npm run scan     [-- --pdf <file>] [--window-size <n>] [--out <file>]
-  npm run plan     [-- --pdf <file>] [--toc-pages <n>] [--out <file>]   (optional: section titles/overview)
   npm run cut      [-- --pdf <file>] [--scan <file>] [--out <file>]
   npm run extract  [-- --subset <file>] [--out <file>]
   npm run check    -- --input <file|-> [--rules <file>] [--out <file>]
 
-Default flow: scan → cut → extract → check. Defaults target the committed
-FCA PS22/9 artifacts under data/.
+Pipeline: scan → cut → extract → check. The source PDF is expected at
+.temp/regulations.pdf (gitignored — see README); scan/cut/extract regenerate
+the data/ artifacts, and check consumes data/rules.json.
 `;
 
 const [command] = process.argv.slice(2);
@@ -37,23 +37,6 @@ switch (command) {
     await runScan({
       pdf: values.pdf,
       windowSize: Number(values["window-size"]),
-      out: values.out,
-    });
-    break;
-  }
-  case "plan": {
-    const { values } = parseArgs({
-      args: rest,
-      options: {
-        pdf: { type: "string", default: ".temp/regulations.pdf" },
-        "toc-pages": { type: "string", default: "10" },
-        out: { type: "string", default: "data/extraction-plan.json" },
-      },
-    });
-    const { runPlan } = await import("./features/extract/plan.js");
-    await runPlan({
-      pdf: values.pdf,
-      tocPages: Number(values["toc-pages"]),
       out: values.out,
     });
     break;

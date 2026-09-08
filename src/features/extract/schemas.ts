@@ -1,27 +1,7 @@
 import { z } from "zod";
 
 /**
- * Stage 1 (`plan`) — the planner's reading of the document's table of contents.
- * One entry per document section it can identify; `relevant` flags the ones
- * that contain obligations applicable to marketing/consumer communications.
- * Pages are PDF page indices (1-based), NOT the document's printed page numbers.
- */
-export const SectionPlan = z.object({
-  title: z.string().describe("Section title as it appears in the contents"),
-  start_page: z.number().int().min(1).describe("First PDF page of the section (1-based PDF index, from the === PDF PAGE n === markers)"),
-  end_page: z.number().int().min(1).describe("Last PDF page of the section (inclusive)"),
-  relevant: z.boolean().describe("true if the section states obligations applicable to marketing / consumer communications"),
-  reason: z.string().describe("One sentence: why this section is or is not relevant to the compliance goal"),
-});
-
-export const ExtractionPlan = z.object({
-  document_title: z.string(),
-  sections: z.array(SectionPlan),
-});
-export type ExtractionPlan = z.infer<typeof ExtractionPlan>;
-
-/**
- * Stage 1b (`scan`) — per-window page classification. One window call returns
+ * Stage 1 (`scan`) — per-window page classification. One window call returns
  * the pages (within that window) that contain checkable obligations. Merging
  * across windows is a trivial page-set union — this is why parallelism lives
  * here and not in rule extraction (DECISIONS.md D11/D12).
