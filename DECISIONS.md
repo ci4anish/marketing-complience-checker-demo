@@ -272,9 +272,22 @@ the top "with more time" item.
 
 **D1 amendment — regulations.pdf moved out of the repo.** The source PDF now lives in
 gitignored `.temp/` (both PDFs; history no longer carries the 1.4MB file — leaner public
-repo). CLI defaults updated to `.temp/regulations.pdf`; the README must tell reviewers to
-download PS22/9 and drop it there (or pass --pdf). Committed pipeline artifacts
-(scan/subset/rules) keep the repo runnable for `check` without the PDF.
+repo). Reviewers download PS22/9 and pass its path via `--pdf`.
+
+**D1 amendment (superseded default) — `--pdf` is required; no hardcoded `.temp/` default.**
+The earlier ".temp/regulations.pdf CLI default" was removed: `scan`/`cut` now require an
+explicit `--pdf <file>` (error if missing) so the PDF location is the caller's, not baked in.
+To keep the BYOK "run `check` immediately, cheaply" story, the three canonical artifacts
+(`data/rules.json`, `data/scan.json`, `data/subset.md`) are COMMITTED — `.gitignore` ignores
+`data/*` except those three (git can't re-include under an ignored dir, so it's `data/*` not
+`data/`). A fresh clone runs `npm i && npm run check -- --input <file>` with zero LLM cost;
+regeneration (`scan → cut → extract`) needs only a `--pdf` path. This is the payoff of the
+ID-free evals (D16): regenerating the ruleset — even to a different taxonomy/count — no longer
+breaks any eval, so re-committing artifacts is safe.
+
+**D1 amendment (smoke layer removed).** The `tests/fixtures/` smoke suite + `check-fixtures.ts`
+harness are deleted: rocket/borderline/compliant are subsumed by checker-eval cases 01/07/09-10.
+One harness (`eval:checker`), one (ID-free) semantics; `rocket` survives as the README demo command.
 
 **D19 — Vestigial `plan` stage deleted.** The TOC-planner was superseded by `scan` (D11) and
 had degraded to "optional section titles" — dead weight: an extra prompt to read, an extra
