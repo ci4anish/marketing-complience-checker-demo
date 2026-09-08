@@ -9,16 +9,18 @@ try {
 
 const USAGE = `Regulation Compliance Agent — pipeline stages as subcommands
 
-Usage:
-  npm run scan     -- --pdf <file> [--window-size <n>] [--out <file>]
-  npm run cut      -- --pdf <file> [--scan <file>] [--out <file>]
-  npm run extract  [-- --subset <file>] [--out <file>]
+Usage (the two you normally run):
+  npm run extract  -- --pdf <file> [--window-size <n>] [--out <file>]   (scan → cut → decompose)
   npm run check    -- --input <file|-> [--rules <file>] [--out <file>]
 
-Pipeline: scan → cut → extract → check. Pass the source regulation PDF via
---pdf (no hardcoded location). The committed data/ artifacts (scan.json,
-subset.md, rules.json) let \`check\` run without a PDF; scan/cut/extract
-rebuild them from whatever --pdf you point at.
+Granular build stages (for debugging one step):
+  npm run scan      -- --pdf <file> [--window-size <n>] [--out <file>]
+  npm run cut       -- --pdf <file> [--scan <file>] [--out <file>]
+  npm run decompose [-- --subset <file>] [--out <file>]
+
+\`extract\` builds data/rules.json from a --pdf (no hardcoded location); \`check\`
+evaluates a text against it. The committed data/ artifacts (scan.json, subset.md,
+rules.json) let \`check\` run without a PDF.
 `;
 
 const [command] = process.argv.slice(2);
@@ -65,6 +67,31 @@ switch (command) {
     break;
   }
   case "extract": {
+    // Master rulebook build: scan → cut → decompose, PDF → data/rules.json.
+    // This is the command you normally run; use the granular scan/cut/decompose
+    // subcommands only to debug a single stage.
+    const { values } = parseArgs({
+      args: rest,
+      options: {
+        pdf: { type: "string" },
+        "window-size": { type: "string", default: "12" },
+        out: { type: "string", default: "data/rules.json" },
+      },
+    });
+    if (!values.pdf) {
+      console.error("extract: --pdf <file> is required (path to the regulation PDF)");
+      process.exit(2);
+    }
+    const { runScan } = await import("./features/extract/scan.js");
+    const { runCut } = await import("./features/extract/cut.js");
+    const { runExtract } = await import("./features/extract/extract.js");
+    await runScan({ pdf: values.pdf, windowSize: Number(values["window-size"]), out: "data/scan.json" });
+    await runCut({ pdf: values.pdf, scan: "data/scan.json", out: "data/subset.md", extra: [] });
+    await runExtract({ subset: "data/subset.md", out: values.out });
+    break;
+  }
+  case "decompose": {
+    // Granular stage 3 (debug): decompose an already-cut subset into rules.
     const { values } = parseArgs({
       args: rest,
       options: {

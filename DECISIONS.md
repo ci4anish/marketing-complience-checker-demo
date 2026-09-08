@@ -295,3 +295,12 @@ stage to explain, zero pipeline role. Removed (command, prompt, schema, npm scri
 design journey it represents — TOC planning, the printed-vs-PDF page-offset fix, its blind
 spot on unpaginated appendices — remains told in D5/D11 and git history; the code now shows
 only the current architecture: scan → cut → extract → check.
+
+**D20 — `extract` is the master rulebook build; granular stages are for debugging.**
+scan → cut → decompose is one logical operation ("turn a regulation PDF into a rulebook"), so
+the command you normally run is `npm run extract -- --pdf <file>`, which chains all three and
+writes `data/rules.json`. The former fine-grained `extract` (subset → rules) is renamed
+`decompose` — matching the brief's stage-2 wording ("Decompose it into rules") and freeing
+`extract` to mean "extract the policies from the PDF". `scan` / `cut` / `decompose` remain as
+separate subcommands only to debug a single stage. Net surface for a reviewer: two verbs —
+`extract` (build rules) and `check` (evaluate text).
